@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florida Contract Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Florida Contracts <span class="highlight">Explorer</span></h1>
+            <p class="subtitle">Searchable database of Digital Security Solutions state term contracts.</p>
+        </header>
+
+        <section class="search-section">
+            <form action="/" method="get" class="search-form">
+                <input type="text" name="q" placeholder="Search for vendors, terms, or pricing..." value="{{ query }}"
+                    autocomplete="off" autofocus>
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+        </section>
+
+        {% if query %}
+        <section class="results-section">
+            <h2>{{ results|length }} Result{% if results|length != 1 %}s{% endif %} Found</h2>
+            <div class="results-grid">
+                {% for row in results %}
+                <a href="{{ url_for('view_document', doc_id=row['id']) }}" class="result-card">
+                    <div class="card-content">
+                        <h3>{{ row['title'] }}</h3>
+                        <div class="snippet">...{{ row['snippet']|safe }}...</div>
+                        <div class="meta">Filename: {{ row['filename'] }}</div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+
+            {% if results|length == 0 %}
+            <div class="no-results">
+                <p>No documents found matching "<strong>{{ query }}</strong>". Try a different keyword.</p>
+            </div>
+            {% endif %}
+        </section>
+        {% endif %}
+    </div>
+</body>
+
+</html>

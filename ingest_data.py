@@ -3,8 +3,9 @@ import os
 import glob
 import re
 
-DB_NAME = "contracts.db"
-MD_DIR = "markdown"
+# Configuration
+DB_NAME = "data/contracts.db"
+MARKDOWN_DIR = "data/markdown"
 
 def init_db():
     conn = sqlite3.connect(DB_NAME)

@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    image: florida-contracts-app
+    ports:
+      - "8080:8000"
+    volumes:
+      - app_data:/app/data
+    restart: always
+
+  digest-worker:
+    build: .
+    image: florida-contracts-worker
+    command: python3 scheduler.py
+    environment:
+      - RUN_ON_STARTUP=true
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - DIGEST_RECIPIENT=${DIGEST_RECIPIENT}
+    volumes:
+      - app_data:/app/data
+    restart: always
+
+volumes:
+  app_data:

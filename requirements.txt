@@ -1,0 +1,6 @@
+flask
+pymupdf
+gunicorn
+requests
+beautifulsoup4
+schedule

@@ -1,8 +1,8 @@
 import os
-import fitz  # PyMuPDF
+import fitz  # Directories
 
-PDF_DIR = "pdfs"
-MD_DIR = "markdown"
+PDF_DIR = "data/pdfs"
+OUTPUT_DIR = "data/markdown"
 
 def convert_pdf_to_md(pdf_path, md_path):
     try:

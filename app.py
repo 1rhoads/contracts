@@ -6,10 +6,10 @@ from markdown import markdown # We might need this, but we can display raw text 
 # Trying to import markdown, if not available we will just return text.
 
 app = Flask(__name__)
-DB_NAME = "contracts.db"
 
 def get_db_connection():
-    conn = sqlite3.connect(DB_NAME)
+    db_path = os.path.join(os.path.dirname(__file__), 'data', 'contracts.db')
+    conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     return conn
 

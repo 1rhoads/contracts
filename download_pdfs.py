@@ -2,7 +2,7 @@ import os
 import urllib.request
 import time
 
-PDF_DIR = "pdfs"
+PDF_DIR = "data/pdfs"
 
 # List extracted by browser subagent
 PDF_LINKS = [

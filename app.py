@@ -30,9 +30,9 @@ def index():
         ORDER BY rank
         LIMIT 50
         """
-        # Escape query for FTS syntax if needed, but standard text often works. 
-        # For safety, we wrap in double quotes or sanitize.
-        sanitized_query = f'"{query}"' if '"' not in query else query
+        # Pass query standard FTS5 syntax. 
+        # Spaces imply AND. Quotes imply PHRASE. OR is explicit.
+        sanitized_query = query
         
         try:
             results = conn.execute(sql, (sanitized_query,)).fetchall()

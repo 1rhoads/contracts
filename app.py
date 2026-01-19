@@ -35,9 +35,18 @@ def index():
         sanitized_query = query
         
         try:
+            # Attempt 1: Exact/Standard Query
             results = conn.execute(sql, (sanitized_query,)).fetchall()
+            
+            # Attempt 2: Fallback (Relaxed)
+            # If no results and query contains space or quotes, try matching terms loosely
+            if not results and (len(query.split()) > 1 or '"' in query):
+                # Remove quotes to allow non-phrase matching (Google AND SecOps)
+                relaxed_query = query.replace('"', '')
+                if relaxed_query != sanitized_query:
+                     results = conn.execute(sql, (relaxed_query,)).fetchall()
+                     
         except sqlite3.OperationalError:
-            # Fallback for complex syntax errors
             results = []
             
         conn.close()

@@ -18,8 +18,6 @@ services:
       - RUN_ON_STARTUP=true
       - SMTP_HOST=${SMTP_HOST}
       - SMTP_PORT=${SMTP_PORT}
-      - SMTP_USER=${SMTP_USER}
-      - SMTP_PASSWORD=${SMTP_PASSWORD}
       - DIGEST_RECIPIENT=${DIGEST_RECIPIENT}
     volumes:
       - app_data:/app/data

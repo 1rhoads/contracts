@@ -34,9 +34,40 @@
     </nav>
 
     <main class="document-container">
+        {% if query %}
+        <div class="search-context-bar">
+            <a href="{{ url_for('view_document', doc_id=doc.id, q=query) }}" class="back-link">
+                ← Back to Results for "{{ query }}"
+            </a>
+        </div>
+        {% endif %}
+
         <div id="content" class="markdown-body">
             <!-- Content injected here -->
         </div>
+
+        {% if current_page %}
+        <div class="pagination-controls">
+            {% if current_page > 1 %}
+            <a href="{{ url_for('view_document', doc_id=doc.id, page=current_page-1, q=query) }}" class="nav-btn prev">
+                Previous Page
+            </a>
+            {% else %}
+            <span class="nav-btn disabled">Previous Page</span>
+            {% endif %}
+
+            <span class="page-indicator">Page {{ current_page }} of {{ total_pages }}</span>
+
+            {% if current_page < total_pages %} <a
+                href="{{ url_for('view_document', doc_id=doc.id, page=current_page+1, q=query) }}" class="nav-btn next">
+                Next Page
+                </a>
+                {% else %}
+                <span class="nav-btn disabled">Next Page</span>
+                {% endif %}
+        </div>
+        {% endif %}
+
         <!-- Hidden source content -->
         <div id="raw-content" style="display: none;">{{ content }}</div>
     </main>

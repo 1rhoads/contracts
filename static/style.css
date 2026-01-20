@@ -72,8 +72,74 @@ body {
 }
 
 @keyframes move {
-    from { transform: translate(0, 0) scale(1); }
-    to { transform: translate(30px, -30px) scale(1.1); }
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+}
+
+/* Pagination and Search Context */
+.search-context-bar {
+    margin-bottom: 1.5rem;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn:hover:not(.disabled) {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.nav-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.page-indicator {
+    font-family: 'JetBrains Mono', monospace;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.document-card,
+.results-header,
+.page-card,
+.document-container {
+    animation: fadeIn 0.5s ease-out forwards;
 }
 
 .container {
@@ -269,7 +335,9 @@ h1 {
     color: #e2e8f0;
 }
 
-.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     color: #fff;
@@ -293,7 +361,15 @@ h1 {
 }
 
 @media (max-width: 600px) {
-    h1 { font-size: 2.5rem; }
-    .container { padding: 1rem; }
-    .results-grid { grid-template-columns: 1fr; }
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
 }

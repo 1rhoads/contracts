@@ -49,7 +49,7 @@ def ingest_files():
         conn.close()
         return
 
-    files = glob.glob(os.path.join(MD_DIR, "*.md"))
+    files = glob.glob(os.path.join(MARKDOWN_DIR, "*.md"))
     print(f"Ingesting {len(files)} files...")
     
     for filepath in files:

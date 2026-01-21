@@ -43,7 +43,7 @@
             <h2>{{ results|length }} Result{% if results|length != 1 %}s{% endif %} Found</h2>
             <div class="results-grid">
                 {% for row in results %}
-                <a href="{{ url_for('view_document', doc_id=row['id']) }}" class="result-card">
+                <a href="{{ url_for('view_document', doc_id=row['id'], q=query) }}" class="result-card">
                     <div class="card-content">
                         <h3>{{ row['title'] }}</h3>
                         <div class="snippet">...{{ row['snippet']|safe }}...</div>

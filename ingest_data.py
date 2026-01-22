@@ -55,8 +55,15 @@ def ingest_files():
         if existing:
             continue
             
-        # title is filename without ext and with spaces
-        title = filename.replace('.md', '').replace('_', ' ')
+        # title cleaning logic
+        title = filename.replace('.md', '').replace('.pdf', '')
+        title = title.replace('_', ' ')
+        title = re.sub(r'Exhibit\s+B\s*[-–]?\s*', '', title, flags=re.IGNORECASE)
+        title = re.sub(r'DMS\s+Attachment\s+[A-Z0-9]+\s*[-–]?\s*', '', title, flags=re.IGNORECASE)
+        title = re.sub(r'Price\s+Sheet\s*[-–]?\s*', '', title, flags=re.IGNORECASE)
+        title = re.sub(r'^\s*[-–]\s*', '', title)
+        title = title.title()
+        title = re.sub(r'\s+', ' ', title).strip()
         
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()

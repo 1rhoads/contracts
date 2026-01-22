@@ -36,7 +36,8 @@ def index():
         # Use FTS5 snippet
         # snippet(documents_fts, -1, '<b>', '</b>', '...', 64)
         sql = """
-        SELECT d.id, d.title, d.filename, snippet(documents_fts, 1, '<mark>', '</mark>', '...', 64) as snippet 
+        SELECT d.id, d.title, d.filename, d.content,
+               snippet(documents_fts, 1, '<mark>', '</mark>', '...', 64) as snippet
         FROM documents_fts 
         JOIN documents d ON documents_fts.rowid = d.id
         WHERE documents_fts MATCH ? 
@@ -49,22 +50,40 @@ def index():
         
         try:
             # Attempt 1: Exact/Standard Query (Sanitized)
-            results = conn.execute(sql, (sanitized_query,)).fetchall()
+            rows = conn.execute(sql, (sanitized_query,)).fetchall()
             
             # Attempt 2: Fallback (Relaxed)
-            # If no results and query contains space or quotes or hyphens
-            if not results:
-                # Remove quotes AND replace hyphens with spaces to allow loose matching
-                # "TAN-CORE" -> "TAN CORE" (AND)
+            if not rows:
                 relaxed_query = query.replace('"', '').replace('-', ' ')
-                
-                # Only retry if relaxed is different from original sanitation (avoid redundant query)
-                # Compare relaxed vs sanitized is hard because sanitized adds quotes vs relaxed replacing chars
-                # Just check if relaxed is different from what we typically query
                 if relaxed_query != query:
-                     results = conn.execute(sql, (relaxed_query,)).fetchall()
+                     rows = conn.execute(sql, (relaxed_query,)).fetchall()
+            
+            # Process rows to add match_count
+            results = []
+            
+            # Prepare counting regex terms
+            # Simple approach: split query, count occurrences of each term?
+            # Or just count the full phrase if quoted?
+            # Let's count *words* from the query that appear.
+            count_terms = query.replace('"', '').lower().split()
+            
+            for row in rows:
+                matches = 0
+                if row['content']:
+                    text_lower = row['content'].lower()
+                    for term in count_terms:
+                        matches += text_lower.count(term)
+                
+                results.append({
+                    'id': row['id'],
+                    'title': row['title'],
+                    'filename': row['filename'],
+                    'snippet': row['snippet'],
+                    'match_count': matches
+                })
                      
-        except sqlite3.OperationalError:
+        except sqlite3.OperationalError as e:
+            print(f"SQL Error: {e}")
             results = []
             
         conn.close()

@@ -45,7 +45,13 @@
                 {% for row in results %}
                 <a href="{{ url_for('view_document', doc_id=row['id'], q=query) }}" class="result-card">
                     <div class="card-content">
-                        <h3>{{ row['title'] }}</h3>
+                        <h3>
+                            {{ row['title'] }}
+                            {% if row['match_count'] > 0 %}
+                            <span class="match-badge">{{ row['match_count'] }} match{% if row['match_count'] != 1 %}es{%
+                                endif %}</span>
+                            {% endif %}
+                        </h3>
                         <div class="snippet">...{{ row['snippet']|safe }}...</div>
                         <div class="meta">Filename: {{ row['filename'] }}</div>
                     </div>

@@ -274,6 +274,17 @@ h1 {
     font-family: 'JetBrains Mono', monospace;
 }
 
+.match-badge {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+    font-weight: 600;
+}
+
 .no-results {
     text-align: center;
     padding: 3rem;

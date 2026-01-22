@@ -14,6 +14,18 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
+def sanitize_query_fns(q):
+    # Split by whitespace to handle multiple terms
+    tokens = q.split()
+    processed = []
+    for t in tokens:
+        # If term has hyphen and not already quoted, quote it
+        if '-' in t and not (t.startswith('"') and t.endswith('"')):
+            processed.append(f'"{t}"')
+        else:
+            processed.append(t)
+    return " ".join(processed)
+
 @app.route('/')
 def index():
     query = request.args.get('q', '')
@@ -33,18 +45,23 @@ def index():
         """
         # Pass query standard FTS5 syntax. 
         # Spaces imply AND. Quotes imply PHRASE. OR is explicit.
-        sanitized_query = query
+        sanitized_query = sanitize_query_fns(query)
         
         try:
-            # Attempt 1: Exact/Standard Query
+            # Attempt 1: Exact/Standard Query (Sanitized)
             results = conn.execute(sql, (sanitized_query,)).fetchall()
             
             # Attempt 2: Fallback (Relaxed)
-            # If no results and query contains space or quotes, try matching terms loosely
-            if not results and (len(query.split()) > 1 or '"' in query):
-                # Remove quotes to allow non-phrase matching (Google AND SecOps)
-                relaxed_query = query.replace('"', '')
-                if relaxed_query != sanitized_query:
+            # If no results and query contains space or quotes or hyphens
+            if not results:
+                # Remove quotes AND replace hyphens with spaces to allow loose matching
+                # "TAN-CORE" -> "TAN CORE" (AND)
+                relaxed_query = query.replace('"', '').replace('-', ' ')
+                
+                # Only retry if relaxed is different from original sanitation (avoid redundant query)
+                # Compare relaxed vs sanitized is hard because sanitized adds quotes vs relaxed replacing chars
+                # Just check if relaxed is different from what we typically query
+                if relaxed_query != query:
                      results = conn.execute(sql, (relaxed_query,)).fetchall()
                      
         except sqlite3.OperationalError:

@@ -1,0 +1,23 @@
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+*.egg-info/
+
+# Docker
+.docker_data/
+portainer_data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug/Temporary
+debug_*
+*.tmp

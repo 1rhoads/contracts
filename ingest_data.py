@@ -43,17 +43,18 @@ def ingest_files():
     c = conn.cursor()
     
     # Check if we already have data
-    c.execute("SELECT COUNT(*) FROM documents")
-    if c.fetchone()[0] > 0:
-        print("Database already populated. Skipping ingestion (delete db to re-ingest).")
-        conn.close()
-        return
-
     files = glob.glob(os.path.join(MARKDOWN_DIR, "*.md"))
-    print(f"Ingesting {len(files)} files...")
+    print(f"Scanning {len(files)} files...")
     
+    new_count = 0
     for filepath in files:
         filename = os.path.basename(filepath)
+        
+        # Check if file exists in DB
+        existing = c.execute("SELECT id FROM documents WHERE filename = ?", (filename,)).fetchone()
+        if existing:
+            continue
+            
         # title is filename without ext and with spaces
         title = filename.replace('.md', '').replace('_', ' ')
         
@@ -61,10 +62,16 @@ def ingest_files():
             content = f.read()
             
         c.execute("INSERT INTO documents (title, filename, content) VALUES (?, ?, ?)", (title, filename, content))
+        new_count += 1
+        print(f"Imported: {filename}")
         
     conn.commit()
     conn.close()
-    print("Ingestion complete.")
+    if new_count > 0:
+        print(f"Ingestion complete. Added {new_count} new documents.")
+    else:
+        print("No new documents to ingest.")
+
 
 if __name__ == "__main__":
     init_db()

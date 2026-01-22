@@ -41,12 +41,86 @@ def get_current_pdf_links():
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
             links = soup.find_all('a', href=True)
+            
+            # Sub-pages to check (avoid infinite recursion, just 1 level deep is requested)
+            sub_pages = []
+            
             for link in links:
                 href = link['href']
                 text = link.get_text(strip=True)
                 full_url = urljoin(BASE_URL, href)
+                
+                # Condition 1: Direct PDF
                 if full_url.lower().endswith('.pdf') or '/content/download/' in full_url:
                     links_found.append({"text": text, "href": full_url})
+                
+                # Condition 2: Child Page (Recursive check)
+                # Check if it extends the BASE_URL (is a sub-resource) usually indicated by no extension or .html
+                # and contains "price_sheets" or similar unique part of path to avoid navigation links
+                elif BASE_URL in full_url and full_url != BASE_URL:
+                     # Heuristic: Check if likely a content page
+                     if "price_sheets_-_" in full_url:
+                         sub_pages.append({"text": text, "url": full_url})
+
+            # Additional Pass: Regex for JSON-embedded links (for Presidio/ARGO)
+            # Find all URLs that match the Base URL + /price_sheets_-_...
+            # The regex matches: base_url + /price_sheets_-_ + anything until "
+            import re
+            pattern = re.escape(BASE_URL) + r"/price_sheets_-_[^\"']+"
+            json_matches = re.findall(pattern, response.text)
+            for m in json_matches:
+                # Add if not already seen
+                if not any(p['url'] == m for p in sub_pages) and m != BASE_URL:
+                    # Clean text might be hard to get, use URL tail
+                    text_guess = m.split('/')[-1].replace('price_sheets_-_', '').replace('_', ' ').title()
+                    sub_pages.append({"text": text_guess, "url": m})
+                    print(f"  Found hidden sub-page: {text_guess} ({m})")
+
+
+            print(f"Found {len(links_found)} direct PDFs. Checking {len(sub_pages)} sub-pages...")
+            
+            for page in sub_pages:
+                try:
+                    print(f"  Checking sub-page: {page['text']} ({page['url']})")
+                    sub_resp = requests.get(page['url'], headers=headers, timeout=20)
+                    if sub_resp.status_code == 200:
+                        sub_soup = BeautifulSoup(sub_resp.content, 'html.parser')
+                        # Look for PDFs in sub-page
+                        # Often in the main area or JSON data. 
+                        # Let's text search for JSON content first as fallback? 
+                        # Or just all links again.
+                        sub_links = sub_soup.find_all('a', href=True)
+                        found_in_sub = False
+                        
+                        for sub_link in sub_links:
+                             sub_href = sub_link['href']
+                             if sub_href.lower().endswith('.pdf') or '/content/download/' in sub_href:
+                                 sub_full = urljoin(page['url'], sub_href)
+                                 links_found.append({"text": page['text'], "href": sub_full})
+                                 found_in_sub = True
+                                 print(f"    Found PDF: {sub_full}")
+                                 
+                        # If no <a> tag found (maybe JS only), check for JSON attachmentUrl OR uri pattern
+                        if not found_in_sub:
+                             import re
+                             # Generalized regex: Look for ANY path starting with /content/download/ inside quotes
+                             # This catches "attachmentUrl": "..." and "uri": "..."
+                             matches = re.findall(r'"(/content/download/[^"]+)"', sub_resp.text)
+                             for m in matches:
+                                  # Add domain if missing
+                                  sub_full = urljoin(page['url'], m)
+                                  
+                                  # Filter for obviously non-PDF things if necessary, but /content/download usually implies file
+                                  # Some might have query params like ?version=1
+                                  
+                                  # Deduplicate
+                                  if not any(item['href'] == sub_full for item in links_found):
+                                      links_found.append({"text": page['text'], "href": sub_full})
+                                      print(f"    Found PDF (via regex): {sub_full}")
+                                  
+                except Exception as ex:
+                    print(f"  Failed to scrape sub-page {page['url']}: {ex}")
+                    
     except Exception as e:
         print(f"Error scraping: {e}")
 
@@ -100,6 +174,8 @@ def get_current_pdf_links():
           {"text": "Telaforce LLC dba Titan Technologies LLC", "href": "https://www.dms.myflorida.com/content/download/433657/9058497/Exhibit%20B%20-%20Titan.pdf"},
           {"text": "Thrive Operations, LLC", "href": "https://www.dms.myflorida.com/content/download/404602/8227987/Exhibit.pdf"},
           {"text": "Trend Micro Inc.", "href": "https://www.dms.myflorida.com/content/download/404838/8229968/Exhibit%20B%20-%20Trend.pdf"},
+          {"text": "Presidio Networked Solutions LLC", "href": "https://www.dms.myflorida.com/content/download/404596/8227945/Exhibit_B_-_Presidio.pdf"},
+          {"text": "ARGO Cyber Systems, LLC", "href": "https://www.dms.myflorida.com/content/download/404578/8227819/Exhibit%20B%20-%20ARGO.pdf"},
           {"text": "United Data Technologies, Inc.", "href": "https://www.dms.myflorida.com/content/download/404775/8229403/Exhibit_B_-_UDT.pdf"}
         ]
 

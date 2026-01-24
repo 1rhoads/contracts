@@ -92,6 +92,8 @@ def index():
 
 @app.route('/document/<int:doc_id>')
 def view_document(doc_id):
+    import sys
+    print(f"Entered view_document: {doc_id}", file=sys.stderr)
     conn = get_db_connection()
     doc = conn.execute('SELECT * FROM documents WHERE id = ?', (doc_id,)).fetchone()
     conn.close()
@@ -143,65 +145,91 @@ def view_document(doc_id):
         # Fallback if regex didn't trigger (maybe old format), treat whole doc as page 1
         page_map[1] = content
 
-    # --- Case 1: Viewing a specific page ---
-    if page_param:
-        try:
-            target_page = int(page_param)
-            if target_page in page_map:
-                # Reconstruct just this page's markdown
-                # We include the title preamble if it's page 1, strictly speaking title is mostly metadata now
-                page_md = f"## Page {target_page}\n{page_map[target_page]}"
-                if target_page == 1:
-                    page_md = title_preamble + page_md
-                
-                return render_template('document.html', 
-                                     doc=doc, 
-                                     content=page_md, 
-                                     current_page=target_page, 
-                                     total_pages=max(page_map.keys()) if page_map else 1,
-                                     query=query)
-        except ValueError:
-            pass # Invalid page number, fall through
             
-    # --- Case 2: Searching (List of Pages) ---
+    
+    # --- Identify Matching Pages (Pre-calculation) ---
+    matching_page_numbers = []
     if query:
-        matches = []
         # Parse query logic (loose vs strict) - replicating logic from index()
         normalized_query = query.replace('"', '').lower()
         query_terms = normalized_query.split()
         
         for p_num, p_text in page_map.items():
             text_lower = p_text.lower()
-            
-            # Check for match (Loose AND: all terms must be present)
-            # If query was quoted originally, user might expect phrase, but for page searching
-            # "contains all text" is usually a good enough filter.
             if all(term in text_lower for term in query_terms):
-                # Generate simple snippet
-                # Find first occurrence of first term
-                idx = text_lower.find(query_terms[0])
-                start = max(0, idx - 50)
-                end = min(len(p_text), idx + 150)
-                snippet = p_text[start:end]
+                matching_page_numbers.append(p_num)
+    
+    matching_page_numbers.sort()
+
+    # --- Case 1: Viewing a specific page ---
+    if page_param:
+        try:
+            target_page = int(page_param)
+            if target_page in page_map:
+                # Reconstruct just this page's markdown
+                page_md = f"## Page {target_page}\n{page_map[target_page]}"
+                if target_page == 1:
+                    page_md = title_preamble + page_md
                 
-                # Highlight logic handled in frontend or simple replace here
-                # Simple crude highlight for the snippet
-                for term in query_terms:
-                    # distinct case-insensitive replace is hard in pure python without regex
-                    # We will leave as text for now, template handles basic display
-                    pass
+                # Calculate Page Navigation
+                total_pages = max(page_map.keys()) if page_map else 1
+                prev_page = target_page - 1 if target_page > 1 else None
+                next_page = target_page + 1 if target_page < total_pages else None
+                
+                # Calculate Result Navigation
+                prev_result = None
+                next_result = None
+                
+                if matching_page_numbers:
+                    # Find matches relative to current page
+                    lower_matches = [p for p in matching_page_numbers if p < target_page]
+                    higher_matches = [p for p in matching_page_numbers if p > target_page]
                     
-                matches.append({
-                    'page_num': p_num,
-                    'snippet': snippet
-                })
+                    if lower_matches:
+                        prev_result = max(lower_matches)
+                    if higher_matches:
+                        next_result = min(higher_matches)
+
+                return render_template('document.html', 
+                                     doc=doc, 
+                                     content=page_md, 
+                                     current_page=target_page, 
+                                     total_pages=total_pages,
+                                     query=query,
+                                     prev_page=prev_page,
+                                     next_page=next_page,
+                                     prev_result=prev_result,
+                                     next_result=next_result)
+        except ValueError:
+            pass # Invalid page number, fall through
+            
+    # --- Case 2: Searching (List of Pages) ---
+    if query and matching_page_numbers:
+        matches = []
+        # Re-using pre-calculated list
+        normalized_query = query.replace('"', '').lower()
+        query_terms = normalized_query.split()
         
-        if matches:
-            return render_template('document_pages.html', 
-                                 doc=doc, 
-                                 matches=matches, 
-                                 query=query, 
-                                 total_matches=len(matches))
+        for p_num in matching_page_numbers:
+            p_text = page_map[p_num]
+            text_lower = p_text.lower()
+            
+            # Snippet generation logic (same as before)
+            idx = text_lower.find(query_terms[0])
+            start = max(0, idx - 50)
+            end = min(len(p_text), idx + 150)
+            snippet = p_text[start:end]
+            
+            matches.append({
+                'page_num': p_num,
+                'snippet': snippet
+            })
+        
+        return render_template('document_pages.html', 
+                             doc=doc, 
+                             matches=matches, 
+                             query=query, 
+                             total_matches=len(matches))
                                  
     # --- Case 3: Default View (Full Doc or Page 1) ---
     # User requested "instead of displaying entire document", but if no search query,

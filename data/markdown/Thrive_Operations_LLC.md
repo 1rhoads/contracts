@@ -1,318 +1,771 @@
+# Thrive Operations LLC
+
 ## Page 1
 
-**Price Proposal**
+43230000-24-STC 
+ 
+ Page 1 of 2 
+Digital Security Solutions 
+Price Proposal 
+ 
+Respondent: Thrive____________________________ 
+ 
+Solution Proposed: FortiEDR w/ Management_______ 
+ 
+Service Category: Service Category 3: Endpoint Detection and Response  
+ 
+ 
+Tiered, not to exceed pricing for initial term: 
+ 
+Tier 
+Price 
+Unit 
+FortiEDR Advanced Endpoint 
+Protection 
+$55.00 
+EA 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Add-On Services (OPTIONAL) for initial term: 
+ 
+Name 
+Description 
+Price 
+Unit 
+FortiEDR Management 
+Per Unit 
+Thrive Managed 
+Services for FortiEDR – 
+Add-On Per Unit 
+$12.00 
+EA 
+FortiEDR Management 
+Base Service 
+Thrive Base Managed 
+Services for FortiEDR 
+$2400 
+EA 
+TransformIT Azure AD 
+End-User Onboarding 
+and Offboarding 
+Automated Azure AD 
+user creation, group 
+assignment and user 
+offboarding disable. 
+$1,884.00 
+EA 
+TransformIT Integration Integration of a product 
+with TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for Freshservice 
+Integration of  
+Freshservice with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for Jira 
+Integration of  Jira with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for ServiceNow 
+Integration of 
+ServieNow  with 
+TransformIT 
+$18,000.00 
+EA 
+ 
+TransformIT Integration 
+for Slack 
+Integration of Slackt 
+with TransformIT 
+$3,000.00 
+EA 
+TransformIT Integration 
+for Workday 
+Integration of 
+aWorkday with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT 
+ITSM 
+Approver Account (per 
+user) 
+Enable access the 
+TransformIT portal for 
+management of cases. 
+$636.00 
+EA 
 
-Respondent: Thrive____________________________
 
-Solution Proposed: FortiEDR w/ Management_______
-
-Service Category: Service Category 3: Endpoint Detection and Response
-
-
-|Tiered, not to exceed pricing fo  Tier|or initial term: Price|Unit|
-|---|---|---|
-|~~Tier~~<br>|~~Price~~<br>|~~Unit~~<br>|
-|~~FortiEDR Advanced Endpoint~~<br>Protection<br>|~~$55.00~~<br>|~~EA~~<br>|
-|<br>|<br>|<br>|
-|<br>|<br>|<br>|
-|<br>|<br>|<br>|
-|<br>|<br>|<br>|
-|<br>|<br>|<br>|
-|<br>|||
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|Add-On Services (OPTI  Name|IONAL) for initial term: Description|: Price|Unit|
-|---|---|---|---|
-|~~Name~~<br>|~~Description~~<br>|~~Price~~<br>|~~Unit~~<br>|
-|~~FortiEDR Management~~<br>Per Unit<br>|~~Thrive Managed~~<br>Services for FortiEDR –<br>Add-On Per Unit<br>|~~$12.00~~<br>|~~EA~~<br>|
-|~~FortiEDR Management~~<br>Base Service<br>|~~Thrive Base Managed~~<br>Services for FortiEDR<br>|~~$2400~~<br>|~~EA~~<br>|
-|~~TransformIT Azure AD~~<br>End-User Onboarding<br>and Offboarding<br>|~~Automated Azure AD~~<br>user creation, group<br>assignment and user<br>offboarding disable.<br>|~~$1,884.00~~<br>|~~EA~~<br>|
-|~~TransformIT Integration~~|~~Integration of a product~~<br>with TransformIT<br>|~~$3,132.00~~|~~EA~~|
-|TransformIT Integration<br>for Freshservice<br>|~~Integration of~~<br>Freshservice with<br>TransformIT<br>|$3,132.00|EA|
-|~~TransformIT Integration~~<br>for Jira|~~Integration of  Jira with~~<br>TransformIT<br>|$3,132.00|EA|
-|TransformIT Integration<br>for ServiceNow<br>|~~Integration of~~<br>ServieNow  with<br>TransformIT<br>|$18,000.00|EA<br>|
-|~~TransformIT Integration~~<br>for Slack|~~Integration of Slackt~~<br>with TransformIT<br>|$3,000.00|EA|
-|TransformIT Integration<br>for Workday<br><br>|~~Integration of~~<br>aWorkday with<br>TransformIT<br>|$3,132.00|EA|
-|~~TransformIT~~<br>~~ITSM~~<br>Approver Account (per<br>user)|~~Enable access the~~<br>TransformIT portal for<br>management of cases.|$636.00|EA|
-
-
-
-43230000-24-STC Page **1** of **2**
-Digital Security Solutions
-
-
+---
 
 ## Page 2
 
-|TransformIT ITSM<br>Assignment Group Add-<br>On (5 groups)|Enable access the<br>TransformIT portal for<br>management of cases.|$318.00|EA|
-|---|---|---|---|
-|TransformIT<br>ITSM<br>Change Management|~~Enables change as a~~<br>category option<br>selection with defined<br>sub categories.<br>|$1,884.00|EA|
-|TransformIT<br>ITSM<br>Confidential Controls|~~Provides role-based~~<br>and logged access to<br>an encrypted (AES256)<br>free-text field. Requires<br>TransformIT ITSM<br>Enterprise.<br>|$9,000.00|EA|
-|TransformIT<br>ITSM<br>Enterprise|~~TransformIT Enterprise~~<br>is a co-managed<br>helpdesk solution which<br>enables management<br>of tickets within the<br>TransformIT portal.<br>|$12,528.00|EA|
-|TransformIT<br>ITSM<br>Knowledge<br>Management|~~Enables the ability to~~<br>manage, create, modify<br>and share knowledge<br>articles.<br>|$636.00|EA|
-|TransformIT<br>ITSM<br>Professional<br><br>|~~TransformIT Enterprise~~<br>is a co-managed<br>helpdesk solution which<br>enables management<br>of tickets within the<br>TransformIT portal.<br>|$1,260.00|EA|
-|~~TransformIT~~<br>~~ITSM~~<br>Related<br>Account<br>Management<br>|~~Used to provide access~~<br>to related ServiceNow<br>account cases.<br>|$3,000.00|EA|
-|~~TransformIT ITSM User~~<br>Account (per user)|~~TrasnformIT Per user~~<br>free<br>|$1,884.00|EA|
-|TransformIT ITSM Web<br>Forms|~~Customized web for~~<br>request. Requires<br>TransformIT ITSM<br>Enterprise.<br>|$1,200.00|EA|
-|TransformIT<br>Orchestrated End-User<br>Onboarding<br>and<br>Offboarding|~~Orchestrated end-user~~<br>onboarding and<br>offboarding. Automated<br>actions for end-user<br>onboarding and<br>offboarding activities.<br>|$3,132.00|EA|
-|TransformIT Strategic<br>End-User Onboarding<br>and Offboarding|~~Customize 3 catalog~~<br>item forms for use in<br>onboarding and<br>offboarding.<br>|$6,264.00|EA|
-|TransformIT Workflow<br>|~~Define and implement~~<br>workflow actions for<br>case routing, approval,<br>escalation,<br>notifications.<br>|$3,132.00<br>|EA<br>|
-|<br>||||
+43230000-24-STC 
+ 
+ Page 2 of 2 
+Digital Security Solutions 
+TransformIT 
+ITSM 
+Assignment Group Add-
+On (5 groups) 
+Enable access the 
+TransformIT portal for 
+management of cases. 
+$318.00 
+EA 
+TransformIT 
+ITSM 
+Change Management 
+Enables change as a 
+category option 
+selection with defined 
+sub categories. 
+$1,884.00 
+EA 
+TransformIT 
+ITSM 
+Confidential Controls 
+Provides role-based 
+and logged access to 
+an encrypted (AES256) 
+free-text field. Requires 
+TransformIT ITSM 
+Enterprise. 
+$9,000.00 
+EA 
+TransformIT 
+ITSM 
+Enterprise 
+TransformIT Enterprise 
+is a co-managed 
+helpdesk solution which 
+enables management 
+of tickets within the 
+TransformIT portal. 
+$12,528.00 
+EA 
+TransformIT 
+ITSM 
+Knowledge 
+Management 
+Enables the ability to 
+manage, create, modify 
+and share knowledge 
+articles. 
+$636.00 
+EA 
+TransformIT 
+ITSM 
+Professional 
+TransformIT Enterprise 
+is a co-managed 
+helpdesk solution which 
+enables management 
+of tickets within the 
+TransformIT portal. 
+$1,260.00 
+EA 
+TransformIT 
+ITSM 
+Related 
+Account 
+Management 
+Used to provide access 
+to related ServiceNow 
+account cases. 
+$3,000.00 
+EA 
+TransformIT ITSM User 
+Account (per user) 
+TrasnformIT Per user 
+free 
+$1,884.00 
+EA 
+TransformIT ITSM Web 
+Forms 
+Customized web for 
+request. Requires 
+TransformIT ITSM 
+Enterprise. 
+$1,200.00 
+EA 
+TransformIT 
+Orchestrated End-User 
+Onboarding 
+and 
+Offboarding 
+Orchestrated end-user 
+onboarding and 
+offboarding. Automated 
+actions for end-user 
+onboarding and 
+offboarding activities. 
+$3,132.00 
+EA 
+TransformIT Strategic 
+End-User Onboarding 
+and Offboarding 
+Customize 3 catalog 
+item forms for use in 
+onboarding and 
+offboarding. 
+$6,264.00 
+EA 
+TransformIT Workflow 
+Define and implement 
+workflow actions for 
+case routing, approval, 
+escalation, 
+notifications. 
+$3,132.00 
+EA 
+ 
+ 
+ 
+ 
+ 
 
 
-
-43230000-24-STC Page **2** of **2**
-Digital Security Solutions
-
-
+---
 
 ## Page 3
 
-**Price Proposal**
+43230000-24-STC 
+ 
+ Page 1 of 2 
+Digital Security Solutions 
+Price Proposal 
+ 
+Respondent: Thrive______________________________ 
+ 
+Solution Proposed: Checkpoint Harmony Email & Collaboration Security w/ Thrive Management 
+ 
+Service Category: Service Category 5: Email Security  
+ 
+ 
+Tiered, not to exceed pricing for initial term: 
+ 
+Tier 
+Price 
+Unit 
+Checkpoint Harmony Email & 
+Collaboration - Advanced 
+$55.00 
+EA 
+Checkpoint Harmony Email & 
+Collaboration – Complete 
+$67.00 
+EA 
+ 
+Add-On Services (OPTIONAL) for initial term: 
+ 
+Name 
+Description 
+Price 
+Unit 
+Checkpoint 
+Harmony 
+Email & Collaboration – 
+Management Per Unit 
+Thrive Managed 
+Services for Checkpoint 
+Harmony Email & 
+Collaboration – Add-On 
+Per Unit 
+$12.00 
+EA 
+Checkpoint 
+Harmony 
+Email & Collaboration – 
+Management 
+Base 
+Service 
+Thrive Base Managed 
+Services for Checkpoint 
+Harmony Email & 
+Collaboration – 
+Management 
+$2400 
+EA 
+TransformIT Azure AD 
+End-User Onboarding 
+and Offboarding 
+Automated Azure AD 
+user creation, group 
+assignment and user 
+offboarding disable. 
+$1,884.00 
+EA 
+TransformIT Integration Integration of a product 
+with TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for Freshservice 
+Integration of  
+Freshservice with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for Jira 
+Integration of  Jira with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for ServiceNow 
+Integration of 
+ServieNow  with 
+TransformIT 
+$18,000.00 
+EA 
+ 
+TransformIT Integration 
+for Slack 
+Integration of Slackt 
+with TransformIT 
+$3,000.00 
+EA 
+TransformIT Integration 
+for Workday 
+Integration of 
+aWorkday with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT 
+ITSM 
+Approver Account (per 
+user) 
+Enable access the 
+TransformIT portal for 
+management of cases. 
+$636.00 
+EA 
 
-Respondent: Thrive______________________________
 
-Solution Proposed: Checkpoint Harmony Email & Collaboration Security w/ Thrive Management
-
-Service Category: Service Category 5: Email Security
-
-
-
-
-
-
-|Tiered, not to exceed pricing fo  Tier|or initial term: Price|Unit|
-|---|---|---|
-|~~Tier~~<br>|~~Price~~<br>|~~Unit~~<br>|
-|~~Checkpoint Harmony Email &~~<br>~~Collaboration - Advanced~~<br>|~~$55.00~~<br>|~~EA~~<br>|
-|~~Checkpoint Harmony Email &~~<br>~~Collaboration – Complete~~<br>|~~$67.00~~|~~EA~~|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|Add-On Services (OPTI  Name|IONAL) for initial term: Description|: Price|Unit|
-|---|---|---|---|
-|~~Name~~<br><br>|~~Description~~<br>|~~Price~~<br>|~~Unit~~<br>|
-|~~Checkpoint~~<br>~~Harmony~~<br>~~Email & Collaboration –~~ <br>~~Management Per Unit~~<br><br>|~~Thrive Managed~~<br>Services for Checkpoint<br>Harmony~~Email &~~<br>C~~ollaboration– Add-O~~n <br>~~Per Un~~it<br>|~~$12.00~~<br>|~~EA~~<br>|
-|~~Checkpoint~~<br>~~Harmony~~<br>~~Email & Collaboration –~~ <br>~~Management~~<br>~~Base~~<br>~~Service ~~<br>|~~Thrive Base Managed~~<br>Services for Checkpoint<br>Harmony~~Email &~~<br>~~Collaboration –~~<br>~~Management~~<br>|~~$2400~~<br>|~~EA~~<br>|
-|~~TransformIT Azure AD~~<br>End-User Onboarding<br>and Offboarding<br>|~~Automated Azure AD~~<br>user creation, group<br>assignment and user<br>offboarding disable.<br>|~~$1,884.00~~<br>|~~EA~~<br>|
-|~~TransformIT Integration~~|~~Integration of a product~~<br>with TransformIT<br>|~~$3,132.00~~|~~EA~~|
-|TransformIT Integration<br>for Freshservice<br>|~~Integration of~~<br>Freshservice with<br>TransformIT<br>|$3,132.00|EA|
-|~~TransformIT Integration~~<br>for Jira|~~Integration of  Jira with~~<br>TransformIT<br>|$3,132.00|EA|
-|TransformIT Integration<br>for ServiceNow<br>|~~Integration of~~<br>ServieNow  with<br>TransformIT<br>|$18,000.00|EA<br>|
-|~~TransformIT Integration~~<br>for Slack|~~Integration of Slackt~~<br>with TransformIT<br>|$3,000.00|EA|
-|TransformIT Integration<br>for Workday<br><br>|~~Integration of~~<br>aWorkday with<br>TransformIT<br>|$3,132.00|EA|
-|~~TransformIT~~<br>~~ITSM~~<br>Approver Account (per<br>user)|~~Enable access the~~<br>TransformIT portal for<br>management of cases.|$636.00|EA|
-
-
-
-43230000-24-STC Page **1** of **2**
-Digital Security Solutions
-
-
+---
 
 ## Page 4
 
-|TransformIT ITSM<br>Assignment Group Add-<br>On (5 groups)|Enable access the<br>TransformIT portal for<br>management of cases.|$318.00|EA|
-|---|---|---|---|
-|TransformIT<br>ITSM<br>Change Management|~~Enables change as a~~<br>category option<br>selection with defined<br>sub categories.<br>|$1,884.00|EA|
-|TransformIT<br>ITSM<br>Confidential Controls|~~Provides role-based~~<br>and logged access to<br>an encrypted (AES256)<br>free-text field. Requires<br>TransformIT ITSM<br>Enterprise.<br>|$9,000.00|EA|
-|TransformIT<br>ITSM<br>Enterprise|~~TransformIT Enterprise~~<br>is a co-managed<br>helpdesk solution which<br>enables management<br>of tickets within the<br>TransformIT portal.<br>|$12,528.00|EA|
-|TransformIT<br>ITSM<br>Knowledge<br>Management|~~Enables the ability to~~<br>manage, create, modify<br>and share knowledge<br>articles.<br>|$636.00|EA|
-|TransformIT<br>ITSM<br>Professional<br><br>|~~TransformIT Enterprise~~<br>is a co-managed<br>helpdesk solution which<br>enables management<br>of tickets within the<br>TransformIT portal.<br>|$1,260.00|EA|
-|~~TransformIT~~<br>~~ITSM~~<br>Related<br>Account<br>Management<br>|~~Used to provide access~~<br>to related ServiceNow<br>account cases.<br>|$3,000.00|EA|
-|~~TransformIT ITSM User~~<br>Account (per user)|~~TrasnformIT Per user~~<br>free<br>|$1,884.00|EA|
-|TransformIT ITSM Web<br>Forms|~~Customized web for~~<br>request. Requires<br>TransformIT ITSM<br>Enterprise.<br>|$1,200.00|EA|
-|TransformIT<br>Orchestrated End-User<br>Onboarding<br>and<br>Offboarding|~~Orchestrated end-user~~<br>onboarding and<br>offboarding. Automated<br>actions for end-user<br>onboarding and<br>offboarding activities.<br>|$3,132.00|EA|
-|TransformIT Strategic<br>End-User Onboarding<br>and Offboarding|~~Customize 3 catalog~~<br>item forms for use in<br>onboarding and<br>offboarding.<br>|$6,264.00|EA|
-|TransformIT Workflow<br>|~~Define and implement~~<br>workflow actions for<br>case routing, approval,<br>escalation,<br>notifications.|$3,132.00|EA|
+43230000-24-STC 
+ 
+ Page 2 of 2 
+Digital Security Solutions 
+TransformIT 
+ITSM 
+Assignment Group Add-
+On (5 groups) 
+Enable access the 
+TransformIT portal for 
+management of cases. 
+$318.00 
+EA 
+TransformIT 
+ITSM 
+Change Management 
+Enables change as a 
+category option 
+selection with defined 
+sub categories. 
+$1,884.00 
+EA 
+TransformIT 
+ITSM 
+Confidential Controls 
+Provides role-based 
+and logged access to 
+an encrypted (AES256) 
+free-text field. Requires 
+TransformIT ITSM 
+Enterprise. 
+$9,000.00 
+EA 
+TransformIT 
+ITSM 
+Enterprise 
+TransformIT Enterprise 
+is a co-managed 
+helpdesk solution which 
+enables management 
+of tickets within the 
+TransformIT portal. 
+$12,528.00 
+EA 
+TransformIT 
+ITSM 
+Knowledge 
+Management 
+Enables the ability to 
+manage, create, modify 
+and share knowledge 
+articles. 
+$636.00 
+EA 
+TransformIT 
+ITSM 
+Professional 
+TransformIT Enterprise 
+is a co-managed 
+helpdesk solution which 
+enables management 
+of tickets within the 
+TransformIT portal. 
+$1,260.00 
+EA 
+TransformIT 
+ITSM 
+Related 
+Account 
+Management 
+Used to provide access 
+to related ServiceNow 
+account cases. 
+$3,000.00 
+EA 
+TransformIT ITSM User 
+Account (per user) 
+TrasnformIT Per user 
+free 
+$1,884.00 
+EA 
+TransformIT ITSM Web 
+Forms 
+Customized web for 
+request. Requires 
+TransformIT ITSM 
+Enterprise. 
+$1,200.00 
+EA 
+TransformIT 
+Orchestrated End-User 
+Onboarding 
+and 
+Offboarding 
+Orchestrated end-user 
+onboarding and 
+offboarding. Automated 
+actions for end-user 
+onboarding and 
+offboarding activities. 
+$3,132.00 
+EA 
+TransformIT Strategic 
+End-User Onboarding 
+and Offboarding 
+Customize 3 catalog 
+item forms for use in 
+onboarding and 
+offboarding. 
+$6,264.00 
+EA 
+TransformIT Workflow 
+Define and implement 
+workflow actions for 
+case routing, approval, 
+escalation, 
+notifications. 
+$3,132.00 
+EA 
+ 
+ 
 
 
-
-43230000-24-STC Page **2** of **2**
-Digital Security Solutions
-
-
+---
 
 ## Page 5
 
-**Price Proposal**
+43230000-24-STC 
+ 
+ Page 1 of 2 
+Digital Security Solutions 
+Price Proposal 
+ 
+Respondent: Thrive______________________________ 
+ 
+Solution Proposed: Checkpoint SASE w/ Management 
+ 
+Service Category: Service Category 10: Secure Access Service Edge (SASE)  
+ 
+Tiered, not to exceed pricing for initial term: 
+ 
+Tier 
+Price 
+Unit 
+Checkpoint SASE Enterprise 
+$173.80 
+EA 
+Add-On Services (OPTIONAL) for initial term: 
+ 
+Name 
+Description 
+Price 
+Unit 
+Checkpoint 
+SASE 
+Gateway 
+Checkpoint SASE 
+Gateway 
+$960.00 
+EA 
+Checkpoint 
+SASE 
+Resource 
+Access 
+Tunnels 
+Checkpoint SASE 
+Resource Access 
+Tunnels 
+$180.00 
+EA 
+Checkpoint 
+SASE 
+Management per Unit 
+Checkpoint SASE 
+Management per Unit 
+$12.00 
+EA 
+Checkpoint 
+SASE 
+Management 
+Base 
+Service 
+Checkpoint SASE 
+Management Base 
+Service 
+$2400 
+EA 
+Checkpoint 
+SASE 
+Gateway Management 
+per Unit 
+Checkpoint SASE 
+Gateway Management 
+per Unit 
+$240.00 
+ 
+EA 
+Checkpoint 
+SASE 
+Resource 
+Access 
+Tunnels 
+Management 
+Per Unit 
+Checkpoint SASE 
+Resource Access 
+Tunnels Management 
+Per Unit 
+$60.00 
+EA 
+TransformIT Azure AD 
+End-User Onboarding 
+and Offboarding 
+Automated Azure AD 
+user creation, group 
+assignment and user 
+offboarding disable. 
+$1,884.00 
+EA 
+TransformIT Integration Integration of a product 
+with TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for Freshservice 
+Integration of  
+Freshservice with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for Jira 
+Integration of  Jira with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT Integration 
+for ServiceNow 
+Integration of 
+ServieNow  with 
+TransformIT 
+$18,000.00 
+EA 
+ 
+TransformIT Integration 
+for Slack 
+Integration of Slackt 
+with TransformIT 
+$3,000.00 
+EA 
+TransformIT Integration 
+for Workday 
+Integration of 
+aWorkday with 
+TransformIT 
+$3,132.00 
+EA 
+TransformIT 
+ITSM 
+Approver Account (per 
+user) 
+Enable access the 
+TransformIT portal for 
+management of cases. 
+$636.00 
+EA 
 
-Respondent: Thrive______________________________
 
-Solution Proposed: Checkpoint SASE w/ Management
-
-Service Category: Service Category 10: Secure Access Service Edge (SASE)
-
-
-|Tiered, not to exceed pricing fo  Tier|or initial term: Price|Unit|
-|---|---|---|
-|~~Tier~~<br>|~~Price~~<br>|~~Unit~~<br>|
-|~~Checkpoint SASE Enterprise~~<br>|~~$173.80~~<br>|~~EA~~|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-|Checkpoint SASE Enter Add-On Services (OPTI  Name|rprise $173.80 IONAL) for initial term: Description|EA : Price|Unit|
-|---|---|---|---|
-|~~Name~~<br><br>|~~Description~~<br>|~~Price~~<br>|~~Unit~~<br>|
-|~~Checkpoint~~<br>~~SASE~~<br>~~Gateway~~<br><br>|~~Checkpoint SASE~~<br>~~Gateway~~<br>|~~$960.00~~<br>|~~EA~~<br>|
-|~~Checkpoint~~<br>~~SASE~~<br>~~Resource~~<br>~~Access~~<br>~~Tunnels~~<br><br>|~~Checkpoint SASE~~<br>~~Resource Access ~~<br>~~Tunnels~~<br>|~~$180.00~~<br>|~~EA~~<br>|
-|~~Checkpoint~~<br>~~SASE~~<br>~~Management per Unit~~<br><br>|~~Checkpoint SASE~~<br>~~Management per Un~~it<br>|~~$12.00~~<br>|~~EA~~<br>|
-|~~Checkpoint~~<br>~~SASE~~<br>~~Management~~<br>~~Base~~<br>~~Service~~<br><br>|~~Checkpoint SASE~~<br>~~Management Base~~ <br>~~Service~~<br>|~~$2400~~<br>|~~EA~~<br>|
-|~~Checkpoint~~<br>~~SASE~~<br>~~Gateway Management~~<br>~~per Unit~~<br><br>|~~Checkpoint SASE~~<br>G~~ateway Manageme~~nt<br>~~per Unit~~<br>|~~$240.00~~<br> <br>|~~EA~~<br>|
-|~~Checkpoint~~<br>~~SASE~~<br>~~Resource~~<br>~~Access~~<br>~~Tunnels~~<br>~~Management~~<br>~~Per Unit~~<br>|~~Checkpoint SASE~~<br>~~Resource Access ~~<br>T~~unnels Managemen~~t <br>~~Per Unit~~<br>|~~$60.00~~<br>|~~EA~~<br>|
-|~~TransformIT Azure AD~~<br>End-User Onboarding<br>and Offboarding<br>|~~Automated Azure AD~~<br>user creation, group<br>assignment and user<br>offboarding disable.<br>|~~$1,884.00~~<br>|~~EA~~<br>|
-|~~TransformIT Integration~~|~~Integration of a product~~<br>with TransformIT<br>|~~$3,132.00~~|~~EA~~|
-|TransformIT Integration<br>for Freshservice<br>|~~Integration of~~<br>Freshservice with<br>TransformIT<br>|$3,132.00|EA|
-|~~TransformIT Integration~~<br>for Jira|~~Integration of  Jira with~~<br>TransformIT<br>|$3,132.00|EA|
-|TransformIT Integration<br>for ServiceNow<br>|~~Integration of~~<br>ServieNow  with<br>TransformIT<br>|$18,000.00|EA<br>|
-|~~TransformIT Integration~~<br>for Slack|~~Integration of Slackt~~<br>with TransformIT<br>|$3,000.00|EA|
-|TransformIT Integration<br>for Workday<br><br>|~~Integration of~~<br>aWorkday with<br>TransformIT<br>|$3,132.00|EA|
-|~~TransformIT~~<br>~~ITSM~~<br>Approver Account (per<br>user)|~~Enable access the~~<br>TransformIT portal for<br>management of cases.|$636.00|EA|
-
-
-
-43230000-24-STC Page **1** of **2**
-Digital Security Solutions
-
-
+---
 
 ## Page 6
 
-|TransformIT ITSM<br>Assignment Group Add-<br>On (5 groups)|Enable access the<br>TransformIT portal for<br>management of cases.|$318.00|EA|
-|---|---|---|---|
-|TransformIT<br>ITSM<br>Change Management|~~Enables change as a~~<br>category option<br>selection with defined<br>sub categories.<br>|$1,884.00|EA|
-|TransformIT<br>ITSM<br>Confidential Controls|~~Provides role-based~~<br>and logged access to<br>an encrypted (AES256)<br>free-text field. Requires<br>TransformIT ITSM<br>Enterprise.<br>|$9,000.00|EA|
-|TransformIT<br>ITSM<br>Enterprise|~~TransformIT Enterprise~~<br>is a co-managed<br>helpdesk solution which<br>enables management<br>of tickets within the<br>TransformIT portal.<br>|$12,528.00|EA|
-|TransformIT<br>ITSM<br>Knowledge<br>Management|~~Enables the ability to~~<br>manage, create, modify<br>and share knowledge<br>articles.<br>|$636.00|EA|
-|TransformIT<br>ITSM<br>Professional<br><br>|~~TransformIT Enterprise~~<br>is a co-managed<br>helpdesk solution which<br>enables management<br>of tickets within the<br>TransformIT portal.<br>|$1,260.00|EA|
-|~~TransformIT~~<br>~~ITSM~~<br>Related<br>Account<br>Management<br>|~~Used to provide access~~<br>to related ServiceNow<br>account cases.<br>|$3,000.00|EA|
-|~~TransformIT ITSM User~~<br>Account (per user)|~~TrasnformIT Per user~~<br>free<br>|$1,884.00|EA|
-|TransformIT ITSM Web<br>Forms|~~Customized web for~~<br>request. Requires<br>TransformIT ITSM<br>Enterprise.<br>|$1,200.00|EA|
-|TransformIT<br>Orchestrated End-User<br>Onboarding<br>and<br>Offboarding|~~Orchestrated end-user~~<br>onboarding and<br>offboarding. Automated<br>actions for end-user<br>onboarding and<br>offboarding activities.<br>|$3,132.00|EA|
-|TransformIT Strategic<br>End-User Onboarding<br>and Offboarding|~~Customize 3 catalog~~<br>item forms for use in<br>onboarding and<br>offboarding.<br>|$6,264.00|EA|
-|TransformIT Workflow<br>|~~Define and implement~~<br>workflow actions for<br>case routing, approval,<br>escalation,<br>notifications.|$3,132.00|EA|
+43230000-24-STC 
+ 
+ Page 2 of 2 
+Digital Security Solutions 
+TransformIT 
+ITSM 
+Assignment Group Add-
+On (5 groups) 
+Enable access the 
+TransformIT portal for 
+management of cases. 
+$318.00 
+EA 
+TransformIT 
+ITSM 
+Change Management 
+Enables change as a 
+category option 
+selection with defined 
+sub categories. 
+$1,884.00 
+EA 
+TransformIT 
+ITSM 
+Confidential Controls 
+Provides role-based 
+and logged access to 
+an encrypted (AES256) 
+free-text field. Requires 
+TransformIT ITSM 
+Enterprise. 
+$9,000.00 
+EA 
+TransformIT 
+ITSM 
+Enterprise 
+TransformIT Enterprise 
+is a co-managed 
+helpdesk solution which 
+enables management 
+of tickets within the 
+TransformIT portal. 
+$12,528.00 
+EA 
+TransformIT 
+ITSM 
+Knowledge 
+Management 
+Enables the ability to 
+manage, create, modify 
+and share knowledge 
+articles. 
+$636.00 
+EA 
+TransformIT 
+ITSM 
+Professional 
+TransformIT Enterprise 
+is a co-managed 
+helpdesk solution which 
+enables management 
+of tickets within the 
+TransformIT portal. 
+$1,260.00 
+EA 
+TransformIT 
+ITSM 
+Related 
+Account 
+Management 
+Used to provide access 
+to related ServiceNow 
+account cases. 
+$3,000.00 
+EA 
+TransformIT ITSM User 
+Account (per user) 
+TrasnformIT Per user 
+free 
+$1,884.00 
+EA 
+TransformIT ITSM Web 
+Forms 
+Customized web for 
+request. Requires 
+TransformIT ITSM 
+Enterprise. 
+$1,200.00 
+EA 
+TransformIT 
+Orchestrated End-User 
+Onboarding 
+and 
+Offboarding 
+Orchestrated end-user 
+onboarding and 
+offboarding. Automated 
+actions for end-user 
+onboarding and 
+offboarding activities. 
+$3,132.00 
+EA 
+TransformIT Strategic 
+End-User Onboarding 
+and Offboarding 
+Customize 3 catalog 
+item forms for use in 
+onboarding and 
+offboarding. 
+$6,264.00 
+EA 
+TransformIT Workflow 
+Define and implement 
+workflow actions for 
+case routing, approval, 
+escalation, 
+notifications. 
+$3,132.00 
+EA 
+ 
 
 
-
-43230000-24-STC Page **2** of **2**
-Digital Security Solutions
-
-
+---

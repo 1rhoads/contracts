@@ -39,6 +39,7 @@
             <a href="{{ url_for('view_document', doc_id=doc.id, q=query) }}" class="back-link">
                 ← Back to Results for "{{ query }}"
             </a>
+
         </div>
         {% endif %}
 
@@ -48,23 +49,49 @@
 
         {% if current_page %}
         <div class="pagination-controls">
-            {% if current_page > 1 %}
-            <a href="{{ url_for('view_document', doc_id=doc.id, page=current_page-1, q=query) }}" class="nav-btn prev">
-                Previous Page
-            </a>
-            {% else %}
-            <span class="nav-btn disabled">Previous Page</span>
+            <!-- Result Navigation -->
+            {% if prev_result or next_result %}
+            <div class="result-nav">
+                {% if prev_result %}
+                <a href="{{ url_for('view_document', doc_id=doc.id, page=prev_result, q=query) }}"
+                    class="nav-btn result-btn">
+                    ← Previous Result (Page {{ prev_result }})
+                </a>
+                {% else %}
+                <span class="nav-btn result-btn disabled">← Previous Result</span>
+                {% endif %}
+
+                {% if next_result %}
+                <a href="{{ url_for('view_document', doc_id=doc.id, page=next_result, q=query) }}"
+                    class="nav-btn result-btn">
+                    Next Result (Page {{ next_result }}) →
+                </a>
+                {% else %}
+                <span class="nav-btn result-btn disabled">Next Result →</span>
+                {% endif %}
+            </div>
             {% endif %}
 
-            <span class="page-indicator">Page {{ current_page }} of {{ total_pages }}</span>
+            <!-- Page Navigation -->
+            <div class="page-nav">
+                {% if prev_page %}
+                <a href="{{ url_for('view_document', doc_id=doc.id, page=prev_page, q=query) }}" class="nav-btn">
+                    Previous Page
+                </a>
+                {% else %}
+                <span class="nav-btn disabled">Previous Page</span>
+                {% endif %}
 
-            {% if current_page < total_pages %} <a
-                href="{{ url_for('view_document', doc_id=doc.id, page=current_page+1, q=query) }}" class="nav-btn next">
-                Next Page
+                <span class="page-indicator">Page {{ current_page }} of {{ total_pages }}</span>
+
+                {% if next_page %}
+                <a href="{{ url_for('view_document', doc_id=doc.id, page=next_page, q=query) }}" class="nav-btn">
+                    Next Page
                 </a>
                 {% else %}
                 <span class="nav-btn disabled">Next Page</span>
                 {% endif %}
+            </div>
         </div>
         {% endif %}
 

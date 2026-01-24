@@ -29,8 +29,8 @@ def convert_pdf_to_md(pdf_path, md_path):
         return False
 
 def main():
-    if not os.path.exists(MD_DIR):
-        os.makedirs(MD_DIR)
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
         
     files = [f for f in os.listdir(PDF_DIR) if f.lower().endswith(".pdf")]
     print(f"Found {len(files)} PDFs to convert.")
@@ -38,7 +38,7 @@ def main():
     for filename in files:
         pdf_path = os.path.join(PDF_DIR, filename)
         md_filename = filename.replace(".pdf", ".md")
-        md_path = os.path.join(MD_DIR, md_filename)
+        md_path = os.path.join(OUTPUT_DIR, md_filename)
         
         convert_pdf_to_md(pdf_path, md_path)
 

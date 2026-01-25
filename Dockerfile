@@ -3,7 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # Install system dependencies (sqlite3)
-RUN apt-get update && apt-get install -y sqlite3 && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y sqlite3 tesseract-ocr libgl1 && rm -rf /var/lib/apt/lists/*
 
 # Install python dependencies
 COPY requirements.txt .

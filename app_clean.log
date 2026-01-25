@@ -11,3 +11,38 @@ Press CTRL+C to quit
  * Debugger PIN: 106-474-066
 Entered view_document: 5
 127.0.0.1 - - [24/Jan/2026 11:17:35] "GET /document/5?page=1&q=Tanium HTTP/1.1" 200 -
+ * Detected change in '/home/rhoadsr/Documents/Code/contracts/convert_to_md.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 106-474-066
+ * Detected change in '/home/rhoadsr/Documents/Code/contracts/convert_to_md.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 106-474-066
+ * Detected change in '/home/rhoadsr/Documents/Code/contracts/convert_to_md.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 106-474-066
+ * Detected change in '/home/rhoadsr/Documents/Code/contracts/convert_to_md.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 106-474-066
+ * Detected change in '/home/rhoadsr/Documents/Code/contracts/convert_to_md.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 106-474-066
+ * Detected change in '/home/rhoadsr/Documents/Code/contracts/convert_to_md.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 106-474-066
+ * Detected change in '/home/rhoadsr/Documents/Code/contracts/convert_to_md.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 106-474-066

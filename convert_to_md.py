@@ -15,7 +15,9 @@ def convert_pdf_to_md(pdf_path, md_path):
         text_content.append(f"# {title}\n")
         
         with pdfplumber.open(pdf_path) as pdf:
+            total_pages = len(pdf.pages)
             for i, page in enumerate(pdf.pages):
+                print(f"  Processing page {i + 1}/{total_pages}...", end='\r', flush=True)
                 text_content.append(f"## Page {i + 1}\n")
                 
                 # Extract tables first
@@ -56,20 +58,48 @@ def convert_pdf_to_md(pdf_path, md_path):
         print(f"Error converting {pdf_path}: {e}")
         return False
 
+# Helper for process pool must be top-level
+def process_file(pdf_file):
+    p_path = os.path.join(PDF_DIR, pdf_file)
+    m_path = os.path.join(OUTPUT_DIR, pdf_file.replace(".pdf", ".md"))
+    
+    if os.path.exists(m_path):
+        # Optional: Check size > 0?
+        # print(f"Skipping existing: {pdf_file}")
+        return True
+
+    # print(f"Starting: {pdf_file}") # Optional: reduce clutter
+    if convert_pdf_to_md(p_path, m_path):
+        return True
+    return False
+
 def main():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
         
     files = [f for f in os.listdir(PDF_DIR) if f.lower().endswith(".pdf")]
-    print(f"Found {len(files)} PDFs to convert.")
+    # Sort files: Process small files first by size?
+    # Simple alphabetic sort is fine, or sort by size if we want quick wins.
+    # files.sort(key=lambda x: os.path.getsize(os.path.join(PDF_DIR, x))) # Optional
+    files.sort()
     
-    for filename in files:
-        print(f"Processing: {filename}...")
-        pdf_path = os.path.join(PDF_DIR, filename)
-        md_filename = filename.replace(".pdf", ".md")
-        md_path = os.path.join(OUTPUT_DIR, md_filename)
-        
-        convert_pdf_to_md(pdf_path, md_path)
+    print(f"Found {len(files)} PDFs. Resuming conversion with 4 workers...")
+    
+    import concurrent.futures
+    import time
+    
+    start_time = time.time()
+    successful = 0
+    
+    # Use fewer workers to avoid OOM on large PDFs
+    with concurrent.futures.ProcessPoolExecutor(max_workers=4) as executor:
+        results = executor.map(process_file, files)
+        for res in results:
+            if res:
+                successful += 1
+
+    duration = time.time() - start_time
+    print(f"\nBatch complete: {successful}/{len(files)} files checked/converted in {duration:.2f}s.")
 
 if __name__ == "__main__":
     main()

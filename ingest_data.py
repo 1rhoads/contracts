@@ -32,7 +32,17 @@ def init_db():
       INSERT INTO documents_fts(rowid, title, content) VALUES (new.id, new.title, new.content);
     END;
     ''')
-    # (We can add update/delete triggers if needed, but for now specific ingestion is enough)
+    c.execute('''
+    CREATE TRIGGER IF NOT EXISTS documents_ad AFTER DELETE ON documents BEGIN
+      INSERT INTO documents_fts(documents_fts, rowid, content) VALUES('delete', old.id, old.content);
+    END;
+    ''')
+    c.execute('''
+    CREATE TRIGGER IF NOT EXISTS documents_au AFTER UPDATE ON documents BEGIN
+      INSERT INTO documents_fts(documents_fts, rowid, content) VALUES('delete', old.id, old.content);
+      INSERT INTO documents_fts(rowid, title, content) VALUES (new.id, new.title, new.content);
+    END;
+    ''')
     
     conn.commit()
     conn.close()
@@ -44,17 +54,17 @@ def ingest_files():
     
     # Check if we already have data
     files = glob.glob(os.path.join(MARKDOWN_DIR, "*.md"))
+    # Sort files to ensure consistent order if possible, though updates won't change ID
+    files.sort()
+    
     print(f"Scanning {len(files)} files...")
     
     new_count = 0
+    updated_count = 0
+    
     for filepath in files:
         filename = os.path.basename(filepath)
         
-        # Check if file exists in DB
-        existing = c.execute("SELECT id FROM documents WHERE filename = ?", (filename,)).fetchone()
-        if existing:
-            continue
-            
         # title cleaning logic
         title = filename.replace('.md', '').replace('.pdf', '')
         title = title.replace('_', ' ')
@@ -67,17 +77,23 @@ def ingest_files():
         
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
-            
-        c.execute("INSERT INTO documents (title, filename, content) VALUES (?, ?, ?)", (title, filename, content))
-        new_count += 1
-        print(f"Imported: {filename}")
+
+        # Check if file exists in DB
+        existing = c.execute("SELECT id FROM documents WHERE filename = ?", (filename,)).fetchone()
+        if existing:
+            # Update content
+            c.execute("UPDATE documents SET title=?, content=? WHERE id=?", (title, content, existing[0]))
+            updated_count += 1
+            print(f"Updated: {filename}")
+        else:
+            # Insert new
+            c.execute("INSERT INTO documents (title, filename, content) VALUES (?, ?, ?)", (title, filename, content))
+            new_count += 1
+            print(f"Imported: {filename}")
         
     conn.commit()
     conn.close()
-    if new_count > 0:
-        print(f"Ingestion complete. Added {new_count} new documents.")
-    else:
-        print("No new documents to ingest.")
+    print(f"Ingestion complete. Added {new_count} new, Updated {updated_count} existing documents.")
 
 
 if __name__ == "__main__":

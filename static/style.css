@@ -390,6 +390,45 @@ h1 {
     font-size: 0.9em;
 }
 
+/* Table Styles */
+.markdown-body table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.markdown-body th,
+.markdown-body td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.markdown-body th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.markdown-body tr:last-child td {
+    border-bottom: none;
+}
+
+.markdown-body tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Scroll wrapper for wide tables */
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 600px) {
     h1 {
         font-size: 2.5rem;

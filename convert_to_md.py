@@ -16,8 +16,16 @@ def convert_pdf_to_md(pdf_path, md_path):
         
         with pdfplumber.open(pdf_path) as pdf:
             total_pages = len(pdf.pages)
+            if total_pages > 500:
+                print(f"Skipping {pdf_path}: Too many pages ({total_pages}) for bulk processing.")
+                text_content.append(f"> **Note**: This document has {total_pages} pages and was skipped during bulk conversion to save resources.\n")
+                # Create a placeholder file so we don't retry it every time
+                with open(md_path, "w", encoding="utf-8") as f:
+                    f.write("\n".join(text_content))
+                return True
+
             for i, page in enumerate(pdf.pages):
-                print(f"  Processing page {i + 1}/{total_pages}...", end='\r', flush=True)
+                # print(f"  Processing page {i + 1}/{total_pages}...", end='\r', flush=True)
                 text_content.append(f"## Page {i + 1}\n")
                 
                 # Extract tables first
@@ -67,6 +75,10 @@ def process_file(pdf_file):
         # Optional: Check size > 0?
         # print(f"Skipping existing: {pdf_file}")
         return True
+        
+    if "Mainline_Information_Systems_LLC.pdf" in pdf_file:
+        print(f"Skipping large file: {pdf_file}")
+        return False
 
     # print(f"Starting: {pdf_file}") # Optional: reduce clutter
     if convert_pdf_to_md(p_path, m_path):

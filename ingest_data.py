@@ -6,10 +6,12 @@ import json
 from util.categories import extract_categories
 
 # Configuration
-DB_NAME = "data/contracts.db"
+DB_NAME = "instance/contracts.db"
 MARKDOWN_DIR = "data/markdown"
 
 def init_db():
+    if not os.path.exists('instance'):
+        os.makedirs('instance')
     conn = sqlite3.connect(DB_NAME)
     c = conn.cursor()
     # Create main table

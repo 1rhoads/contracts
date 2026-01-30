@@ -162,7 +162,7 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
     padding: 3rem 1.5rem;
 }
@@ -348,15 +348,25 @@ h1 {
     text-overflow: ellipsis;
 }
 
+.doc-layout {
+    display: flex;
+    height: calc(100vh - 80px);
+    /* Adjust based on header height */
+    overflow: hidden;
+    width: 100%;
+}
+
 .document-container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 2.5rem;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
     background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 1rem;
+    border: none;
+    border-radius: 0;
     backdrop-filter: blur(12px);
-    min-height: 800px;
+    min-height: auto;
+    height: 100vh;
+    /* Full height if not using split pane layout directly on body */
 }
 
 /* Markdown Styles */

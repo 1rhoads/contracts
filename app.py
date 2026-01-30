@@ -9,7 +9,8 @@ from markdown import markdown # We might need this, but we can display raw text 
 app = Flask(__name__)
 
 def get_db_connection():
-    db_path = os.path.join(os.path.dirname(__file__), 'data', 'contracts.db')
+    # Use instance folder for persistence
+    db_path = os.path.join(os.path.dirname(__file__), 'instance', 'contracts.db')
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     return conn

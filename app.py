@@ -26,69 +26,142 @@ def sanitize_query_fns(q):
             processed.append(t)
     return " ".join(processed)
 
+def get_sidebar_data():
+    conn = get_db_connection()
+    # Get all distinct vendors
+    vendors = [r['vendor'] for r in conn.execute("SELECT DISTINCT vendor FROM documents WHERE vendor IS NOT NULL ORDER BY vendor").fetchall()]
+    
+    # Get all categories
+    # Since categories are stored as JSON list strings, we need to flatten them
+    import json
+    cats_rows = conn.execute("SELECT categories FROM documents WHERE categories IS NOT NULL").fetchall()
+    unique_cats = set()
+    for row in cats_rows:
+        try:
+            clist = json.loads(row['categories'])
+            for c in clist:
+                unique_cats.add(c)
+        except:
+            pass
+            
+    # Sort categories naturally (Number first)
+    # They usually come as "1. Name", so sorting by string works decently or better logic needed
+    def natural_keys(text):
+        try:
+           return int(text.split('.')[0])
+        except:
+           return 999
+           
+    sorted_cats = sorted(list(unique_cats), key=natural_keys)
+    
+    conn.close()
+    return vendors, sorted_cats
+
 @app.route('/')
 def index():
     query = request.args.get('q', '')
+    selected_vendor = request.args.get('vendor')
+    selected_category = request.args.get('category')
+    
     results = []
     
-    if query:
-        conn = get_db_connection()
-        # Use FTS5 snippet
-        # snippet(documents_fts, -1, '<b>', '</b>', '...', 64)
-        sql = """
-        SELECT d.id, d.title, d.filename, d.content,
+    conn = get_db_connection()
+    
+    # Base Query
+    # We need to construct dynamic WHERE clauses
+    sql_parts = ["""
+        SELECT d.id, d.title, d.filename, d.content, d.vendor, d.categories,
                snippet(documents_fts, 1, '<mark>', '</mark>', '...', 64) as snippet
         FROM documents_fts 
         JOIN documents d ON documents_fts.rowid = d.id
-        WHERE documents_fts MATCH ? 
-        ORDER BY rank
-        LIMIT 50
-        """
-        # Pass query standard FTS5 syntax. 
-        # Spaces imply AND. Quotes imply PHRASE. OR is explicit.
-        sanitized_query = sanitize_query_fns(query)
+    """]
+    
+    where_clauses = []
+    params = []
+    
+    # 1. Search Query
+    if query:
+        where_clauses.append("documents_fts MATCH ?")
+        params.append(sanitize_query_fns(query))
         
-        try:
-            # Attempt 1: Exact/Standard Query (Sanitized)
-            rows = conn.execute(sql, (sanitized_query,)).fetchall()
-            
-            # Attempt 2: Fallback (Relaxed)
-            if not rows:
-                relaxed_query = query.replace('"', '').replace('-', ' ')
-                if relaxed_query != query:
-                     rows = conn.execute(sql, (relaxed_query,)).fetchall()
-            
-            # Process rows to add match_count
-            results = []
-            
-            # Prepare counting regex terms
-            # Simple approach: split query, count occurrences of each term?
-            # Or just count the full phrase if quoted?
-            # Let's count *words* from the query that appear.
-            count_terms = query.replace('"', '').lower().split()
-            
-            for row in rows:
-                matches = 0
-                if row['content']:
-                    text_lower = row['content'].lower()
-                    for term in count_terms:
-                        matches += text_lower.count(term)
-                
-                results.append({
-                    'id': row['id'],
-                    'title': row['title'],
-                    'filename': row['filename'],
-                    'snippet': row['snippet'],
-                    'match_count': matches
-                })
-                     
-        except sqlite3.OperationalError as e:
-            print(f"SQL Error: {e}")
-            results = []
-            
-        conn.close()
+    # 2. Vendor Filter
+    if selected_vendor:
+        where_clauses.append("d.vendor = ?")
+        params.append(selected_vendor)
         
-    return render_template('index.html', query=query, results=results)
+    # 3. Category Filter
+    # Categories are JSON list. We check if the JSON string contains the category substring.
+    # Simple workaround for SQLite without JSON extension
+    if selected_category:
+        where_clauses.append("d.categories LIKE ?")
+        params.append(f"%{selected_category}%")
+        
+    if where_clauses:
+        sql_parts.append("WHERE " + " AND ".join(where_clauses))
+        
+    sql_parts.append("ORDER BY rank LIMIT 50" if query else "ORDER BY d.title")
+    # If no query, we might want to paginate or limit? Let's show all for browsing
+    
+    full_sql = " ".join(sql_parts)
+    
+    try:
+        rows = conn.execute(full_sql, params).fetchall()
+        
+        # If no results with strict query, try relaxed (only if search was involved)
+        if not rows and query:
+             relaxed_query = query.replace('"', '').replace('-', ' ')
+             if relaxed_query != query:
+                 # Rebuild params with relaxed query
+                 # Params order: [query, vendor?, category?]
+                 new_params = [relaxed_query]
+                 if selected_vendor: new_params.append(selected_vendor)
+                 if selected_category: new_params.append(f"%{selected_category}%")
+                 
+                 rows = conn.execute(full_sql, new_params).fetchall()
+                 
+        # Process rows
+        count_terms = query.replace('"', '').lower().split() if query else []
+        
+        for row in rows:
+            matches = 0
+            if query and row['content']:
+                text_lower = row['content'].lower()
+                for term in count_terms:
+                    matches += text_lower.count(term)
+                    
+            # Load cats for display
+            import json
+            try:
+                display_cats = json.loads(row['categories'])
+            except:
+                display_cats = []
+            
+            results.append({
+                'id': row['id'],
+                'title': row['title'],
+                'filename': row['filename'],
+                'vendor': row['vendor'],
+                'categories': display_cats,
+                'snippet': row['snippet'] if query else row['content'][:200] + "...", 
+                'match_count': matches
+            })
+            
+    except sqlite3.OperationalError as e:
+        print(f"SQL Error: {e}")
+        # Possibly fallback to empty
+        
+    conn.close()
+    
+    # Get Sidebar Data
+    vendors, categories = get_sidebar_data()
+        
+    return render_template('index.html', 
+                         query=query, 
+                         results=results,
+                         all_vendors=vendors,
+                         all_categories=categories,
+                         selected_vendor=selected_vendor,
+                         selected_category=selected_category)
 
 @app.route('/document/<int:doc_id>')
 def view_document(doc_id):
@@ -240,6 +313,12 @@ def view_document(doc_id):
          
     # Fallback to full content
     return render_template('document.html', doc=doc, content=content)
+
+@app.route('/pdfs/<path:filename>')
+def serve_pdf(filename):
+    from flask import send_from_directory
+    pdf_dir = os.path.join(os.path.dirname(__file__), 'data', 'pdfs')
+    return send_from_directory(pdf_dir, filename)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

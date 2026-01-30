@@ -38,34 +38,113 @@
             </form>
         </section>
 
-        {% if query %}
+        <!-- Always show main container now -->
         <section class="results-section">
+            {% if query or selected_vendor or selected_category %}
             <h2>{{ results|length }} Result{% if results|length != 1 %}s{% endif %} Found</h2>
-            <div class="results-grid">
-                {% for row in results %}
-                <a href="{{ url_for('view_document', doc_id=row['id'], q=query) }}" class="result-card">
-                    <div class="card-content">
-                        <h3>
-                            {{ row['title'] }}
-                            {% if row['match_count'] > 0 %}
-                            <span class="match-badge">{{ row['match_count'] }} match{% if row['match_count'] != 1 %}es{%
-                                endif %}</span>
-                            {% endif %}
-                        </h3>
-                        <div class="snippet">...{{ row['snippet']|safe }}...</div>
-                        <div class="meta">Filename: {{ row['filename'] }}</div>
+            {% endif %}
+
+            <div class="main-container"
+                style="display: flex; gap: 2rem; max-width: 1200px; margin: 0 auto; margin-top: 2rem; padding: 0 1rem;">
+
+                <!-- Sidebar -->
+                <aside class="filters-sidebar" style="width: 250px; flex-shrink: 0;">
+                    <div class="filter-group">
+                        <h3>Vendors</h3>
+                        <div class="filter-list" style="max-height: 300px; overflow-y: auto;">
+                            {% for vendor in all_vendors %}
+                            {% set is_active = (vendor == selected_vendor) %}
+                            <a href="{{ url_for('index', q=query, vendor=vendor if not is_active else None, category=selected_category) }}"
+                                class="filter-item {{ 'active' if is_active else '' }}"
+                                style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
+                                {{ vendor }}
+                                {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
+                            </a>
+                            {% endfor %}
+                        </div>
                     </div>
-                </a>
-                {% endfor %}
+
+                    <div class="filter-group" style="margin-top: 2rem;">
+                        <h3>Service Categories</h3>
+                        <div class="filter-list" style="max-height: 400px; overflow-y: auto;">
+                            {% for cat in all_categories %}
+                            {% set is_active = (cat == selected_category) %}
+                            <a href="{{ url_for('index', q=query, vendor=selected_vendor, category=cat if not is_active else None) }}"
+                                class="filter-item {{ 'active' if is_active else '' }}"
+                                style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
+                                {{ cat }}
+                                {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
+                            </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    {% if selected_vendor or selected_category %}
+                    <div style="margin-top: 1rem;">
+                        <a href="{{ url_for('index', q=query) }}" class="button secondary"
+                            style="width: 100%; text-align: center;">Clear Filters</a>
+                    </div>
+                    {% endif %}
+                </aside>
+
+                <!-- Results -->
+                <main class="results-area" style="flex-grow: 1;">
+                    {% if query %}
+                    <p class="search-stats">{{ results|length }} result(s) found for "<strong>{{ query }}</strong>"</p>
+                    {% elif selected_vendor or selected_category %}
+                    <p class="search-stats">{{ results|length }} document(s) matching filters</p>
+                    {% else %}
+                    <p class="search-stats" style="color: var(--text-secondary);">Select a filter or search to browse
+                        documents.</p>
+                    {% endif %}
+
+                    <div class="results-grid">
+                        {% for result in results %}
+                        <div class="card result-card">
+                            <div class="card-header">
+                                <h2><a href="{{ url_for('view_document', doc_id=result.id, q=query) }}">{{ result.title
+                                        }}</a></h2>
+                                {% if result.match_count > 0 %}
+                                <span class="match-badge">{{ result.match_count }} matches</span>
+                                {% endif %}
+                            </div>
+
+                            <div class="metadata-badges"
+                                style="margin: 0.5rem 0; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span class="badge"
+                                    style="background: #eef2ff; color: #4f46e5; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">{{
+                                    result.vendor }}</span>
+                                {% for cat in result.categories[:2] %}
+                                <span class="badge"
+                                    style="background: #ecfdf5; color: #059669; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">{{
+                                    cat.split('.')[0] }}</span>
+                                {% endfor %}
+                                {% if result.categories|length > 2 %}
+                                <span class="badge" style="font-size: 0.8rem; color: #666;">+{{ result.categories|length
+                                    - 2 }} more</span>
+                                {% endif %}
+                            </div>
+
+                            <div class="snippet">
+                                ...{{ result.snippet|safe }}...
+                            </div>
+                            <div class="card-footer">
+                                <span class="filename">{{ result.filename }}</span>
+                                <a href="{{ url_for('view_document', doc_id=result.id, q=query) }}"
+                                    class="button small">View Document &rarr;</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        {% if not results and (query or selected_vendor or selected_category) %}
+                        <div class="no-results">
+                            <p>No documents found matching your criteria.</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </main>
             </div>
 
-            {% if results|length == 0 %}
-            <div class="no-results">
-                <p>No documents found matching "<strong>{{ query }}</strong>". Try a different keyword.</p>
-            </div>
-            {% endif %}
-        </section>
-        {% endif %}
     </div>
 </body>
 

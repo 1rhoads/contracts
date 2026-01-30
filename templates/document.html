@@ -43,67 +43,115 @@
         </div>
         {% endif %}
 
-        <div id="content" class="markdown-body">
-            <!-- Content injected here -->
+        <div class="doc-layout" style="display: flex; height: calc(100vh - 80px); overflow: hidden;">
+
+            <!-- Left Pane: Markdown/Text Content -->
+            <main class="doc-content" style="flex: 1; overflow-y: auto; padding: 2rem; max-width: 50%;">
+                <header class="doc-header">
+                    <a href="{{ url_for('index', q=query) }}" class="back-link">&larr; Back to Search</a>
+                    <h1>{{ doc.title }}</h1>
+                    <div class="doc-meta">Filename: {{ doc.filename }}</div>
+
+                    <!-- Toggle PDF Button -->
+                    <button onclick="togglePdf()" class="button secondary small" style="margin-top: 1rem;">Toggle PDF
+                        Viewer</button>
+                </header>
+
+                <!-- Navigation Controls -->
+                <div class="nav-controls sticky-nav">
+                    <div class="nav-group page-nav">
+                        {% if prev_page %}
+                        <a href="{{ url_for('view_document', doc_id=doc.id, page=prev_page, q=query) }}"
+                            class="button small">&larr; Page {{ prev_page }}</a>
+                        {% else %}
+                        <span class="button small disabled">&larr; Prev</span>
+                        {% endif %}
+
+                        <span class="current-indicator">Page <strong>{{ current_page }}</strong> of {{ total_pages
+                            }}</span>
+
+                        {% if next_page %}
+                        <a href="{{ url_for('view_document', doc_id=doc.id, page=next_page, q=query) }}"
+                            class="button small">Page {{ next_page }} &rarr;</a>
+                        {% else %}
+                        <span class="button small disabled">Next &rarr;</span>
+                        {% endif %}
+                    </div>
+
+                    {% if query %}
+                    <div class="nav-group match-nav">
+                        <span class="nav-label">Matches:</span>
+                        {% if prev_result %}
+                        <a href="{{ url_for('view_document', doc_id=doc.id, page=prev_result, q=query) }}"
+                            class="button small result-btn">&larr; Prev Match</a>
+                        {% else %}
+                        <span class="button small disabled result-btn">&larr; Prev Match</span>
+                        {% endif %}
+
+                        {% if next_result %}
+                        <a href="{{ url_for('view_document', doc_id=doc.id, page=next_result, q=query) }}"
+                            class="button small result-btn">Next Match &rarr;</a>
+                        {% else %}
+                        <span class="button small disabled result-btn">Next Match &rarr;</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+
+                <!-- Debug Info (Optional) -->
+                {#
+                <div
+                    style="background: #333; color: lime; padding: 10px; margin-bottom: 10px; font-family: monospace; font-size: 0.8em;">
+                    Query: {{ query }} <br>
+                    Current Page: {{ current_page }} <br>
+                    Total Pages: {{ total_pages }} <br>
+                    Prev/Next Page: {{ prev_page }} / {{ next_page }} <br>
+                    Prev/Next Result: {{ prev_result }} / {{ next_result }}
+                </div>
+                #}
+
+                <div class="markdown-body">
+                    {{ content | safe }}
+                </div>
+            </main>
+
+            <!-- Right Pane: PDF Viewer -->
+            <aside id="pdf-pane" class="pdf-viewer"
+                style="flex: 1; border-left: 1px solid var(--border); background: #333; display: flex; flex-direction: column;">
+                <div
+                    style="padding: 0.5rem; background: #222; border-bottom: 1px solid #444; color: #fff; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Original PDF (Page {{ current_page }})</span>
+                    <a href="/pdfs/{{ doc.filename }}" download class="button small">Download</a>
+                </div>
+                <!-- Embed PDF with page parameter using browser native viewer fragments -->
+                <!-- #page=3 -->
+                <iframe src="/pdfs/{{ doc.filename }}#page={{ current_page }}" width="100%" height="100%"
+                    style="border: none;"></iframe>
+            </aside>
+
         </div>
-
-        {% if current_page %}
-        <div class="pagination-controls">
-            <!-- Result Navigation -->
-            {% if prev_result or next_result %}
-            <div class="result-nav">
-                {% if prev_result %}
-                <a href="{{ url_for('view_document', doc_id=doc.id, page=prev_result, q=query) }}"
-                    class="nav-btn result-btn">
-                    ← Previous Result (Page {{ prev_result }})
-                </a>
-                {% else %}
-                <span class="nav-btn result-btn disabled">← Previous Result</span>
-                {% endif %}
-
-                {% if next_result %}
-                <a href="{{ url_for('view_document', doc_id=doc.id, page=next_result, q=query) }}"
-                    class="nav-btn result-btn">
-                    Next Result (Page {{ next_result }}) →
-                </a>
-                {% else %}
-                <span class="nav-btn result-btn disabled">Next Result →</span>
-                {% endif %}
-            </div>
-            {% endif %}
-
-            <!-- Page Navigation -->
-            <div class="page-nav">
-                {% if prev_page %}
-                <a href="{{ url_for('view_document', doc_id=doc.id, page=prev_page, q=query) }}" class="nav-btn">
-                    Previous Page
-                </a>
-                {% else %}
-                <span class="nav-btn disabled">Previous Page</span>
-                {% endif %}
-
-                <span class="page-indicator">Page {{ current_page }} of {{ total_pages }}</span>
-
-                {% if next_page %}
-                <a href="{{ url_for('view_document', doc_id=doc.id, page=next_page, q=query) }}" class="nav-btn">
-                    Next Page
-                </a>
-                {% else %}
-                <span class="nav-btn disabled">Next Page</span>
-                {% endif %}
-            </div>
-        </div>
-        {% endif %}
-
-        <!-- Hidden source content -->
-        <div id="raw-content" style="display: none;">{{ content }}</div>
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const raw = document.getElementById('raw-content').textContent;
-            const contentDiv = document.getElementById('content');
-            contentDiv.innerHTML = marked.parse(raw);
+        function togglePdf() {
+            const pane = document.getElementById('pdf-pane');
+            const content = document.querySelector('.doc-content');
+
+            if (pane.style.display === 'none') {
+                pane.style.display = 'flex';
+                content.style.maxWidth = '50%';
+            } else {
+                pane.style.display = 'none';
+                content.style.maxWidth = '100%';
+            }
+        }
+
+        // Auto-scroll to mark
+        document.addEventListener("DOMContentLoaded", function () {
+            const mark = document.querySelector("mark");
+            if (mark) {
+                mark.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
         });
     </script>
 </body>

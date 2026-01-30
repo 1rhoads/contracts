@@ -2,6 +2,8 @@ import sqlite3
 import os
 import glob
 import re
+import json
+from util.categories import extract_categories
 
 # Configuration
 DB_NAME = "data/contracts.db"
@@ -16,6 +18,8 @@ def init_db():
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT,
         filename TEXT,
+        vendor TEXT,
+        categories TEXT,
         content TEXT
     )
     ''')
@@ -75,21 +79,31 @@ def ingest_files():
         title = title.title()
         title = re.sub(r'\s+', ' ', title).strip()
         
+        # Vendor is essentially the cleaned title for now, or we can use the filename stem
+        vendor = title 
+        
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
+
+        # Extract Categories
+        cats = extract_categories(content)
+        cats_json = json.dumps(cats)
 
         # Check if file exists in DB
         existing = c.execute("SELECT id FROM documents WHERE filename = ?", (filename,)).fetchone()
         if existing:
             # Update content
-            c.execute("UPDATE documents SET title=?, content=? WHERE id=?", (title, content, existing[0]))
+            # Only update if changed? For now, force update to get new metadata
+            c.execute("UPDATE documents SET title=?, vendor=?, categories=?, content=? WHERE id=?", 
+                      (title, vendor, cats_json, content, existing[0]))
             updated_count += 1
-            print(f"Updated: {filename}")
+            print(f"Updated: {filename} (Cats: {len(cats)})")
         else:
             # Insert new
-            c.execute("INSERT INTO documents (title, filename, content) VALUES (?, ?, ?)", (title, filename, content))
+            c.execute("INSERT INTO documents (title, filename, vendor, categories, content) VALUES (?, ?, ?, ?, ?)", 
+                      (title, filename, vendor, cats_json, content))
             new_count += 1
-            print(f"Imported: {filename}")
+            print(f"Imported: {filename} (Cats: {len(cats)})")
         
     conn.commit()
     conn.close()

@@ -121,12 +121,12 @@
                 <div
                     style="padding: 0.5rem; background: #222; border-bottom: 1px solid #444; color: #fff; display: flex; justify-content: space-between; align-items: center;">
                     <span>Original PDF (Page {{ current_page }})</span>
-                    <a href="/pdfs/{{ doc.filename }}" download class="button small">Download</a>
+                    <a href="/pdfs/{{ doc.filename.replace('.md', '.pdf') }}" download class="button small">Download</a>
                 </div>
                 <!-- Embed PDF with page parameter using browser native viewer fragments -->
                 <!-- #page=3 -->
-                <iframe src="/pdfs/{{ doc.filename }}#page={{ current_page }}" width="100%" height="100%"
-                    style="border: none;"></iframe>
+                <iframe src="/pdfs/{{ doc.filename.replace('.md', '.pdf') }}#page={{ current_page }}" width="100%"
+                    height="100%" style="border: none;"></iframe>
             </aside>
 
         </div>

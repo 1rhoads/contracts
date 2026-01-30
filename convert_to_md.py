@@ -4,59 +4,26 @@ import fitz  # Directories
 PDF_DIR = "data/pdfs"
 OUTPUT_DIR = "data/markdown"
 
-import pdfplumber
+
+import pymupdf4llm
 
 def convert_pdf_to_md(pdf_path, md_path):
     try:
-        text_content = []
-        
-        # Add Title based on filename
+        # Get title from filename
         title = os.path.basename(pdf_path).replace('.pdf', '').replace('_', ' ')
+        
+        # Use pymupdf4llm for high-quality Markdown conversion
+        # It handles tables, headers, and multi-column layouts automatically
+        chunks = pymupdf4llm.to_markdown(pdf_path, page_chunks=True)
+        
+        text_content = []
         text_content.append(f"# {title}\n")
         
-        with pdfplumber.open(pdf_path) as pdf:
-            total_pages = len(pdf.pages)
-            if total_pages > 500:
-                print(f"Skipping {pdf_path}: Too many pages ({total_pages}) for bulk processing.")
-                text_content.append(f"> **Note**: This document has {total_pages} pages and was skipped during bulk conversion to save resources.\n")
-                # Create a placeholder file so we don't retry it every time
-                with open(md_path, "w", encoding="utf-8") as f:
-                    f.write("\n".join(text_content))
-                return True
-
-            for i, page in enumerate(pdf.pages):
-                # print(f"  Processing page {i + 1}/{total_pages}...", end='\r', flush=True)
-                text_content.append(f"## Page {i + 1}\n")
-                
-                # Extract tables first
-                tables = page.extract_tables()
-                if tables:
-                    for table in tables:
-                        # Convert table to markdown
-                        if not table: continue
-                        
-                        # Filter out empty rows/None
-                        cleaned_table = [[cell if cell else "" for cell in row] for row in table]
-                        
-                        # Markdown table formatting
-                        if cleaned_table:
-                             # Header
-                            header = cleaned_table[0]
-                            text_content.append("| " + " | ".join(header) + " |")
-                            text_content.append("| " + " | ".join(["---"] * len(header)) + " |")
-                            # Rows
-                            for row in cleaned_table[1:]:
-                                text_content.append("| " + " | ".join(row) + " |")
-                            text_content.append("\n")
-                
-                # Extract text (filtering out text inside tables is hard, so we just dump text too)
-                # Ideally we deduct table bboxes, but for V1 let's append text below
-                text = page.extract_text()
-                if text:
-                    text_content.append(text)
-                
-                text_content.append("\n---\n")
-                
+        for i, chunk in enumerate(chunks):
+            text_content.append(f"## Page {i + 1}\n")
+            text_content.append(chunk.get('text', ''))
+            text_content.append("\n---\n")
+            
         with open(md_path, "w", encoding="utf-8") as f:
             f.write("\n".join(text_content))
             
@@ -71,16 +38,10 @@ def process_file(pdf_file):
     p_path = os.path.join(PDF_DIR, pdf_file)
     m_path = os.path.join(OUTPUT_DIR, pdf_file.replace(".pdf", ".md"))
     
-    if os.path.exists(m_path):
-        # Optional: Check size > 0?
-        # print(f"Skipping existing: {pdf_file}")
-        return True
-        
-    if "Mainline_Information_Systems_LLC.pdf" in pdf_file:
-        print(f"Skipping large file: {pdf_file}")
-        return False
+    # Always re-convert to ensure standardization across all files
+    # if os.path.exists(m_path):
+    #    return True
 
-    # print(f"Starting: {pdf_file}") # Optional: reduce clutter
     if convert_pdf_to_md(p_path, m_path):
         return True
     return False

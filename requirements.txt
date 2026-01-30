@@ -5,4 +5,5 @@ requests
 beautifulsoup4
 schedule
 markdown
-pdfplumber
+
+pymupdf4llm

@@ -2,2146 +2,1052 @@
 
 ## Page 1
 
-|  | Service Category 1 |  | Qualys Toolset | Qualys
-SKU(s) | Quantity | List Price –
-Monthly
-Recurring
-Charge (MRC) |  | Lumen PM |  |  | Lumen M&P |  | Each
-Additional
-Unit (MRC) |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Endpoint Based |  |  |  |  |  |  | Support Install |  |  | Day 1 and |  |  |  |  |
-|  | Asset Discovery |  |  |  |  |  |  | and Setup – |  |  | Day 2 |  |  |  |  |
-|  | Monthly Scan and |  |  |  |  |  |  | Non-Recurring |  |  | Support |  |  |  |  |
-|  | Report |  |  |  |  |  |  | Charge (NRC) |  |  | (MRC) |  |  |  |  |
-| Model Small Entity:
-Tier 1
-Devices/Endpoints:
-250
-Domains 5,
-[1 SSL Cert per
-Domain]
-Users: 150
-IP Addresses: 100 |  |  | Mgd Qualys
-CSAM - Cloud
-Agent Passive
-Sensor (CAPS) | Q-P-
-CSAM | 250 -
-Minimum
-Quantity | $5,260.00 | 16 hours
-$136.00 per
-hour
-$2,176.00 NRC |  |  | SecEng 8
-hours per
-month
-$136.00 per
-hour
-$13,056.00
-annual |  |  | $21.04, per
-unit for
-quantities of
-251 to 4999
-units |  |  |
-|  |  |  | Patch
-Management | Q-P-M | 250 -
-Minimum
-Quantity | $5,990.00 |  |  |  |  |  |  |  | $23.96, per unit |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  | for quantities |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  | 251 to 4999 |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  | units |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-
-
-| Qualys |
-| --- |
-| SKU(s) |
-
-
-| List Price – |
-| --- |
-| Monthly |
-| Recurring |
-| Charge (MRC) |
-
-
-| Each |
-| --- |
-| Additional |
-| Unit (MRC) |
-
-
-| Patch |
-| --- |
-| Management |
-
-
-| 250 - |
-| --- |
-| Minimum |
-| Quantity |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Exhibit B
-Service Category 1 (Qualys)
+
+# Exhibit B Service Category 1 (Qualys)
+
+
 Respondent: __Lumen____________________________
+
+
 Solution Proposed: _Lumen Managed Cybersecurity Asset Management _
-Service Category: Service Category 1: Endpoint-Based Asset Discovery
-Service Category 1 Qualys Toolset Qualys Quantity List Price – Lumen PM Lumen M&P Each
-Endpoint Based SKU(s) Monthly Support Install Day 1 and Additional
-Asset Discovery Recurring and Setup – Day 2 Unit (MRC)
-Monthly Scan and Charge (MRC) Non-Recurring Support
-Report Charge (NRC) (MRC)
-Model Small Entity: Mgd Qualys Q-P- 250 - $5,260.00 16 hours SecEng 8 $21.04, per
-Tier 1 CSAM - Cloud CSAM Minimum $136.00 per hours per unit for
-Devices/Endpoints: Agent Passive Quantity hour month quantities of
-250 Sensor (CAPS) $2,176.00 NRC $136.00 per 251 to 4999
-Domains 5, hour units
-[1 SSL Cert per $13,056.00
-Domain] annual
-Users: 150
-IP Addresses: 100
-Patch Q-P-M 250 - $5,990.00 $23.96, per unit
-Management Minimum for quantities
-Quantity 251 to 4999
-units
-Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)
-43230000-24-STC Page 2 of 25
+~~Service Category: Service Category 1: Endpoint-Based Asset Discovery~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 1<br>Endpoint Based<br>Asset Discovery<br>Monthly Scan and<br>Report|Qualys Toolset|Qualys<br>SKU(s)|Quantity|List Price –<br>Monthly<br>Recurring<br>Charge (MRC)|Lumen PM<br>Support Install<br>and Setup –<br>Non-Recurring<br>Charge (NRC)|Lumen M&P<br>Day 1 and<br>Day 2<br>Support<br>(MRC)|Each<br>Additional<br>Unit (MRC)|
+|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Tier 1<br>Devices/Endpoints:<br>250<br>Domains 5,<br>[1 SSL Cert per<br>Domain]<br>Users: 150<br>IP Addresses: 100|Mgd Qualys<br>CSAM - Cloud<br>Agent Passive<br>Sensor (CAPS)|Q-P-<br>CSAM|250 -<br>Minimum<br>Quantity|$5,260.00|16 hours<br>$136.00 per<br>hour<br>$2,176.00 NRC|SecEng 8<br>hours per<br>month<br>$136.00 per<br>hour<br>$13,056.00<br>annual|$21.04, per<br>unit for<br>quantities of<br>251 to 4999<br>units|
+||Patch<br>Management|Q-P-M|250 -<br>Minimum<br>Quantity|$5,990.00|||$23.96, per unit<br>for quantities<br>251 to 4999<br>units|
+|||||||||
+|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|Year 1 Total $26,482.00 … Year 2 Total $24,306.00 (minus install NRC)|
+
+
+43230000-24-STC Page **2** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 2
 
-| Model Medium
-Entity: Tier 2
-Devices/Endpoints:
-5000,
-Domains 50,
-[1 SSL Cert per
-Domain]
-Users: 3000 IP
-Addresses: 1500 |  |  | Mgd Qualys
-CSAM - Cloud
-Agent Passive
-Sensor (CAPS) | Q-P-
-CSAM | 5000 | $37,150.00 | 16 hours
-$136.00 per
-hour $2,176.00
-NRC | SecEng 8
-hours per
-month
-$136.00 per
-hour
-$13,056.00
-Annual | $7.43, per unit
-for quantities of
-5001 to 16999
-units |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  | Patch
-Management | Q-P-M | 5000 | $57,100.00 |  |  |  | $11.42, per unit |  |
-|  |  |  |  |  |  |  |  |  |  | for quantities of |  |
-|  |  |  |  |  |  |  |  |  |  | 5001 to 16999 |  |
-|  |  |  |  |  |  |  |  |  |  | units |  |
-| Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |  |  |
-|  | Model Large Entity: |  | Mgd Qualys
-CSAM - Cloud
-Agent Passive
-Sensor (CAPS) | Q-P-
-CSAM | 17000 | $74,800.00 | 16 hours
-$136.00 per
-hour
-$2,176.00 NRC | SecEng 8
-hours per
-month
-$136.00 per
-hour
-$13,056.00
-Annual | $4.40, Above
-17000 units |  |  |
-|  | Tier 3 |  |  |  |  |  |  |  |  |  |  |
-|  | Devices/Endpoints: |  |  |  |  |  |  |  |  |  |  |
-|  | 17000, |  |  |  |  |  |  |  |  |  |  |
-|  | Domains 1700, |  |  |  |  |  |  |  |  |  |  |
-|  | [1 SSL Cert per |  |  |  |  |  |  |  |  |  |  |
-|  | Domain] |  |  |  |  |  |  |  |  |  |  |
-|  | Users: 10,000 |  |  |  |  |  |  |  |  |  |  |
-|  | IP Addresses: 5000 |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Patch
-Management | Q-P-M | 17000 | $136,870.00 |  |  | $8.05, Above
-17000 units |  |  |
-| Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |  |  |
-
-
-| Patch |
-| --- |
-| Management |
-
-
-| Mgd Qualys |
-| --- |
-| CSAM - Cloud |
-| Agent Passive |
-| Sensor (CAPS) |
-
-
-| Q-P- |
-| --- |
-| CSAM |
-
-
-| 16 hours |
-| --- |
-| $136.00 per |
-| hour |
-| $2,176.00 NRC |
-
-
-| SecEng 8 |
-| --- |
-| hours per |
-| month |
-| $136.00 per |
-| hour |
-| $13,056.00 |
-| Annual |
-
-
-| $4.40, Above |
-| --- |
-| 17000 units |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Model Medium Mgd Qualys Q-P- 5000 $37,150.00 16 hours SecEng 8 $7.43, per unit
-Entity: Tier 2 CSAM - Cloud CSAM $136.00 per hours per for quantities of
-Devices/Endpoints: Agent Passive hour $2,176.00 month 5001 to 16999
-5000, Sensor (CAPS) NRC $136.00 per units
-Domains 50, hour
-[1 SSL Cert per $13,056.00
-Domain] Annual
-Users: 3000 IP
-Addresses: 1500
-Patch Q-P-M 5000 $57,100.00 $11.42, per unit
-Management for quantities of
-5001 to 16999
-units
-Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)
-Model Large Entity: Mgd Qualys Q-P- 17000 $74,800.00 16 hours SecEng 8 $4.40, Above
-Tier 3 CSAM - Cloud CSAM $136.00 per hours per 17000 units
-Devices/Endpoints: Agent Passive hour month
-17000, Sensor (CAPS) $2,176.00 NRC $136.00 per
-Domains 1700, hour
-[1 SSL Cert per $13,056.00
-Domain] Annual
-Users: 10,000
-IP Addresses: 5000
-Patch Q-P-M 17000 $136,870.00 $8.05, Above
-Management 17000 units
-Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)
-43230000-24-STC Page 3 of 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Model Medium<br>Entity: Tier 2<br>Devices/Endpoints:<br>5000,<br>Domains 50,<br>[1 SSL Cert per<br>Domain]<br>Users: 3000 IP<br>Addresses: 1500|Mgd Qualys<br>CSAM - Cloud<br>Agent Passive<br>Sensor (CAPS)|Q-P-<br>CSAM|5000|$37,150.00|16 hours<br>$136.00 per<br>hour $2,176.00<br>NRC|SecEng 8<br>hours per<br>month<br>$136.00 per<br>hour<br>$13,056.00<br>Annual|$7.43, per unit<br>for quantities of<br>5001 to 16999<br>units|
+|---|---|---|---|---|---|---|---|
+||Patch<br>Management|Q-P-M|5000|$57,100.00|||$11.42, per unit<br>for quantities of<br>5001 to 16999<br>units|
+|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|Year 1 Total $109,482.00 … Year 2 Total $107,306.00 (minus install NRC)|
+|Model Large Entity:<br>Tier 3<br>Devices/Endpoints:<br>17000,<br>Domains 1700,<br>[1 SSL Cert per<br>Domain]<br>Users: 10,000<br>IP Addresses: 5000|Mgd Qualys<br>CSAM - Cloud<br>Agent Passive<br>Sensor (CAPS)|Q-P-<br>CSAM|17000|$74,800.00|16 hours<br>$136.00 per<br>hour<br>$2,176.00 NRC|SecEng 8<br>hours per<br>month<br>$136.00 per<br>hour<br>$13,056.00<br>Annual|$4.40, Above<br>17000 units|
+||Patch<br>Management|Q-P-M|17000|$136,870.00|||$8.05, Above<br>17000 units|
+|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|Year 1 Total $226,902.00 … Year 2 Total $224,726.00 (minus install NRC)<br>|
+
+
+43230000-24-STC Page **3** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 3
 
-|  | Service Category 2 |  | Qualys Toolset | Qualys
-SKU(s) | Quantity | List Price -
-(MRC) | Lumen PM
-Support Install
-and Setup -
-(NRC) | Lumen M&P Day
-1 and Day 2
-Support - (MRC) | Each
-Additional
-Unit (MRC) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Network Based |  |  |  |  |  |  |  |  |
-|  | Asset Discovery |  |  |  |  |  |  |  |  |
-|  | Monthly Scan and |  |  |  |  |  |  |  |  |
-|  | Report |  |  |  |  |  |  |  |  |
-| Model Small Entity:
-Tier 1
-Devices/Endpoints:
-250
-Domains 5,
-[1 SSL Cert per
-Domain]
-Users: 150
-IP Addresses: 100 |  |  | Mgd Qualys Network
-Passive Sensor | Q-S-PS-1G | 1 | $ 2,495.00 | 16 hours
-$136.00 per
-hour
-$2,176.00 NRC | SecEng 8 hours
-per month
-$136.00 per hour
-$13,056.00 annual | $2,495, per
-unit for
-quantities
-of 251 to
-4999 units |
-|  | Model Small Entity: |  | Mgd Qualys CSAM -
-Cloud Agent Passive
-Sensor (CAPS) | Q-P-CSAM | 250 -
-Minimum
-Quantity | $ 5,260.00 |  |  | $21.04, per
-unit for
-quantities
-of 251 to
-4999 units |
-|  | Devices/Endpoints: |  |  |  |  |  |  |  |  |
-|  | 250 |  |  |  |  |  |  |  |  |
-|  | Domains 5, |  |  |  |  |  |  |  |  |
-|  | [1 SSL Cert per |  |  |  |  |  |  |  |  |
-|  | Domain] |  |  |  |  |  |  |  |  |
-|  | Users: 150 |  |  |  |  |  |  |  |  |
-|  | IP Addresses: 100 |  |  |  |  |  |  |  |  |
-|  |  |  | Qualys Network
-Passive Sensor VM
-cores 8, 16G Ram, 50G
-HD | free Value
-Add with
-CSAM | 1 | $ |  |  |  |
-
-
-| Qualys |
-| --- |
-| SKU(s) |
-
-
-| List Price - |
-| --- |
-| (MRC) |
-
-
-| Lumen PM |
-| --- |
-| Support Install |
-| and Setup - |
-| (NRC) |
-
-
-| Lumen M&P Day |
-| --- |
-| 1 and Day 2 |
-| Support - (MRC) |
-
-
-| Each |
-| --- |
-| Additional |
-| Unit (MRC) |
-
-
-| Mgd Qualys CSAM - |
-| --- |
-| Cloud Agent Passive |
-| Sensor (CAPS) |
-
-
-| 250 - |
-| --- |
-| Minimum |
-| Quantity |
-
-
-| $21.04, per |
-| --- |
-| unit for |
-| quantities |
-| of 251 to |
-| 4999 units |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 2 (Qualys)
+
+# Service Category 2 (Qualys)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: _Lumen Managed Network Based Asset Discovery
-Service Category: Service Category 2: Network-Based Asset Discovery
-Service Category 2 Qualys Toolset Qualys Quantity List Price - Lumen PM Lumen M&P Day Each
-Network Based SKU(s) (MRC) Support Install 1 and Day 2 Additional
-Asset Discovery and Setup - Support - (MRC) Unit (MRC)
-Monthly Scan and (NRC)
-Report
-Model Small Entity: Mgd Qualys Network Q-S-PS-1G 1 $ 2,495.00 16 hours SecEng 8 hours $2,495, per
-Tier 1 Passive Sensor $136.00 per per month unit for
-Devices/Endpoints: hour $136.00 per hour quantities
-250 $2,176.00 NRC $13,056.00 annual of 251 to
-Domains 5, 4999 units
-[1 SSL Cert per
-Domain]
-Users: 150
-IP Addresses: 100
-Model Small Entity: Mgd Qualys CSAM - Q-P-CSAM 250 - $ 5,260.00 $21.04, per
-Devices/Endpoints: Cloud Agent Passive Minimum unit for
-250 Sensor (CAPS) Quantity quantities
-Domains 5, of 251 to
-[1 SSL Cert per 4999 units
-Domain]
-Users: 150
-IP Addresses: 100
-Qualys Network free Value 1 $
-Passive Sensor VM Add with
-cores 8, 16G Ram, 50G CSAM
-HD
-43230000-24-STC Page 4 of 25
+~~Service Category: Service Category 2: Network-Based Asset Discovery~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 2<br>Network Based<br>Asset Discovery<br>Monthly Scan and<br>Report|Qualys Toolset|Qualys<br>SKU(s)|Quantity|List Price -<br>(MRC)|Lumen PM<br>Support Install<br>and Setup -<br>(NRC)|Lumen M&P Day<br>1 and Day 2<br>Support - (MRC)|Each<br>Additional<br>Unit (MRC)|
+|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Tier 1<br>Devices/Endpoints:<br>250<br>Domains 5,<br>[1 SSL Cert per<br>Domain]<br>Users: 150<br>IP Addresses: 100|Mgd Qualys Network<br>Passive Sensor|Q-S-PS-1G|1|$ 2,495.00|16 hours<br>$136.00 per<br>hour<br>$2,176.00 NRC|SecEng 8 hours<br>per month<br>$136.00 per hour<br>$13,056.00 annual|$2,495, per<br>unit for<br>quantities<br>of 251 to<br>4999 units|
+|Model Small Entity:<br>Devices/Endpoints:<br>250<br>Domains 5,<br>[1 SSL Cert per<br>Domain]<br>Users: 150<br>IP Addresses: 100|Mgd Qualys CSAM  -<br>Cloud Agent Passive<br>Sensor  (CAPS)|Q-P-CSAM|250 -<br>Minimum<br>Quantity|$ 5,260.00|||$21.04, per<br>unit for<br>quantities<br>of 251 to<br>4999 units|
+||Qualys Network<br>Passive Sensor VM<br>cores 8, 16G Ram, 50G<br>HD|free Value<br>Add with<br>CSAM|1|$||||
+
+
+
+43230000-24-STC Page **4** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 4
 
-| Year 1 Total: $22,987.00 … Year 2 Total: $20,811.00 |  |  |  |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |  |  |  |  |
-|  | Model Medium |  | Mgd Qualys Network
-Passive Sensor and
-CSAM Appliance |  |  | Q-S-PS-1G |  | $ 2,495.00 | 16 hours
-$136.00 per
-hour
-$2,176.00 NRC | SecEng 8 hours
-per month
-$136.00 per hour
-$13,056.00 annual | $2,495, per
-unit for
-quantities
-of 5001 to
-16999 units |
-|  | Entity: |  |  |  |  |  |  |  |  |  |  |
-|  | Devices/Endpoints: |  |  |  |  |  |  |  |  |  |  |
-|  | 5000, |  |  |  |  |  |  |  |  |  |  |
-|  | Domains 50, |  |  |  |  |  |  |  |  |  |  |
-|  | [1 SSL Cert per |  |  |  |  |  |  |  |  |  |  |
-|  | Domain] |  |  |  |  |  |  |  |  |  |  |
-|  | Users: 3000 |  |  |  |  |  |  |  |  |  |  |
-|  | IP Addresses: 1500 |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Mgd Qualys CSAM -
-Cloud Agent Passive
-Sensor (CAPS) |  |  | Q-P-CSAM | 5000 | $ 37,150.00 |  |  | $7.43, per
-unit for
-quantities
-of 5001 to
-16999 units |
-|  |  |  |  | Qualys Network |  | free Value
-Add with
-CSAM |  |  |  |  |  |
-|  |  |  |  | Passive Sensor VM |  |  |  |  |  |  |  |
-|  |  |  |  | cores 8, 16G Ram, 50G |  |  |  |  |  |  |  |
-|  |  |  |  | HD |  |  |  |  |  |  |  |
-| Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00 |  |  |  |  |  |  |  |  |  |  |  |
-|  | Model Large Entity: |  | Mgd Qualys Network
-Passive Sensor and
-CSAM Appliance |  |  | Q-S-PS-1G | 1 | $ 2,495.00 | 16 hours
-$136.00 per
-hour
-$2,176.00 NRC | SecEng 8 hours
-per month
-$136.00 per hour
-$13,056.00 annual | $2,495,
-Above
-17000 units |
-|  | Devices/Endpoints: |  |  |  |  |  |  |  |  |  |  |
-|  | 17000, |  |  |  |  |  |  |  |  |  |  |
-|  | Domains 1700, |  |  |  |  |  |  |  |  |  |  |
-|  | [1 SSL Cert per |  |  |  |  |  |  |  |  |  |  |
-|  | Domain] |  |  |  |  |  |  |  |  |  |  |
-|  | Users: 10,000 |  |  |  |  |  |  |  |  |  |  |
-|  | IP Addresses: 5000 |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Mgd Qualys CSAM -
-Cloud Agent Passive
-Sensor (CAPS) |  |  | Q-P-CSAM | 17000 | $74,800.00 |  |  | $4.40,
-Above
-17000 units |
-|  |  |  |  | Qualys Network |  | free Value
-Add with
-CSAM |  |  |  |  |  |
-|  |  |  |  | Passive Sensor VM |  |  |  |  |  |  |  |
-|  |  |  |  | cores 8, 16G Ram, 50G |  |  |  |  |  |  |  |
-|  |  |  |  | HD |  |  |  |  |  |  |  |
-
-
-| Mgd Qualys Network |
-| --- |
-| Passive Sensor and |
-| CSAM Appliance |
-
-
-| 16 hours |
-| --- |
-| $136.00 per |
-| hour |
-| $2,176.00 NRC |
-
-
-| SecEng 8 hours |
-| --- |
-| per month |
-| $136.00 per hour |
-| $13,056.00 annual |
-
-
-| $2,495, per |
-| --- |
-| unit for |
-| quantities |
-| of 5001 to |
-| 16999 units |
-
-
-| free Value |
-| --- |
-| Add with |
-| CSAM |
-
-
-| Mgd Qualys Network |
-| --- |
-| Passive Sensor and |
-| CSAM Appliance |
-
-
-| 16 hours |
-| --- |
-| $136.00 per |
-| hour |
-| $2,176.00 NRC |
-
-
-| SecEng 8 hours |
-| --- |
-| per month |
-| $136.00 per hour |
-| $13,056.00 annual |
-
-
-| $2,495, |
-| --- |
-| Above |
-| 17000 units |
-
-
-| free Value |
-| --- |
-| Add with |
-| CSAM |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Year 1 Total: $22,987.00 … Year 2 Total: $20,811.00
-Model Medium Mgd Qualys Network Q-S-PS-1G $ 2,495.00 16 hours SecEng 8 hours $2,495, per
-Entity: Passive Sensor and $136.00 per per month unit for
-Devices/Endpoints: CSAM Appliance hour $136.00 per hour quantities
-5000, $2,176.00 NRC $13,056.00 annual of 5001 to
-Domains 50, 16999 units
-[1 SSL Cert per
-Domain]
-Users: 3000
-IP Addresses: 1500
-Mgd Qualys CSAM - Q-P-CSAM 5000 $ 37,150.00 $7.43, per
-Cloud Agent Passive unit for
-Sensor (CAPS) quantities
-of 5001 to
-16999 units
-Qualys Network free Value
-Passive Sensor VM Add with
-cores 8, 16G Ram, 50G CSAM
-HD
-Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00
-Model Large Entity: Mgd Qualys Network Q-S-PS-1G 1 $ 2,495.00 16 hours SecEng 8 hours $2,495,
-Devices/Endpoints: Passive Sensor and $136.00 per per month Above
-17000, CSAM Appliance hour $136.00 per hour 17000 units
-Domains 1700, $2,176.00 NRC $13,056.00 annual
-[1 SSL Cert per
-Domain]
-Users: 10,000
-IP Addresses: 5000
-Mgd Qualys CSAM - Q-P-CSAM 17000 $74,800.00 $4.40,
-Cloud Agent Passive Above
-Sensor (CAPS) 17000 units
-Qualys Network free Value
-Passive Sensor VM Add with
-cores 8, 16G Ram, 50G CSAM
-HD
-43230000-24-STC Page 5 of 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Year 1 Total: $22,987.00 … Year 2 Total: $20,811.00|Col2|Col3|Col4|Col5|Col6|Col7|Col8|
+|---|---|---|---|---|---|---|---|
+|||||||||
+|Model Medium<br>Entity:<br>Devices/Endpoints:<br>5000,<br>Domains 50,<br>[1 SSL Cert per<br>Domain]<br>Users: 3000<br>IP Addresses: 1500|Mgd Qualys Network<br>Passive Sensor and<br>CSAM Appliance|Q-S-PS-1G||$ 2,495.00|16 hours<br>$136.00 per<br>hour<br>$2,176.00 NRC|SecEng 8 hours<br>per month<br>$136.00 per hour<br>$13,056.00 annual|$2,495, per<br>unit for<br>quantities<br>of 5001 to<br>16999 units|
+||Mgd Qualys CSAM  -<br>Cloud Agent Passive<br>Sensor  (CAPS)|Q-P-CSAM|5000|$ 37,150.00|||$7.43,  per<br>unit for<br>quantities<br>of 5001 to<br>16999 units|
+||Qualys Network<br>Passive Sensor VM<br>cores 8, 16G Ram, 50G<br>HD|free Value<br>Add with<br>CSAM||||||
+|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|Year 1 Total: $54,877.00 … Year 2 Total: $52,701.00|
+|Model Large Entity:<br>Devices/Endpoints:<br>17000,<br>Domains 1700,<br>[1 SSL Cert per<br>Domain]<br>Users: 10,000<br>IP Addresses: 5000|Mgd Qualys Network<br>Passive Sensor and<br>CSAM Appliance|Q-S-PS-1G|1|$ 2,495.00|16 hours<br>$136.00 per<br>hour<br>$2,176.00 NRC|SecEng 8 hours<br>per month<br>$136.00 per hour<br>$13,056.00 annual|$2,495,<br>Above<br>17000 units|
+||Mgd Qualys CSAM  -<br>Cloud Agent Passive<br>Sensor  (CAPS)|Q-P-CSAM|17000|$74,800.00|||$4.40,<br>Above<br>17000 units|
+||Qualys Network<br>Passive Sensor VM<br>cores 8, 16G Ram, 50G<br>HD|free Value<br>Add with<br>CSAM||||||
+
+
+
+43230000-24-STC Page **5** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 5
 
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
+
+
 Year 1 Total: $92,527.00 … Year 2 Total: $90,351.00
-43230000-24-STC Page 6 of 25
+
+
+43230000-24-STC Page **6** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 6
 
-| Service Category 3
-Endpoint Detection
-and Response |  |  | Qualys Toolset | Qualys
-SKU(s) | Quantity | List Price –
-(MRC) | Lumen PM
-Support Install
-and Setup – (NRC) | Lumen M&P
-Onboarding –
-(MRC) | Each
-Additional
-Unit – (MRC) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Model Small Entity:
-Devices/Endpoints: 250
-Domains 5,
-[1 SSL Cert per Domain]
-Users: 150
-IP Addresses: 100 |  |  | Mgd Qualys
-Qualys Multi-
-Vector EDR | Q-P-EDR | 250 -
-Minimum
-Quantity | $ 44,745.00 | 40 hours $136.00
-per hour
-$5,440.00 NRC | 40 hours
-$136.00 per
-hour
-$5,440.00 NRC | $178.98, per
-unit for
-quantities of
-251 to 4999
-units |
-|  |  |  | Mgd Qualys
-CSAM VM |  |  |  |  |  |  |
-| Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00 |  |  |  |  |  |  |  |  |  |
-|  | Model Medium Entity: |  | Mgd Qualys
-Qualys Multi-
-Vector EDR | Q-P-EDR | 5000 | $ 105,950.00 | 60 hours $136.00
-per hour
-$8,160.00 NRC | 60 hours
-$136.00 per
-hour
-$8,160.00 NRC | $21.19, per
-unit for
-quantities of
-5001 to
-16999 units |
-|  | Devices/Endpoints: |  |  |  |  |  |  |  |  |
-|  | 5000, |  |  |  |  |  |  |  |  |
-|  | Domains 50, |  |  |  |  |  |  |  |  |
-|  | [1 SSL Cert per Domain] |  |  |  |  |  |  |  |  |
-|  | Users: 3000 |  |  |  |  |  |  |  |  |
-|  | IP Addresses: 1500 |  |  |  |  |  |  |  |  |
-|  |  |  | Mgd Qualys
-CSAM VM |  |  |  |  |  |  |
-| Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00 |  |  |  |  |  |  |  |  |  |
-
-
-| Service Category 3 |
-| --- |
-| Endpoint Detection |
-| and Response |
-
-
-| Qualys |
-| --- |
-| SKU(s) |
-
-
-| List Price – |
-| --- |
-| (MRC) |
-
-
-| Lumen PM |
-| --- |
-| Support Install |
-| and Setup – (NRC) |
-
-
-| Lumen M&P |
-| --- |
-| Onboarding – |
-| (MRC) |
-
-
-| Each |
-| --- |
-| Additional |
-| Unit – (MRC) |
-
-
-| Mgd Qualys |
-| --- |
-| CSAM VM |
-
-
-| Mgd Qualys |
-| --- |
-| Qualys Multi- |
-| Vector EDR |
-
-
-| 60 hours $136.00 |
-| --- |
-| per hour |
-| $8,160.00 NRC |
-
-
-| 60 hours |
-| --- |
-| $136.00 per |
-| hour |
-| $8,160.00 NRC |
-
-
-| $21.19, per |
-| --- |
-| unit for |
-| quantities of |
-| 5001 to |
-| 16999 units |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 3 (Qualys)
+
+# Service Category 3 (Qualys)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: _Lumen Managed Endpoint Detection and Response (Qualys)
-Service Category: Service Category 3: Endpoint Detection and Response
-Service Category 3 Qualys Toolset Qualys Quantity List Price – Lumen PM Lumen M&P Each
-Endpoint Detection SKU(s) (MRC) Support Install Onboarding – Additional
-and Response and Setup – (NRC) (MRC) Unit – (MRC)
-Model Small Entity: Mgd Qualys Q-P-EDR 250 - $ 44,745.00 40 hours $136.00 40 hours $178.98, per
-Devices/Endpoints: 250 Qualys Multi- Minimum per hour $136.00 per unit for
-Domains 5, Vector EDR Quantity $5,440.00 NRC hour quantities of
-[1 SSL Cert per Domain] $5,440.00 NRC 251 to 4999
-Users: 150 units
-IP Addresses: 100
-Mgd Qualys
-CSAM VM
-Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00
-Model Medium Entity: Mgd Qualys Q-P-EDR 5000 $ 105,950.00 60 hours $136.00 60 hours $21.19, per
-Devices/Endpoints: Qualys Multi- per hour $136.00 per unit for
-5000, Vector EDR $8,160.00 NRC hour quantities of
-Domains 50, $8,160.00 NRC 5001 to
-[1 SSL Cert per Domain] 16999 units
-Users: 3000
-IP Addresses: 1500
-Mgd Qualys
-CSAM VM
-Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00
-43230000-24-STC Page 7 of 25
+~~Service Category: Service Category 3: Endpoint Detection and Response~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 3<br>Endpoint Detection<br>and Response|Qualys Toolset|Qualys<br>SKU(s)|Quantity|List Price –<br>(MRC)|Lumen PM<br>Support Install<br>and Setup – (NRC)|Lumen M&P<br>Onboarding –<br>(MRC)|Each<br>Additional<br>Unit – (MRC)|
+|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Devices/Endpoints: 250<br>Domains 5,<br>[1 SSL Cert per Domain]<br>Users: 150<br>IP Addresses: 100|Mgd Qualys<br>Qualys Multi-<br>Vector EDR|Q-P-EDR|250 -<br>Minimum<br>Quantity|$ 44,745.00|40 hours $136.00<br>per hour<br>$5,440.00 NRC|40 hours<br>$136.00 per<br>hour<br>$5,440.00 NRC|$178.98, per<br>unit for<br>quantities of<br>251 to 4999<br>units|
+||Mgd Qualys<br>CSAM VM|||||||
+|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|Year 1 Total: $55,625.00 … Year 2 Total: $44,745.00|
+|Model Medium Entity:<br>Devices/Endpoints:<br>5000,<br>Domains 50,<br>[1 SSL Cert per Domain]<br>Users: 3000<br>IP Addresses: 1500|Mgd Qualys<br>Qualys Multi-<br>Vector EDR|Q-P-EDR|5000|$ 105,950.00|60 hours $136.00<br>per hour<br>$8,160.00 NRC|60 hours<br>$136.00 per<br>hour<br>$8,160.00 NRC|$21.19, per<br>unit for<br>quantities of<br>5001 to<br>16999 units|
+||Mgd Qualys<br>CSAM VM|||||||
+|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|Year 1 Total: $ 122,270.00… Year 2 Total: $105,950.00|
+
+
+
+43230000-24-STC Page **7** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 7
 
-| Model Large Entity:
-Devices/Endpoints:
-17000,
-Domains 1700,
-[1 SSL Cert per Domain]
-Users: 10,000
-IP Addresses: 5000 | Mgd Qualys
-Qualys Multi-
-Vector EDR | Q-P-EDR | 17000 | $240,890.00 | 80 hours $136.00
-per hour
-$10,880.00 NRC | 80 hours
-$136.00 per
-hour
-$10,880.00 NRC | $14.17,
-Above 17000
-units |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Mgd Qualys
-CSAM VM |  |  |  |  |  |  |
-| Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00 |  |  |  |  |  |  |  |
-
-
-| Mgd Qualys |
-| --- |
-| CSAM VM |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Model Large Entity: Mgd Qualys Q-P-EDR 17000 $240,890.00 80 hours $136.00 80 hours $14.17,
-Devices/Endpoints: Qualys Multi- per hour $136.00 per Above 17000
-17000, Vector EDR $10,880.00 NRC hour units
-Domains 1700, $10,880.00 NRC
-[1 SSL Cert per Domain]
-Users: 10,000
-IP Addresses: 5000
-Mgd Qualys
-CSAM VM
-Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00
-43230000-24-STC Page 8 of 25
+
+
+
+
+
+
+
+
+
+
+
+
+|Model Large Entity:<br>Devices/Endpoints:<br>17000,<br>Domains 1700,<br>[1 SSL Cert per Domain]<br>Users: 10,000<br>IP Addresses: 5000|Mgd Qualys<br>Qualys Multi-<br>Vector EDR|Q-P-EDR|17000|$240,890.00|80 hours $136.00<br>per hour<br>$10,880.00 NRC|80 hours<br>$136.00 per<br>hour<br>$10,880.00 NRC|$14.17,<br>Above 17000<br>units|
+|---|---|---|---|---|---|---|---|
+||Mgd Qualys<br>CSAM VM|||||||
+|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|Year 1 Total: $262,650.00 … Year 2 Total: $240,890.00<br>|
+
+
+
+43230000-24-STC Page **8** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 8
 
-| Service Category 3
-Endpoint Detection
-and Response | Toolset | SKU(s) |  |  | Quantity
-(number of
-endpoints) |  | Lumen |  |  | Lumen PM |  |  | Lumen |  | Each
-Additional Unit
-– (MRC) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  | Standard |  |  | Support |  |  | SOC |  |  |
-|  |  |  |  |  |  |  | Pricing 1Yr. |  |  | Install and |  |  | 24X7 |  |  |
-|  |  |  |  |  |  |  | (MRC) |  |  | Setup (NRC) |  |  | Support |  |  |
-| Model Small Entity:
-Tier 1
-Devices/Endpoints:
-250 | Lumen MEDR
-CrowdStrike | CrowdStrike
-MSSP-Bundle
-Falcon Prevent
-Falcon Insight
-XDR
-Falcon Threat
-Graph
-Falcon Data
-Replicator
-Falcon Discover
-Falcon X
-Intelligence |  |  | 250 –
-Minimum
-Quantity | $28,650.00 |  |  | 40 hours
-$136.00 per
-hour
-$5,440.00 NRC |  |  | incl. |  |  | $114.60, per
-unit for
-quantities of
-251 to 4999
-units |
-| Year 1 Total $34,090.00 … Year 2 Total $28,650.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| Model Medium
-Entity: Tier 2
-Devices/Endpoints:
-5000, | Lumen MEDR
-CrowdStrike |  | CrowdStrike |  | 5000 | $ 573,000.00 |  |  | 60 hours
-$136.00 per
-hour
-$8,160.00 NRC |  |  | incl |  |  | $114.60, per
-unit for
-quantities of
-5001 to 16999
-units |
-|  |  |  | MSSP-Bundle |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Falcon Prevent |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Falcon Insight |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | XDR |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Falcon Threat |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Graph |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Falcon Data |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Replicator |  |  |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | Falcon Discover |  |  |  |  |  |  |  |  |  |  |  |  |
-
-
-| Service Category 3 |
-| --- |
-| Endpoint Detection |
-| and Response |
-
-
-| Quantity |
-| --- |
-| (number of |
-| endpoints) |
-
-
-| Each |
-| --- |
-| Additional Unit |
-| – (MRC) |
-
-
-| Model Medium |
-| --- |
-| Entity: Tier 2 |
-| Devices/Endpoints: |
-| 5000, |
-
-
-| Lumen MEDR |
-| --- |
-| CrowdStrike |
-
-
-| 60 hours |
-| --- |
-| $136.00 per |
-| hour |
-| $8,160.00 NRC |
-
-
-| $114.60, per |
-| --- |
-| unit for |
-| quantities of |
-| 5001 to 16999 |
-| units |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 3 (Crowdstrike)
+
+# Service Category 3 (Crowdstrike)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: _Lumen Managed Endpoint Detection and Response (Crowdstrike)
-Service Category: Service Category 3: Endpoint Detection and Response
-Service Category 3 Toolset SKU(s) Quantity Lumen Lumen PM Lumen Each
-Endpoint Detection (number of Standard Support SOC Additional Unit
-and Response endpoints) Pricing 1Yr. Install and 24X7 – (MRC)
-(MRC) Setup (NRC) Support
-Model Small Entity: Lumen MEDR CrowdStrike 250 – $28,650.00 40 hours incl. $114.60, per
-Tier 1 CrowdStrike MSSP-Bundle Minimum $136.00 per unit for
-Devices/Endpoints: Falcon Prevent Quantity hour quantities of
-250 Falcon Insight $5,440.00 NRC 251 to 4999
-XDR units
-Falcon Threat
-Graph
-Falcon Data
-Replicator
-Falcon Discover
-Falcon X
-Intelligence
-Year 1 Total $34,090.00 … Year 2 Total $28,650.00 (minus install NRC)
-Model Medium Lumen MEDR CrowdStrike 5000 $ 573,000.00 60 hours incl $114.60, per
-Entity: Tier 2 CrowdStrike MSSP-Bundle $136.00 per unit for
-Devices/Endpoints: Falcon Prevent hour quantities of
-5000, Falcon Insight $8,160.00 NRC 5001 to 16999
-XDR units
-Falcon Threat
-Graph
-Falcon Data
-Replicator
-Falcon Discover
-43230000-24-STC Page 9 of 25
+~~Service Category: Service Category 3: Endpoint Detection and Response~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 3<br>Endpoint Detection<br>and Response|Toolset|SKU(s)|Quantity<br>(number of<br>endpoints)|Lumen<br>Standard<br>Pricing 1Yr.<br>(MRC)|Lumen PM<br>Support<br>Install and<br>Setup (NRC)|Lumen<br>SOC<br>24X7<br>Support|Each<br>Additional Unit<br>– (MRC)|
+|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Tier 1<br>Devices/Endpoints:<br>250|Lumen MEDR<br>CrowdStrike|CrowdStrike<br>MSSP-Bundle<br>Falcon Prevent<br>Falcon Insight<br>XDR<br>Falcon Threat<br>Graph<br>Falcon Data<br>Replicator<br>Falcon Discover<br>Falcon X<br>Intelligence|250 –<br>Minimum<br>Quantity|$28,650.00|40 hours<br>$136.00 per<br>hour<br>$5,440.00 NRC|incl.|$114.60, per<br>unit for<br>quantities of<br>251 to 4999<br>units|
+|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|Year 1 Total $34,090.00  …  Year 2 Total $28,650.00 (minus install NRC)|
+|||||||||
+|Model Medium<br>Entity: Tier 2<br>Devices/Endpoints:<br>5000,|Lumen MEDR<br>CrowdStrike|CrowdStrike<br>MSSP-Bundle<br>Falcon Prevent<br>Falcon Insight<br>XDR<br>Falcon Threat<br>Graph<br>Falcon Data<br>Replicator<br>Falcon Discover|5000|$ 573,000.00|60 hours<br>$136.00 per<br>hour<br>$8,160.00 NRC|incl|$114.60, per<br>unit for<br>quantities of<br>5001 to 16999<br>units|
+
+
+
+43230000-24-STC Page **9** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 9
 
-|  |  |  | Falcon X
-Intelligence |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
-| Model Large Entity:
-Tier 3
-Devices/Endpoints:
-17000, |  | Lumen MEDR
-CrowdStrike | CrowdStrike
-MSSP-Bundle
-Falcon Prevent
-Falcon Insight
-XDR
-Falcon Threat
-Graph
-Falcon Data
-Replicator
-Falcon Discover
-Falcon X
-Intelligence | 17000 | $ 1,915,560.00 | 80 hours
-$136.00 per
-hour
-$10,880.00
-NRC | incl | $112.68, Above
-17000 units |  |
-| Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |
-
-
-| Falcon X |
-| --- |
-| Intelligence |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Falcon X
-Intelligence
-Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)
-Model Large Entity: Lumen MEDR CrowdStrike 17000 $ 1,915,560.00 80 hours incl $112.68, Above
-Tier 3 CrowdStrike MSSP-Bundle $136.00 per 17000 units
-Devices/Endpoints: Falcon Prevent hour
-17000, Falcon Insight $10,880.00
-XDR NRC
-Falcon Threat
-Graph
-Falcon Data
-Replicator
-Falcon Discover
-Falcon X
-Intelligence
-Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)
-43230000-24-STC Page 10 of 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Col1|Col2|Falcon X<br>Intelligence|Col4|Col5|Col6|Col7|Col8|
+|---|---|---|---|---|---|---|---|
+|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|Year 1 Total $581,160.00 … Year 2 Total $573,000.00 (minus install NRC)|
+|||||||||
+|Model Large Entity:<br>Tier 3<br>Devices/Endpoints:<br>17000,|Lumen MEDR<br>CrowdStrike|CrowdStrike<br>MSSP-Bundle<br>Falcon Prevent<br>Falcon Insight<br>XDR<br>Falcon Threat<br>Graph<br>Falcon Data<br>Replicator<br>Falcon Discover<br>Falcon X<br>Intelligence|17000|$ 1,915,560.00|80 hours<br>$136.00 per<br>hour<br>$10,880.00<br>NRC|incl|$112.68, Above<br>17000 units|
+|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|Year 1 Total $1,926,440.00 … Year 2 Total $1,915,560.00 (minus install NRC)<br>|
+
+
+43230000-24-STC Page **10** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 10
 
-| Service Category 4
-External Facing Asset
-Discovery |  |  | Qualys
-Toolset | Qualys SKU(s) | Quantity | List Price
-(MRC) |  | Lumen PM |  | Lumen M&P Day
-1 and Day 2
-Support – (MRC) | Each Additional
-Unit (MRC) |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  | Support |  |  |  |  |  |
-|  |  |  |  |  |  |  |  | Install and |  |  |  |  |  |
-|  |  |  |  |  |  |  |  | Setup (NRC) |  |  |  |  |  |
-| Model Small Entity:
-Devices/Endpoints:
-250
-Domains 5,
-[1 SSL Cert per
-Domain]
-Users: 150
-IP Addresses: 100 |  |  | Mgd Qualys
-CSAM with
-EASM
-Appliance | Q-P-CSAM | 100 -
-Minimum
-Quantity | $2,807.00 | "16 hours
-$136.00 per
-hour |  |  | Mgd Qualys
-CSAM with
-EASM Appliance | Q-P-CSAM |  |  |
-|  |  |  | Mgd Qualys
-VMDR | Q-P-VMDR | 100 | $3,917.00 |  |  |  |  |  | $39.17, per unit |  |
-|  |  |  |  |  |  |  |  |  |  |  |  | for quantities of |  |
-|  |  |  |  |  |  |  |  |  |  |  |  | 101 to 1499 |  |
-|  |  |  |  |  |  |  |  |  |  |  |  | units |  |
-| Year 1 Total: $21,956 … Year 2 Total: $19,780.00 |  |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | Model Medium |  | Mgd Qualys
-CSAM with
-EASM
-Appliance | Q-P-CSAM | 1500 | $14,430.00 | "16 hours
-$136.00 per
-hour |  |  | Mgd Qualys
-CSAM with
-EASM Appliance | Q-P-CSAM |  |  |
-|  | Entity: |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | Devices/Endpoints: |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | 5000, |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | Domains 50, |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | [1 SSL Cert per |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | Domain] |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | Users: 3000 |  |  |  |  |  |  |  |  |  |  |  |  |
-|  | IP Addresses: 1500 |  |  |  |  |  |  |  |  |  |  |  |  |
-
-
-| Service Category 4 |
-| --- |
-| External Facing Asset |
-| Discovery |
-
-
-| Qualys |
-| --- |
-| Toolset |
-
-
-| List Price |
-| --- |
-| (MRC) |
-
-
-| Lumen M&P Day |
-| --- |
-| 1 and Day 2 |
-| Support – (MRC) |
-
-
-| Each Additional |
-| --- |
-| Unit (MRC) |
-
-
-| Mgd Qualys |
-| --- |
-| VMDR |
-
-
-| Mgd Qualys |
-| --- |
-| CSAM with |
-| EASM |
-| Appliance |
-
-
-| "16 hours |
-| --- |
-| $136.00 per |
-| hour |
-
-
-| Mgd Qualys |
-| --- |
-| CSAM with |
-| EASM Appliance |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 4
+
+# Service Category 4
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: Managed External Attack Surface Management_ _
-Service Category: Service Category 4: External-Facing Asset Discovery
-Service Category 4 Qualys Qualys SKU(s) Quantity List Price Lumen PM Lumen M&P Day Each Additional
-External Facing Asset Toolset (MRC) Support 1 and Day 2 Unit (MRC)
-Discovery Install and Support – (MRC)
-Setup (NRC)
-Model Small Entity: Mgd Qualys Q-P-CSAM 100 - $2,807.00 "16 hours Mgd Qualys Q-P-CSAM
-Devices/Endpoints: CSAM with Minimum $136.00 per CSAM with
-250 EASM Quantity hour EASM Appliance
-Domains 5, Appliance
-[1 SSL Cert per
-Domain]
-Users: 150
-IP Addresses: 100
-Mgd Qualys Q-P-VMDR 100 $3,917.00 $39.17, per unit
-VMDR for quantities of
-101 to 1499
-units
-Year 1 Total: $21,956 … Year 2 Total: $19,780.00
-Model Medium Mgd Qualys Q-P-CSAM 1500 $14,430.00 "16 hours Mgd Qualys Q-P-CSAM
-Entity: CSAM with $136.00 per CSAM with
-Devices/Endpoints: EASM hour EASM Appliance
-5000, Appliance
-Domains 50,
-[1 SSL Cert per
-Domain]
-Users: 3000
-IP Addresses: 1500
-43230000-24-STC Page 11 of 25
+~~Service Category: Service Category 4: External-Facing Asset Discover~~ y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 4<br>External Facing Asset<br>Discovery|Qualys<br>Toolset|Qualys SKU(s)|Quantity|List Price<br>(MRC)|Lumen PM<br>Support<br>Install and<br>Setup (NRC)|Lumen M&P Day<br>1 and Day 2<br>Support – (MRC)|Each Additional<br>Unit (MRC)|
+|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Devices/Endpoints:<br>250<br>Domains 5,<br>[1 SSL Cert per<br>Domain]<br>Users: 150<br>IP Addresses: 100|Mgd Qualys<br>CSAM with<br>EASM<br>Appliance|Q-P-CSAM|100 -<br>Minimum<br>Quantity|$2,807.00|"16 hours<br>$136.00 per<br>hour|Mgd Qualys<br>CSAM with<br>EASM Appliance|Q-P-CSAM|
+||Mgd Qualys<br>VMDR|Q-P-VMDR|100|$3,917.00|||$39.17, per unit<br>for quantities of<br>101 to 1499<br>units|
+|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|
+|Model Medium<br>Entity:<br>Devices/Endpoints:<br>5000,<br>Domains 50,<br>[1 SSL Cert per<br>Domain]<br>Users: 3000<br>IP Addresses: 1500|Mgd Qualys<br>CSAM with<br>EASM<br>Appliance|Q-P-CSAM|1500|$14,430.00|"16 hours<br>$136.00 per<br>hour|Mgd Qualys<br>CSAM with<br>EASM Appliance|Q-P-CSAM|
+
+
+
+43230000-24-STC Page **11** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 11
 
-|  | Mgd Qualys
-VMDR | Q-P-VMDR | 1500 | $19,665.00 |  |  | $13.11, for
-quantities of
-1501 to 4999
-units |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Year 1 Total: $49,327.00 … Year 2 Total: $47,151.00 |  |  |  |  |  |  |  |
-| Model Large Entity:
-Devices/Endpoints:
-17000,
-Domains 1700,
-[1 SSL Cert per
-Domain]
-Users: 10,000
-IP Addresses: 5000 | Mgd Qualys
-CSAM with
-EASM
-Appliance | Q-P-CSAM | 5000 | $37,150.00 | 16 hours
-$136.00 per
-hour | SecEng 8 hours
-per month
-$136.00 per
-hour
-$13,056.00 | $7.43, Above
-5000 units |
-|  | Mgd Qualys
-VMDR | Q-P-VMDR | 5000 | $51,750.00 |  |  | $10.35, Above
-5000 units |
-| Year 1 Total: $104,132.00 … Year 2 Total: $101,956.00 |  |  |  |  |  |  |  |
-
-
-| Mgd Qualys |
-| --- |
-| VMDR |
-
-
-| $10.35, Above |
-| --- |
-| 5000 units |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Mgd Qualys Q-P-VMDR 1500 $19,665.00 $13.11, for
-VMDR quantities of
-1501 to 4999
-units
-Year 1 Total: $49,327.00 … Year 2 Total: $47,151.00
-Model Large Entity: Mgd Qualys Q-P-CSAM 5000 $37,150.00 16 hours SecEng 8 hours $7.43, Above
-Devices/Endpoints: CSAM with $136.00 per per month 5000 units
-17000, EASM hour $136.00 per
-Domains 1700, Appliance hour
-[1 SSL Cert per $13,056.00
-Domain]
-Users: 10,000
-IP Addresses: 5000
-Mgd Qualys Q-P-VMDR 5000 $51,750.00 $10.35, Above
-VMDR 5000 units
-Year 1 Total: $104,132.00 … Year 2 Total: $101,956.00
-43230000-24-STC Page 12 of 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Col1|Mgd Qualys<br>VMDR|Q-P-VMDR|1500|$19,665.00|Col6|Col7|$13.11, for<br>quantities of<br>1501 to 4999<br>units|
+|---|---|---|---|---|---|---|---|
+|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|
+|Model Large Entity:<br>Devices/Endpoints:<br>17000,<br>Domains 1700,<br>[1 SSL Cert per<br>Domain]<br>Users: 10,000<br>IP Addresses: 5000|Mgd Qualys<br>CSAM with<br>EASM<br>Appliance|Q-P-CSAM|5000|$37,150.00|16 hours<br>$136.00 per<br>hour|SecEng 8 hours<br>per month<br>$136.00 per<br>hour<br>$13,056.00|$7.43, Above<br>5000 units|
+||Mgd Qualys<br>VMDR|Q-P-VMDR|5000|$51,750.00|||$10.35, Above<br>5000 units|
+|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|Year 1 Total: $104,132.00  … Year 2 Total: $101,956.00<br>|
+
+
+
+43230000-24-STC Page **12** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 12
 
-|  | Service |  | Checkpoint
-Toolset | Checkpoint SKU |  |  | Quantity | Lumen Price
-– (MRC) | Lumen Support
-Install and
-Setup (PM) –
-(NRC) | Each Additional
-Unit – (MRC) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Category 5 |  |  |  |  |  |  |  |  |  |
-|  | Email |  |  |  |  |  |  |  |  |  |
-|  | Security |  |  |  |  |  |  |  |  |  |
-|  | Harmony |  |  |  |  |  |  |  |  |  |
-| Model Small
-Entity:
-Users: 150 |  |  | Harmony Email
-and
-Collaboration | Advanced Protect -Anti Phishing,
-Anti Virus, URL Protection, URL
-Re-writing, Anomalies, Shadow
-IT, Sandboxing, CDR; Threat
-Extraction |  |  | 150 –
-Minimum
-Quantity | $ 8,400.25 | 20 hours $136.00
-per hour
-$2,720.00 NRC | $56, per unit for
-quantities of 151
-to 2999 units |
-|  |  |  |  |  | Premium Support 7X24 Every |  |  |  |  |  |
-|  |  |  |  |  | Day |  |  |  |  |  |
-| Year 1 Total $11,120.25 … Year 2 Total $8,400.25.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |  |
-| Model
-Medium
-Entity:
-Users: 3000 |  |  | Harmony Email
-and
-Collaboration |  | Advanced Protect -Anti Phishing, |  | 3000 | $116,311.14 | 40 hours $136.00
-per hour
-$5,440.00 NRC | $38.77, per unit
-for quantities of
-151 to 9999 units |
-|  |  |  |  |  | Anti Virus, URL Protection, URL |  |  |  |  |  |
-|  |  |  |  |  | Re-writing, Anomalies, Shadow |  |  |  |  |  |
-|  |  |  |  |  | IT, Sandboxing, CDR; Threat |  |  |  |  |  |
-|  |  |  |  |  | Extraction |  |  |  |  |  |
-|  |  |  |  | Premium Support 7X24 Every
-Day |  |  |  |  |  |  |
-| Year 1 Total $121,751.44 … Year 2 Total $116,311.14 (minus install NRC) |  |  |  |  |  |  |  |  |  |  |
-| Model
-Large Entity:
-Users:
-10,000 |  |  | Harmony Email
-and
-Collaboration | Advanced Protect -Anti Phishing,
-Anti Virus, URL Protection, URL
-Re-writing, Anomalies, Shadow
-IT, Sandboxing, CDR; Threat
-Extraction |  |  | 10000 | $280,008.30 | 80 hours $136.00
-per hour
-$10,880.00 NRC | $28.00, Above
-10000 units |
-
-
-| Checkpoint |
-| --- |
-| Toolset |
-
-
-| Lumen Price |
-| --- |
-| – (MRC) |
-
-
-| Lumen Support |
-| --- |
-| Install and |
-| Setup (PM) – |
-| (NRC) |
-
-
-| Each Additional |
-| --- |
-| Unit – (MRC) |
-
-
-| Model |
-| --- |
-| Medium |
-| Entity: |
-| Users: 3000 |
-
-
-| Harmony Email |
-| --- |
-| and |
-| Collaboration |
-
-
-| 40 hours $136.00 |
-| --- |
-| per hour |
-| $5,440.00 NRC |
-
-
-| $38.77, per unit |
-| --- |
-| for quantities of |
-| 151 to 9999 units |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 5 (Checkpoint)
+
+# Service Category 5 (Checkpoint)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: _Lumen Managed Email Security
-Service Category: Service Category 5: Email Security
-Service Checkpoint Checkpoint SKU Quantity Lumen Price Lumen Support Each Additional
-Category 5 Toolset – (MRC) Install and Unit – (MRC)
-Email Setup (PM) –
-Security (NRC)
-Harmony
-Model Small Harmony Email Advanced Protect -Anti Phishing, 150 – $ 8,400.25 20 hours $136.00 $56, per unit for
-Entity: and Anti Virus, URL Protection, URL Minimum per hour quantities of 151
-Users: 150 Collaboration Re-writing, Anomalies, Shadow Quantity $2,720.00 NRC to 2999 units
-IT, Sandboxing, CDR; Threat
-Extraction
-Premium Support 7X24 Every
-Day
-Year 1 Total $11,120.25 … Year 2 Total $8,400.25.00 (minus install NRC)
-Model Harmony Email Advanced Protect -Anti Phishing, 3000 $116,311.14 40 hours $136.00 $38.77, per unit
-Medium and Anti Virus, URL Protection, URL per hour for quantities of
-Entity: Collaboration Re-writing, Anomalies, Shadow $5,440.00 NRC 151 to 9999 units
-Users: 3000 IT, Sandboxing, CDR; Threat
-Extraction
-Premium Support 7X24 Every
-Day
-Year 1 Total $121,751.44 … Year 2 Total $116,311.14 (minus install NRC)
-Model Harmony Email Advanced Protect -Anti Phishing, 10000 $280,008.30 80 hours $136.00 $28.00, Above
-Large Entity: and Anti Virus, URL Protection, URL per hour 10000 units
-Users: Collaboration Re-writing, Anomalies, Shadow $10,880.00 NRC
-10,000 IT, Sandboxing, CDR; Threat
-Extraction
-43230000-24-STC Page 13 of 25
+~~Service Category: Service Category 5: Email Security~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service<br>Category 5<br>Email<br>Security<br>Harmony|Checkpoint<br>Toolset|Checkpoint SKU|Quantity|Lumen Price<br>– (MRC)|Lumen Support<br>Install and<br>Setup (PM) –<br>(NRC)|Each Additional<br>Unit – (MRC)|
+|---|---|---|---|---|---|---|
+|Model Small<br>Entity:<br>Users: 150|Harmony Email<br>and<br>Collaboration|Advanced Protect -Anti Phishing,<br>Anti Virus, URL Protection, URL<br>Re-writing, Anomalies, Shadow<br>IT, Sandboxing, CDR; Threat<br>Extraction|150 –<br>Minimum<br>Quantity|$  8,400.25|20 hours $136.00<br>per hour<br>$2,720.00 NRC|$56, per unit for<br>quantities of 151<br>to 2999 units|
+|||Premium Support 7X24 Every<br>Day|||||
+|Year 1 Total $11,120.25  …  Year 2 Total $8,400.25.00 (minus install NRC)|Year 1 Total $11,120.25  …  Year 2 Total $8,400.25.00 (minus install NRC)|Year 1 Total $11,120.25  …  Year 2 Total $8,400.25.00 (minus install NRC)|Year 1 Total $11,120.25  …  Year 2 Total $8,400.25.00 (minus install NRC)|Year 1 Total $11,120.25  …  Year 2 Total $8,400.25.00 (minus install NRC)|||
+|Model<br>Medium<br>Entity:<br>Users: 3000|Harmony Email<br>and<br>Collaboration|Advanced Protect -Anti Phishing,<br>Anti Virus, URL Protection, URL<br>Re-writing, Anomalies, Shadow<br>IT, Sandboxing, CDR; Threat<br>Extraction|3000|$116,311.14|40 hours $136.00<br>per hour<br>$5,440.00 NRC|$38.77, per unit<br>for quantities of<br>151 to 9999 units|
+|||Premium Support 7X24 Every<br>Day|||||
+|Year 1 Total $121,751.44  …  Year 2 Total $116,311.14 (minus install NRC)|Year 1 Total $121,751.44  …  Year 2 Total $116,311.14 (minus install NRC)|Year 1 Total $121,751.44  …  Year 2 Total $116,311.14 (minus install NRC)|Year 1 Total $121,751.44  …  Year 2 Total $116,311.14 (minus install NRC)|Year 1 Total $121,751.44  …  Year 2 Total $116,311.14 (minus install NRC)|||
+|Model<br>Large Entity:<br>Users:<br>10,000|Harmony Email<br>and<br>Collaboration|Advanced Protect -Anti Phishing,<br>Anti Virus, URL Protection, URL<br>Re-writing, Anomalies, Shadow<br>IT, Sandboxing, CDR; Threat<br>Extraction|10000|$280,008.30|80 hours $136.00<br>per hour<br>$10,880.00 NRC|$28.00, Above<br>10000 units|
+
+
+
+43230000-24-STC Page **13** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 13
 
-|  |  |  |  | Premium Support 7X24 Every |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  | Day |  |  |  |  |  |  |
-| Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC) |  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Premium Support 7X24 Every
-Day
-Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)
-43230000-24-STC Page 14 of 25
+
+|Col1|Col2|Premium Support 7X24 Every<br>Day|Col4|Col5|Col6|Col7|
+|---|---|---|---|---|---|---|
+|Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)|Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)|Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)|Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)|Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)|Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)|Year 1 Total $290,888.30 … Year 2 Total $280,008.30 (minus install NRC)|
+|<br>|<br>|<br>|<br>|<br>|<br>|<br>|
+
+
+
+43230000-24-STC Page **14** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 14
 
-|  | Service Category 7 |  | Lumen Toolset | Lumen
-SKU | Quantity | List Price –
-(MRC) | Lumen M&P
-Support Install
-and Setup –
-(NRC) | SOC 24X7
-Monitoring | Each Additional
-Unit (MRC) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  | Service Category 10 |  |  |  |  |  |  |  |  |
-|  | Lumen SOCaaS, Log |  |  |  |  |  |  |  |  |
-|  | Management and |  |  |  |  |  |  |  |  |
-|  | Managed SIEM |  |  |  |  |  |  |  |  |
-| Model Small Entity:
-Devices/Endpoints: 250 |  |  | Cloud based
-SPLUNK
-Instance, 24X7
-SOC and Log
-Archive | SOCaaS
-for Public
-Sector
-100G Logs
-per day | 250 –
-Minimum
-Quantity | $ 79,300.00 | 20 hours
-$136.00 per
-hour
-$2,720.00 NRC | included | $317.20, per
-unit for
-quantities of 251
-to 4999 units |
-| Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC) |  |  |  |  |  |  |  |  |  |
-| Model Medium Entity:
-Devices/Endpoints:
-5000, |  |  | Cloud based
-SPLUNK
-Instance, 24X7
-SOC and Log
-Archive | SOCaaS
-for Public
-Sector
-200G Logs
-per day | 5000 | $ 158,600.00 | 40 hours
-$136.00 per
-hour
-$5,440.00 NRC | included | $31.72, per unit
-for quantities of
-5001 to 16999
-units |
-| Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |
-| Model Large Entity:
-Devices/Endpoints:
-17000, |  |  | Cloud based
-SPLUNK
-Instance, 24X7
-SOC and Log
-Archive | SOCaaS
-for Public
-Sector
-400G Logs
-per day | 17000 | $ 317,200.00 | 80 hours
-$136.00 per
-hour
-$10,880.00 NRC | included | $18.66, Above
-17000 units |
-| Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC) |  |  |  |  |  |  |  |  |  |
-
-
-| Lumen |
-| --- |
-| SKU |
-
-
-| List Price – |
-| --- |
-| (MRC) |
-
-
-| Lumen M&P |
-| --- |
-| Support Install |
-| and Setup – |
-| (NRC) |
-
-
-| SOC 24X7 |
-| --- |
-| Monitoring |
-
-
-| Each Additional |
-| --- |
-| Unit (MRC) |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 7 (SOCaaS)
+
+# Service Category 7 (SOCaaS)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: Lumen Security Operations Center as a Service _
-Service Category: Service Category 7: Security Operations Platform
-Service Category 7 Lumen Toolset Lumen Quantity List Price – Lumen M&P SOC 24X7 Each Additional
-Service Category 10 SKU (MRC) Support Install Monitoring Unit (MRC)
-Lumen SOCaaS, Log and Setup –
-Management and (NRC)
-Managed SIEM
-Model Small Entity: Cloud based SOCaaS 250 – $ 79,300.00 20 hours included $317.20, per
-Devices/Endpoints: 250 SPLUNK for Public Minimum $136.00 per unit for
-Instance, 24X7 Sector Quantity hour quantities of 251
-SOC and Log 100G Logs $2,720.00 NRC to 4999 units
-Archive per day
-Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)
-Model Medium Entity: Cloud based SOCaaS 5000 $ 158,600.00 40 hours included $31.72, per unit
-Devices/Endpoints: SPLUNK for Public $136.00 per for quantities of
-5000, Instance, 24X7 Sector hour 5001 to 16999
-SOC and Log 200G Logs $5,440.00 NRC units
-Archive per day
-Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)
-Model Large Entity: Cloud based SOCaaS 17000 $ 317,200.00 80 hours included $18.66, Above
-Devices/Endpoints: SPLUNK for Public $136.00 per 17000 units
-17000, Instance, 24X7 Sector hour
-SOC and Log 400G Logs $10,880.00 NRC
-Archive per day
-Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)
-43230000-24-STC Page 15 of 25
+~~Service Category: Service Category 7: Security Operations Platform~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 7<br>Service Category 10<br>Lumen SOCaaS, Log<br>Management and<br>Managed SIEM|Lumen Toolset|Lumen<br>SKU|Quantity|List Price –<br>(MRC)|Lumen M&P<br>Support Install<br>and Setup –<br>(NRC)|SOC 24X7<br>Monitoring|Each Additional<br>Unit (MRC)|
+|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Devices/Endpoints: 250|Cloud based<br>SPLUNK<br>Instance, 24X7<br>SOC and Log<br>Archive|SOCaaS<br>for Public<br>Sector<br>100G Logs<br>per day|250 –<br>Minimum<br>Quantity|$ 79,300.00|20 hours<br>$136.00 per<br>hour<br>$2,720.00 NRC|included|$317.20, per<br>unit for<br>quantities of 251<br>to 4999 units|
+|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300(minus install NRC)|
+|Model Medium Entity:<br>Devices/Endpoints:<br>5000,|Cloud based<br>SPLUNK<br>Instance, 24X7<br>SOC and Log<br>Archive|SOCaaS<br>for Public<br>Sector<br>200G Logs<br>per day|5000|$ 158,600.00|40 hours<br>$136.00 per<br>hour<br>$5,440.00 NRC|included|$31.72, per unit<br>for quantities of<br>5001 to 16999<br>units|
+|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|
+|Model Large Entity:<br>Devices/Endpoints:<br>17000,|Cloud based<br>SPLUNK<br>Instance, 24X7<br>SOC and Log<br>Archive|SOCaaS<br>for Public<br>Sector<br>400G Logs<br>per day|17000|$ 317,200.00|80 hours<br>$136.00 per<br>hour<br>$10,880.00 NRC|included|$18.66, Above<br>17000 units|
+|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)<br>|
+
+
+43230000-24-STC Page **15** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 15
 
-|  | Monthly Recurring Charges Small Fortinet SDWAN/SASE |  |  |  |  |
-| --- | --- | --- | --- | --- | --- |
-|  | Small Tier (does not include BW pricing) |  |  |  |  |
-|  | 2 branch sites 500M DIA (Fortinet 60F) |  |  |  |  |
-|  | 1 main site 1G DIA (Fortinet 100F) |  |  |  |  |
-|  | Domains 5 (1 SSL Cert per Domain) |  |  |  |  |
-|  | Endpoints 150 (Forticlient 150) |  |  |  |  |
-|  | Public IP Address Space 100 |  |  |  |  |
-|  | Private IP Address Space 254 |  |  |  |  |
-| SDWAN Network Management and Monitoring Services | SDWAN Network Management and Monitoring Services | Quantity/Units | Lumen Price | Lumen Price |  |
-| Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits |  | 2 | $ 307.70 |  |  |
-| Fortigate 100F Small with SD WAN Functionality, with support for up to 2 Circuits |  | 1 | $ 64.11 |  |  |
-| Remote Power Switch per Broadband Circuit |  | 6 | $ 15.39 |  |  |
-| SASE uplift to Fortigate with SDWAN |  | 3 | $ 38.47 |  |  |
-| FortiClient per client |  | 150 | $ 240.39 |  |  |
-|  |  |  | $ 666.06 |  |  |
-| Non Recurring Charges |  |  |  |  |  |
-| Customer Setup for up to 100 Devices |  | 1 | $3,205.00 |  |  |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 10 (Fortinet)
+
+# Service Category 10 (Fortinet)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: Lumen Managed SASE (Fortinet) _ _
-Service Category: Service Category 10: Secure Access Service Edge (SASE)
-Lumen SASE Solutions with Fortinet Pro-Managed
-Monthly Recurring Charges Small Fortinet SDWAN/SASE
-Small Tier (does not include BW pricing)
-2 branch sites 500M DIA (Fortinet 60F)
-1 main site 1G DIA (Fortinet 100F)
-Domains 5 (1 SSL Cert per Domain)
-Endpoints 150 (Forticlient 150)
-Public IP Address Space 100
-Private IP Address Space 254
-SDWAN Network Management and Monitoring Services Quantity/Units Lumen Price
-Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits 2 $ 307.70
-Fortigate 100F Small with SD WAN Functionality, with support for up to 2 Circuits 1 $ 64.11
-Remote Power Switch per Broadband Circuit 6 $ 15.39
-SASE uplift to Fortigate with SDWAN 3 $ 38.47
-FortiClient per client 150 $ 240.39
-$ 666.06
-Non Recurring Charges
-Customer Setup for up to 100 Devices 1 $3,205.00
-43230000-24-STC Page 16 of 25
+~~Service Category: Service Category 10: Secure Access S~~ ervice Edge (SASE)
+
+## **Lumen SASE Solutions with Fortinet Pro-Managed**
+
+|Monthly Recurring Charges Small Fortinet SDWAN/SASE<br>Small Tier (does not include BW pricing)<br>2 branch sites 500M DIA (Fortinet 60F)<br>1 main site 1G DIA (Fortinet 100F)<br>Domains 5 (1 SSL Cert per Domain)<br>Endpoints 150 (Forticlient 150)<br>Public IP Address Space 100<br>Private IP Address Space 254|Col2|Col3|
+|---|---|---|
+|**SDWAN Network Management and Monitoring Services**|**Quantity/Units**|**Lumen Price**|
+|Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits|2|$ 307.70|
+|Fortigate 100F Small with SD WAN Functionality, with support for up to 2 Circuits|1|$ 64.11|
+|Remote Power Switch per Broadband Circuit|6|$ 15.39|
+|SASE uplift to Fortigate with SDWAN|3|$ 38.47|
+|FortiClient per client|150|$ 240.39|
+|||$ 666.06|
+|**Non Recurring Charges**|**Non Recurring Charges**|**Non Recurring Charges**|
+|Customer Setup for up to 100 Devices|1|$3,205.00|
+
+
+
+43230000-24-STC Page **16** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 16
 
-| Forticlient setup per remote client | 150 | $ 962.00 |
-| --- | --- | --- |
-| Tele Installation Remote Power Switch per Broadband Circuit | 6 | $ 962.00 |
-|  |  | $5,129.00 |
-| Year 1 Cost $13,121.72 |  |  |
-| Renewal Cost $7,992.72 |  |  |
-|  |  |  |
-| Monthly Recurring Charges medium Fortinet SDWAN/SASE
-Medium Tier (does not include BW pricing)
-5 branch sites 500M to 1G DIA (Fortinet 60F)
-1 main site 1G to 5G DIA (Fortinet 200F)
-Domains 10 (1 SSL Cert per Domain)
-Endpoints 300 (Forticlient 300)
-Public IP Address Space 254
-Private IP Address Space 512 |  |  |
-| SDWAN Network Management and Monitoring Services | Quantity/Units | Lumen Price |
-| Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits | 5 | $ 128.21 |
-| Fortigate 200F Large with SD WAN Functionality, with support for up to 2 Circuits | 1 | $ 153.85 |
-| Remote Power Switch per Broadband Circuit | 12 | $ 30.77 |
-| SASE uplift to Fortigate with SDWAN | 6 | $ 76.94 |
-| Forticlient, per client | 300 | $ 480.77 |
-|  |  | $ 870.54 |
-| Non Recurring Charges |  |  |
-| Customer Setup for up to 100 Devices | 1 | $3,205.00 |
-| Forticlient setup per remote client | 300 | $1,923.00 |
-
-
-| Monthly Recurring Charges medium Fortinet SDWAN/SASE |
-| --- |
-| Medium Tier (does not include BW pricing) |
-| 5 branch sites 500M to 1G DIA (Fortinet 60F) |
-| 1 main site 1G to 5G DIA (Fortinet 200F) |
-| Domains 10 (1 SSL Cert per Domain) |
-| Endpoints 300 (Forticlient 300) |
-| Public IP Address Space 254 |
-| Private IP Address Space 512 |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Forticlient setup per remote client 150 $ 962.00
-Tele Installation Remote Power Switch per Broadband Circuit 6 $ 962.00
-$5,129.00
-Year 1 Cost $13,121.72
-Renewal Cost $7,992.72
-Monthly Recurring Charges medium Fortinet SDWAN/SASE
-Medium Tier (does not include BW pricing)
-5 branch sites 500M to 1G DIA (Fortinet 60F)
-1 main site 1G to 5G DIA (Fortinet 200F)
-Domains 10 (1 SSL Cert per Domain)
-Endpoints 300 (Forticlient 300)
-Public IP Address Space 254
-Private IP Address Space 512
-SDWAN Network Management and Monitoring Services Quantity/Units Lumen Price
-Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits 5 $ 128.21
-Fortigate 200F Large with SD WAN Functionality, with support for up to 2 Circuits 1 $ 153.85
-Remote Power Switch per Broadband Circuit 12 $ 30.77
-SASE uplift to Fortigate with SDWAN 6 $ 76.94
-Forticlient, per client 300 $ 480.77
-$ 870.54
-Non Recurring Charges
-Customer Setup for up to 100 Devices 1 $3,205.00
-Forticlient setup per remote client 300 $1,923.00
-43230000-24-STC Page 17 of 25
+
+|Forticlient setup per remote client|150|$ 962.00|
+|---|---|---|
+|Tele Installation Remote Power Switch per Broadband Circuit<br>|6 <br>|$ 962.00|
+|||$5,129.00|
+|**Year 1 Cost $13,121.72**|**Year 1 Cost $13,121.72**|**Year 1 Cost $13,121.72**|
+|**Renewal Cost $7,992.72**|**Renewal Cost $7,992.72**|**Renewal Cost $7,992.72**|
+||||
+|**Monthly Recurring Charges medium Fortinet SDWAN/SASE**<br>**Medium Tier (does not include BW pricing)**<br>**5 branch sites 500M to 1G DIA (Fortinet 60F)**<br>**1 main site 1G to 5G DIA (Fortinet 200F)**<br>**Domains 10 (1 SSL Cert per Domain)**<br>**Endpoints 300 (Forticlient 300)**<br>**Public IP Address Space 254**<br>**Private IP Address Space 512**|**Monthly Recurring Charges medium Fortinet SDWAN/SASE**<br>**Medium Tier (does not include BW pricing)**<br>**5 branch sites 500M to 1G DIA (Fortinet 60F)**<br>**1 main site 1G to 5G DIA (Fortinet 200F)**<br>**Domains 10 (1 SSL Cert per Domain)**<br>**Endpoints 300 (Forticlient 300)**<br>**Public IP Address Space 254**<br>**Private IP Address Space 512**|**Monthly Recurring Charges medium Fortinet SDWAN/SASE**<br>**Medium Tier (does not include BW pricing)**<br>**5 branch sites 500M to 1G DIA (Fortinet 60F)**<br>**1 main site 1G to 5G DIA (Fortinet 200F)**<br>**Domains 10 (1 SSL Cert per Domain)**<br>**Endpoints 300 (Forticlient 300)**<br>**Public IP Address Space 254**<br>**Private IP Address Space 512**|
+|SDWAN Network Management and Monitoring Services|Quantity/Units|Lumen Price|
+|Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits|5|$ 128.21|
+|Fortigate 200F Large with SD WAN Functionality, with support for up to 2 Circuits|1|$ 153.85|
+|Remote Power Switch per Broadband Circuit|12|$ 30.77|
+|SASE uplift to Fortigate with SDWAN|6|$ 76.94|
+|Forticlient, per client|300|$ 480.77|
+|||$ 870.54|
+|**Non Recurring Charges**|**Non Recurring Charges**|**Non Recurring Charges**|
+|Customer Setup for up to 100 Devices|1|$3,205.00|
+|Forticlient setup per remote client|300|$1,923.00|
+
+
+
+43230000-24-STC Page **17** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 17
 
-| Tele Installation Remote Power Switch per Broadband Circuit | 12 | $1,923.00 |
-| --- | --- | --- |
-|  |  | $7,051.00 |
-| Year 1 Cost $17,497.48 |  |  |
-| Renewal Cost $10,446.48 |  |  |
-|  |  |  |
-| Monthly Recurring Charges medium Fortinet SDWAN/SASE
-Large Tier (does not include BW pricing)
-9 branch sites 500M DIA (Fortinet 60F)
-1 branch site 2G DIA (Fortinet 100F
-1 main site 10G DIA (Fortinet 200F)
-Domains 20 (1 SSL Cert per Domain)
-Endpoints 1000 (Forticlient 1000)
-Public IP Address Space 512
-Private IP Address Space 1024 |  |  |
-| SDWAN Network Management and Monitoring Services | Quantity/Units | Lumen Price |
-| Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits | 9 | $ 230.77 |
-| Fortigate 100f Small with SD WAN Functionality, with support for up to 2 Circuits | 1 | $ 64.11 |
-| Fortigate 200F Large with SD WAN Functionality, with support for up to 2 Circuits | 1 | $ 153.85 |
-| Remote Power Switch per Broadband Circuit | 22 | $ 56.42 |
-| SASE uplift to Fortigate with SDWAN | 11 | $ 141.03 |
-| Forticlient, per client | 1000 | $1,602.57 |
-|  |  | $2,248.75 |
-| Non Recurring Charges |  |  |
-| Customer Setup for up to 100 Devices | 1 | $3,205.00 |
-
-
-| Monthly Recurring Charges medium Fortinet SDWAN/SASE |
-| --- |
-| Large Tier (does not include BW pricing) |
-| 9 branch sites 500M DIA (Fortinet 60F) |
-| 1 branch site 2G DIA (Fortinet 100F |
-| 1 main site 10G DIA (Fortinet 200F) |
-| Domains 20 (1 SSL Cert per Domain) |
-| Endpoints 1000 (Forticlient 1000) |
-| Public IP Address Space 512 |
-| Private IP Address Space 1024 |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Tele Installation Remote Power Switch per Broadband Circuit 12 $1,923.00
-$7,051.00
-Year 1 Cost $17,497.48
-Renewal Cost $10,446.48
-Monthly Recurring Charges medium Fortinet SDWAN/SASE
-Large Tier (does not include BW pricing)
-9 branch sites 500M DIA (Fortinet 60F)
-1 branch site 2G DIA (Fortinet 100F
-1 main site 10G DIA (Fortinet 200F)
-Domains 20 (1 SSL Cert per Domain)
-Endpoints 1000 (Forticlient 1000)
-Public IP Address Space 512
-Private IP Address Space 1024
-SDWAN Network Management and Monitoring Services Quantity/Units Lumen Price
-Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits 9 $ 230.77
-Fortigate 100f Small with SD WAN Functionality, with support for up to 2 Circuits 1 $ 64.11
-Fortigate 200F Large with SD WAN Functionality, with support for up to 2 Circuits 1 $ 153.85
-Remote Power Switch per Broadband Circuit 22 $ 56.42
-SASE uplift to Fortigate with SDWAN 11 $ 141.03
-Forticlient, per client 1000 $1,602.57
-$2,248.75
-Non Recurring Charges
-Customer Setup for up to 100 Devices 1 $3,205.00
-43230000-24-STC Page 18 of 25
+
+|Tele Installation Remote Power Switch per Broadband Circuit|12|$1,923.00|
+|---|---|---|
+|||$7,051.00|
+|**Year 1 Cost $17,497.48**|**Year 1 Cost $17,497.48**|**Year 1 Cost $17,497.48**|
+|**Renewal Cost $10,446.48**<br> <br> <br>|**Renewal Cost $10,446.48**<br> <br> <br>|**Renewal Cost $10,446.48**<br> <br> <br>|
+||||
+|**Monthly Recurring Charges medium Fortinet SDWAN/SASE**<br>**Large Tier (does not include BW pricing)**<br>**9 branch sites 500M DIA (Fortinet 60F)**<br>**1 branch site 2G DIA (Fortinet 100F**<br>**1 main site 10G DIA (Fortinet 200F)**<br>**Domains 20 (1 SSL Cert per Domain)**<br>**Endpoints 1000 (Forticlient 1000)**<br>**Public IP Address Space 512**<br>**Private IP Address Space 1024**|**Monthly Recurring Charges medium Fortinet SDWAN/SASE**<br>**Large Tier (does not include BW pricing)**<br>**9 branch sites 500M DIA (Fortinet 60F)**<br>**1 branch site 2G DIA (Fortinet 100F**<br>**1 main site 10G DIA (Fortinet 200F)**<br>**Domains 20 (1 SSL Cert per Domain)**<br>**Endpoints 1000 (Forticlient 1000)**<br>**Public IP Address Space 512**<br>**Private IP Address Space 1024**|**Monthly Recurring Charges medium Fortinet SDWAN/SASE**<br>**Large Tier (does not include BW pricing)**<br>**9 branch sites 500M DIA (Fortinet 60F)**<br>**1 branch site 2G DIA (Fortinet 100F**<br>**1 main site 10G DIA (Fortinet 200F)**<br>**Domains 20 (1 SSL Cert per Domain)**<br>**Endpoints 1000 (Forticlient 1000)**<br>**Public IP Address Space 512**<br>**Private IP Address Space 1024**|
+|**SDWAN Network Management and Monitoring Services**|**Quantity/Units**|**Lumen Price**|
+|Fortigate 60F Small with SD WAN Functionality, with support for up to 2 Circuits|9|$ 230.77|
+|Fortigate 100f Small with SD WAN Functionality, with support for up to 2 Circuits|1|$ 64.11|
+|Fortigate 200F Large with SD WAN Functionality, with support for up to 2 Circuits|1|$ 153.85|
+|Remote Power Switch per Broadband Circuit|22|$ 56.42|
+|SASE uplift to Fortigate with SDWAN|11|$ 141.03|
+|Forticlient, per client|1000|$1,602.57|
+|||$2,248.75|
+|**Non Recurring Charges**|**Non Recurring Charges**|**Non Recurring Charges**|
+|Customer Setup for up to 100 Devices|1|$3,205.00|
+
+
+
+43230000-24-STC Page **18** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 18
 
-| Forticlient setup per remote client | 1000 | $6,410.00 |
-| --- | --- | --- |
-| Tele Installation Remote Power Switch per Broadband Circuit | 22 | $3,526.00 |
-|  |  | $ 13,141.00 |
-| Year 1 Cost $40,126.00 |  |  |
-| Renewal Cost $26,985.00 |  |  |
-
-
-| Service Category 10
-Secure Access Service
-Edge (SASE) |  | Pricing Includes: |  | Compute SASE Node |  | NGFW License
-(security) |  | SD-WAN License |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  | CPE, SD-WAN, |  |  |  |  |  |  |  |  |  |  |
-|  |  | and NGFW |  |  |  |  |  |  |  |  |  |  |
-|  |  | license. VSPA |  |  |  |  |  |  |  |  |  |  |
-|  |  | (ZTNA) per user |  |  |  |  |  |  |  |  |  |  |
-|  |  | and NRC. |  |  |  |  |  |  |  |  |  |  |
-| Size | Model | Model |  | MRC | NRC | MRC | NRC | MRC | NRC |  | MRC Total |  |
-|  |  |  |  |  |  |  |  |  |  |  | SASE 12 mo |  |
-|  |  |  |  |  |  |  |  |  |  |  | (CPE + |  |
-|  |  |  |  |  |  |  |  |  |  |  | SDWAM + |  |
-|  |  |  |  |  |  |  |  |  |  |  | NGFW) |  |
-| Primary Extra Small CPE | FWA1012 |  |  | $ 120.00 | $ 240.00 | $ 60.00 | $ 240.00 | $ 119.00 | $ 120.00 | $ 299.00 | $ 299.00 |  |
-| Primary Small CPE | L-1515B |  |  | $ 156.00 | $ 240.00 | $ 60.00 | $ 240.00 | $ 119.00 | $ 120.00 | $ 335.00 |  |  |
-
-
-| Service Category 10 |
-| --- |
-| Secure Access Service |
-| Edge (SASE) |
-
-
-| NGFW License |
-| --- |
-| (security) |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Forticlient setup per remote client 1000 $6,410.00
-Tele Installation Remote Power Switch per Broadband Circuit 22 $3,526.00
-$ 13,141.00
-Year 1 Cost $40,126.00
-Renewal Cost $26,985.00
-Service Category 10 (Versa)
+
+|Forticlient setup per remote client|1000|$6,410.00|
+|---|---|---|
+|Tele Installation Remote Power Switch per Broadband Circuit|22|$3,526.00|
+|||$ 13,141.00|
+|**Year 1 Cost $40,126.00**|**Year 1 Cost $40,126.00**|**Year 1 Cost $40,126.00**|
+|**Renewal Cost $26,985.00**<br>|**Renewal Cost $26,985.00**<br>|**Renewal Cost $26,985.00**<br>|
+
+
+# Service Category 10 (Versa)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed Lumen Managed SASE (Versa): _
-Service Category: Service Category 10: Secure Access Service Edge (SASE)
-Lumen SASE Solutions with Versa Pro-Managed
-Service Category 10 Pricing Includes: Compute SASE Node NGFW License SD-WAN License
-Secure Access Service CPE, SD-WAN, (security)
-Edge (SASE) and NGFW
-license. VSPA
-(ZTNA) per user
-and NRC.
-MRC Total
-Size Model MRC NRC MRC NRC MRC NRC SASE 12 mo
-(CPE +
-SDWAM +
-NGFW)
-Primary Extra Small CPE FWA1012 $ 120.00 $ 240.00 $ 60.00 $ 240.00 $ 119.00 $ 120.00 $ 299.00
-Primary Small CPE L-1515B $ 156.00 $ 240.00 $ 60.00 $ 240.00 $ 119.00 $ 120.00 $ 335.00
-43230000-24-STC Page 19 of 25
+~~Service Category: Service Category 10: Secure Acces~~ s Service Edge (SASE)
+## **Lumen SASE Solutions with Versa Pro-Managed**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 10<br>Secure Access Service<br>Edge (SASE)|Pricing Includes:<br>CPE, SD-WAN,<br>and NGFW<br>license. VSPA<br>(ZTNA) per user<br>and NRC.|Compute SASE Node|Col4|NGFW License<br>(security)|Col6|SD-WAN License|Col8|Col9|
+|---|---|---|---|---|---|---|---|---|
+|Size|Model|MRC|NRC|MRC|NRC|MRC|NRC|MRC Total<br>SASE 12 mo<br>(CPE +<br>SDWAM<br>+ <br>NGFW)|
+|Primary Extra Small CPE|FWA1012|$ 120.00|$ 240.00|$ 60.00|$ 240.00|$ 119.00|$ 120.00|$ 299.00|
+|Primary Small CPE|L-1515B|$ 156.00|$ 240.00|$ 60.00|$ 240.00|$ 119.00|$ 120.00|$ 335.00|
+
+
+43230000-24-STC Page **19** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 19
 
-| Primary Medium CPE |  |  | L-1515A |  |  | $ 204.00 |  |  | $ 240.00 |  |  | $ 72.00 |  |  | $ 300.00 |  |  | $ 143.00 |  |  | $ 240.00 |  |  | $ 419.00 |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Primary Large CPE |  |  | FWA3260 |  |  | $ 420.00 |  |  | $ 360.00 |  |  | $ 120.00 |  |  | $ 300.00 |  |  | $ 179.00 |  |  | $ 240.00 |  |  | $ 719.00 |  |  |
-|  | Primary Extra Large |  | FWA5070 |  |  | $ 840.00 |  |  | $ 600.00 |  |  | $ 180.00 |  |  | $ 360.00 |  |  | $ 329.00 |  |  | $ 240.00 |  |  | $ 1,259.00 |  |  |
-|  | CPE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| Secondary (HA) Extra
-Small CPE |  |  | FWA1012 |  |  | $ 90.00 |  |  | $ 240.00 |  |  | $ 42.00 |  |  | $ 60.00 |  |  | $ 90.00 |  |  | $ 60.00 |  |  | $ 222.00 |  |  |
-|  | Secondary (HA) Small |  | L-1515B |  |  | $ 120.00 |  |  | $ 240.00 |  |  | $ 42.00 |  |  | $ 60.00 |  |  | $ 90.00 |  |  | $ 60.00 |  |  | $ 252.00 |  |  |
-|  | CPE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| Secondary (HA)
-Medium CPE |  |  | L-1515A |  |  | $ 150.00 |  |  | $ 240.00 |  |  | $ 54.00 |  |  | $ 90.00 |  |  | $ 108.00 |  |  | $ 90.00 |  |  | $ 312.00 |  |  |
-|  | Secondary (HA) Large |  | FWA3260 |  |  | $ 306.00 |  |  | $ 360.00 |  |  | $ 90.00 |  |  | $ 120.00 |  |  | $ 144.00 |  |  | $ 120.00 |  |  | $ 540.00 |  |  |
-|  | CPE |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| Secondary (HA) Extra
-Large CPE |  |  | FWA5070 |  |  | $ 624.00 |  |  | $ 600.00 |  |  | $ 138.00 |  |  | $ 240.00 |  |  | $ 180.00 |  |  | $ 240.00 |  |  | $ 942.00 |  |  |
-|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ZTNA is per user in 3
-groups.
-(50-249/250-
-999/1000+) |  |  | VSPA (ZTNA per
-user license) |  |  | $14/$12/$11 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Primary Medium CPE L-1515A $ 204.00 $ 240.00 $ 72.00 $ 300.00 $ 143.00 $ 240.00 $ 419.00
-Primary Large CPE FWA3260 $ 420.00 $ 360.00 $ 120.00 $ 300.00 $ 179.00 $ 240.00 $ 719.00
-Primary Extra Large FWA5070 $ 840.00 $ 600.00 $ 180.00 $ 360.00 $ 329.00 $ 240.00 $ 1,259.00
-CPE
-Secondary (HA) Extra FWA1012 $ 90.00 $ 240.00 $ 42.00 $ 60.00 $ 90.00 $ 60.00 $ 222.00
-Small CPE
-Secondary (HA) Small L-1515B $ 120.00 $ 240.00 $ 42.00 $ 60.00 $ 90.00 $ 60.00 $ 252.00
-CPE
-Secondary (HA) L-1515A $ 150.00 $ 240.00 $ 54.00 $ 90.00 $ 108.00 $ 90.00 $ 312.00
-Medium CPE
-Secondary (HA) Large FWA3260 $ 306.00 $ 360.00 $ 90.00 $ 120.00 $ 144.00 $ 120.00 $ 540.00
-CPE
-Secondary (HA) Extra FWA5070 $ 624.00 $ 600.00 $ 138.00 $ 240.00 $ 180.00 $ 240.00 $ 942.00
-Large CPE
-ZTNA is per user in 3 VSPA (ZTNA per $14/$12/$11
-groups. user license)
-(50-249/250-
-999/1000+)
-43230000-24-STC Page 20 of 25
+
+
+
+
+
+
+
+
+
+
+|Primary Medium CPE|L-1515A|$ 204.00|$ 240.00|$ 72.00|$ 300.00|$ 143.00|$ 240.00|$ 419.00|
+|---|---|---|---|---|---|---|---|---|
+|Primary Large CPE|FWA3260|$ 420.00|$ 360.00|$ 120.00|$ 300.00|$ 179.00|$ 240.00|$ 719.00|
+|Primary<br>Extra<br>Large<br>CPE|FWA5070|$ 840.00|$ 600.00|$ 180.00|$ 360.00|$ 329.00|$ 240.00|$ 1,259.00|
+|Secondary (HA) Extra<br>Small CPE|FWA1012|$ 90.00|$ 240.00|$ 42.00|$ 60.00|$ 90.00|$ 60.00|$ 222.00|
+|Secondary (HA) Small<br>CPE|L-1515B|$ 120.00|$ 240.00|$ 42.00|$ 60.00|$ 90.00|$ 60.00|$ 252.00|
+|Secondary<br>(HA)<br>Medium CPE|L-1515A|$ 150.00|$ 240.00|$ 54.00|$ 90.00|$ 108.00|$ 90.00|$ 312.00|
+|Secondary (HA)  Large<br>CPE|FWA3260|$ 306.00|$ 360.00|$ 90.00|$ 120.00|$ 144.00|$ 120.00|$ 540.00|
+|Secondary (HA)  Extra<br>Large CPE|FWA5070|$ 624.00|$ 600.00|$ 138.00|$ 240.00|$ 180.00|$ 240.00|$ 942.00|
+||||||||||
+|ZTNA is per user in 3<br>groups.<br> (50-249/250-<br>999/1000+)<br>|VSPA (ZTNA per<br>user license)|$14/$12/$11|||||||
+
+
+
+43230000-24-STC Page **20** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 20
 
-| SKU | Description |  |  | Lumen List MRC |  | Lumen List |  | Lumen Renewal | Unit |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  | Annual |  |  |  |
-| C8200L-1N-4T-TNMS | Cisco Catalyst Router Small |  |  | $ 3,657.29 | $ 43,887.48 |  |  | $410,785.92 | 1 ea |
-| C8300-2N2S-4T2X-TNMS | Cisco Catalyst Router Med |  |  | $ 9,399.15 | $112,789.80 |  |  | $ 1,055,711.52 | 1 ea |
-| C8500-12X-TNMS | Cisco Catalyst Router Lge |  |  | $ 18,379.00 | $220,548.00 |  |  | $ 2,064,346.56 | 1 ea |
-| SCS-FL-C8500-12X-TMNS-HA |  | Large HA 2nd appliance for |  | $ 18,379.00 | $220,548.00 |  |  | $ 2,064,346.56 | 1ea |
-|  |  | CPE redundancy |  |  |  |  |  |  |  |
-| SCS-FL-C8300-2N2S-4T2X-TMNS-HA | Medium High Availability
-2nd appliance for CPE
-Redundancy - (Cisco
-Software-Defined WAN (SD-
-WAN) |  |  | $ 9,399.15 | $112,789.80 |  |  | $ 1,055,711.52 | 1 ea |
-| SCS-FL-C8200L-1N-4T-TMNS-HA |  | Small High Availability 2nd |  | $ 3,657.29 | $ 43,887.48 |  |  | $410,785.92 | 1ea |
-|  |  | appliance for CPE |  |  |  |  |  |  |  |
-|  |  | Redundancy - (Cisco |  |  |  |  |  |  |  |
-|  |  | Software-Defined WAN (SD- |  |  |  |  |  |  |  |
-|  |  | WAN) |  |  |  |  |  |  |  |
-| SCS-FL-SDWAN-0015 | Additional On-Site Work
-Cisco Software Defined
-(Small, Medium, and Large
-Appliance) One time fee. |  |  | $ 13,717.95 | $164,615.40 |  |  | $128,400.00 | 1ea |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Value Add-On Services
+
+# Value Add-On Services
+
+
 Respondent: Lumen
+
 Solution Proposed: Value Add- Viptela _ _
-Service Category: Service Category 10: Secure Access Service Edge (SASE)
-Lumen Managed SDWAN (Cisco Viptella)
-SKU Description Lumen List MRC Lumen List Lumen Renewal Unit
-Annual
-C8200L-1N-4T-TNMS Cisco Catalyst Router Small $ 3,657.29 $ 43,887.48 $410,785.92 1 ea
-C8300-2N2S-4T2X-TNMS Cisco Catalyst Router Med $ 9,399.15 $112,789.80 $ 1,055,711.52 1 ea
-C8500-12X-TNMS Cisco Catalyst Router Lge $ 18,379.00 $220,548.00 $ 2,064,346.56 1 ea
-SCS-FL-C8500-12X-TMNS-HA Large HA 2nd appliance for $ 18,379.00 $220,548.00 $ 2,064,346.56 1ea
-CPE redundancy
-SCS-FL-C8300-2N2S-4T2X-TMNS-HA Medium High Availability $ 9,399.15 $112,789.80 $ 1,055,711.52 1 ea
-2nd appliance for CPE
-Redundancy - (Cisco
-Software-Defined WAN (SD-
-WAN)
-SCS-FL-C8200L-1N-4T-TMNS-HA Small High Availability 2nd $ 3,657.29 $ 43,887.48 $410,785.92 1ea
-appliance for CPE
-Redundancy - (Cisco
-Software-Defined WAN (SD-
-WAN)
-SCS-FL-SDWAN-0015 Additional On-Site Work $ 13,717.95 $164,615.40 $128,400.00 1ea
-Cisco Software Defined
-(Small, Medium, and Large
-Appliance) One time fee.
-43230000-24-STC Page 21 of 25
+~~Service Category: Service Category 10: Se~~ cure Access Service Edge (SASE)
+## **Lumen Managed SDWAN (Cisco Viptella)**
+
+
+
+
+
+
+
+
+
+
+|SKU|Description|Lumen List MRC|Lumen List<br>Annual|Lumen Renewal|Unit|
+|---|---|---|---|---|---|
+|C8200L-1N-4T-TNMS|Cisco Catalyst Router Small|$ 3,657.29|$ 43,887.48|$410,785.92|1 ea|
+|C8300-2N2S-4T2X-TNMS|Cisco Catalyst Router Med|$ 9,399.15|$112,789.80|$ 1,055,711.52|1 ea|
+|C8500-12X-TNMS|Cisco Catalyst Router Lge|$ 18,379.00|$220,548.00|$ 2,064,346.56|1 ea|
+|SCS-FL-C8500-12X-TMNS-HA|Large HA 2nd appliance for<br>CPE redundancy|$ 18,379.00|$220,548.00|$ 2,064,346.56|1ea|
+|SCS-FL-C8300-2N2S-4T2X-TMNS-HA|Medium High Availability<br>2nd appliance for CPE<br>Redundancy - (Cisco<br>Software-Defined WAN (SD-<br>WAN)|$ 9,399.15|$112,789.80|$ 1,055,711.52|1 ea|
+|SCS-FL-C8200L-1N-4T-TMNS-HA|Small High Availability 2nd<br>appliance for CPE<br>Redundancy - (Cisco<br>Software-Defined WAN (SD-<br>WAN)|$ 3,657.29|$   43,887.48|$410,785.92|1ea|
+|SCS-FL-SDWAN-0015|Additional On-Site Work<br>Cisco Software Defined<br>(Small, Medium, and Large<br>Appliance) One time fee.|$ 13,717.95|$164,615.40|$128,400.00|1ea|
+
+
+
+43230000-24-STC Page **21** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 21
 
-| Service Category 13
-Vulnerability Assessment
-Management |  | Qualys Toolset | Qualys
-SKU(s) | Quantity | List Price |  |  | Lumen PM
-Support Install
-and Setup | Lumen M&P Day 1
-and Day 2 Support |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Model Small Entity:
-Devices/Endpoints: 100 |  | Mgd Qualys CSAM
-with EASM
-Appliance | Q-P-
-CSAM | 100 | $ 2,807.00 |  |  | 16 hours $136.00
-per hour
-$2,176.00 NRC | SecEng 8 hours per
-month $136.00 per
-hour
-$13,056.00 |  |  |
-|  |  | Mgd Qualys VMDR | Q-P-
-VMDR | 100 | $ 3,917.00 |  |  |  |  |  |  |
-| Year 1 Total: $21,956 … Year 2 Total: $19,780.00 |  |  |  |  |  |  |  |  |  |  |  |
-| Model Medium Entity:
-Devices/Endpoints: 1500, |  | Mgd Qualys CSAM
-with EASM
-Appliance | Q-P-
-CSAM | 1500 | $ 14,430.00 |  |  | 16 hours $136.00
-per hour
-$2,176.00 NRC |  | SecEng 8 hours per |  |
-|  |  |  |  |  |  |  |  |  |  | month $136.00 per |  |
-|  |  |  |  |  |  |  |  |  |  | hour |  |
-|  |  |  |  |  |  |  |  |  |  | $13,056.00 |  |
-|  |  | Mgd Qualys VMDR | Q-P-
-VMDR | 1500 | $ 19,665.00 |  |  |  |  |  |  |
-|  | Year 1 Total: $49,327.00 … Year 2 Total: $47,151.00 |  |  |  |  |  |  |  |  |  |  |
-| Model Large Entity:
-Devices/Endpoints: 5000, |  | Mgd Qualys CSAM
-with EASM
-Appliance | Q-P-
-CSAM | 5000 | $ 37,150.00 |  |  | 16 hours $136.00
-per hour
-$2,176.00 NRC | SecEng 8 hours per
-month $136.00 per
-hour
-$13,056.00 |  |  |
-|  |  | Mgd Qualys VMDR | Q-P-
-VMDR | 5000 | $ 51,750.00 |  |  |  |  |  |  |
-
-
-| Service Category 13 |
-| --- |
-| Vulnerability Assessment |
-| Management |
-
-
-| Qualys |
-| --- |
-| SKU(s) |
-
-
-| Lumen PM |
-| --- |
-| Support Install |
-| and Setup |
-
-
-| Lumen M&P Day 1 |
-| --- |
-| and Day 2 Support |
-
-
-| Q-P- |
-| --- |
-| VMDR |
-
-
-| Model Medium Entity: |
-| --- |
-| Devices/Endpoints: 1500, |
-
-
-| Mgd Qualys CSAM |
-| --- |
-| with EASM |
-| Appliance |
-
-
-| Q-P- |
-| --- |
-| CSAM |
-
-
-| 16 hours $136.00 |
-| --- |
-| per hour |
-| $2,176.00 NRC |
-
-
-| Q-P- |
-| --- |
-| VMDR |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 13 (Qualys)
+
+# Service Category 13 (Qualys)
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed: Vulnerability Assessment and Management _
-Service Category: Service Category 13: Vulnerability Assessment and Management
-Service Category 13 Qualys Toolset Qualys Quantity List Price Lumen PM Lumen M&P Day 1
-Vulnerability Assessment SKU(s) Support Install and Day 2 Support
-Management and Setup
-Model Small Entity: Mgd Qualys CSAM Q-P- 100 $ 2,807.00 16 hours $136.00 SecEng 8 hours per
-Devices/Endpoints: 100 with EASM CSAM per hour month $136.00 per
-Appliance $2,176.00 NRC hour
-$13,056.00
-Mgd Qualys VMDR Q-P- 100 $ 3,917.00
-VMDR
-Year 1 Total: $21,956 … Year 2 Total: $19,780.00
-Model Medium Entity: Mgd Qualys CSAM Q-P- 1500 $ 14,430.00 16 hours $136.00 SecEng 8 hours per
-Devices/Endpoints: 1500, with EASM CSAM per hour month $136.00 per
-Appliance $2,176.00 NRC hour
-$13,056.00
-Mgd Qualys VMDR Q-P- 1500 $ 19,665.00
-VMDR
-Year 1 Total: $49,327.00 … Year 2 Total: $47,151.00
-Model Large Entity: Mgd Qualys CSAM Q-P- 5000 $ 37,150.00 16 hours $136.00 SecEng 8 hours per
-Devices/Endpoints: 5000, with EASM CSAM per hour month $136.00 per
-Appliance $2,176.00 NRC hour
-$13,056.00
-Mgd Qualys VMDR Q-P- 5000 $ 51,750.00
-VMDR
-43230000-24-STC Page 22 of 25
+~~Service Category: Service Category 13: Vulnerability Assessment~~ and Management
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 13<br>Vulnerability Assessment<br>Management|Qualys Toolset|Qualys<br>SKU(s)|Quantity|List Price|Col6|Col7|Lumen PM<br>Support Install<br>and Setup|Lumen M&P Day 1<br>and Day 2 Support|
+|---|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Devices/Endpoints: 100|Mgd Qualys CSAM<br>with EASM<br>Appliance|Q-P-<br>CSAM|100|$ 2,807.00|||16 hours $136.00<br>per hour<br>$2,176.00 NRC|SecEng 8 hours per<br>month $136.00 per<br>hour<br>$13,056.00|
+||Mgd Qualys VMDR|Q-P-<br>VMDR|100|$ 3,917.00|||||
+|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|Year 1 Total: $21,956  … Year 2 Total: $19,780.00|
+|Model Medium Entity:<br>Devices/Endpoints: 1500,|Mgd Qualys CSAM<br>with EASM<br>Appliance|Q-P-<br>CSAM|1500|$ 14,430.00|||16 hours $136.00<br>per hour<br>$2,176.00 NRC|SecEng 8 hours per<br>month $136.00 per<br>hour<br>$13,056.00|
+||Mgd Qualys VMDR|Q-P-<br>VMDR|1500|$ 19,665.00|||||
+|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|Year 1 Total: $49,327.00  … Year 2 Total: $47,151.00|
+|Model Large Entity:<br>Devices/Endpoints: 5000,|Mgd Qualys CSAM<br>with EASM<br>Appliance|Q-P-<br>CSAM|5000|$ 37,150.00|||16 hours $136.00<br>per hour<br>$2,176.00 NRC|SecEng 8 hours per<br>month $136.00 per<br>hour<br>$13,056.00|
+||Mgd Qualys VMDR|Q-P-<br>VMDR|5000|$ 51,750.00|||||
+
+
+
+43230000-24-STC Page **22** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 22
 
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
+
+
 Year 1 Total: $104,132.00 … Year 2 Total: $101,956.00
-43230000-24-STC Page 23 of 25
+
+
+43230000-24-STC Page **23** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 23
 
-| Service Category 16
-Lumen SOCaaS, Log
-Management and
-Managed SIEM |  | Lumen Toolset | Lumen
-SKU | Quantity | List Price –
-(MRC) | Lumen M&P
-Support Install
-and Setup –
-(NRC) | SOC 24X7
-Monitoring | Each Additional
-Unit (MRC) |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Model Small Entity:
-Devices/Endpoints: 250 |  | Cloud based
-SPLUNK
-Instance, 24X7
-SOC and Log
-Archive | SOCaaS
-for Public
-Sector
-100G
-Logs per
-day | 250 –
-Minimum
-Quantity | $ 79,300.00 | 20 hours
-$136.00 per
-hour
-$2,720.00 NRC | included | $317.20, per
-unit for
-quantities of 251
-to 4999 units |  |
-|  | Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC) |  |  |  |  |  |  |  |  |
-| Model Medium Entity:
-Devices/Endpoints:
-5000, |  | Cloud based
-SPLUNK
-Instance, 24X7
-SOC and Log
-Archive | SOCaaS
-for Public
-Sector
-200G
-Logs per
-day | 5000 | $ 158,600.00 | 40 hours
-$136.00 per
-hour
-$5,440.00 NRC | included | $31.72, per unit
-for quantities of
-5001 to 16999
-units |  |
-|  | Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC) |  |  |  |  |  |  |  |  |
-| Model Large Entity:
-Devices/Endpoints:
-17000, |  | Cloud based
-SPLUNK
-Instance, 24X7
-SOC and Log
-Archive | SOCaaS
-for Public
-Sector
-400G
-Logs per
-day | 17000 | $ 317,200.00 | 80 hours
-$136.00 per
-hour
-$10,880.00 NRC | included | $18.66, Above
-17001 units |  |
-|  | Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC) |  |  |  |  |  |  |  |  |
-
-
-| Service Category 16 |
-| --- |
-| Lumen SOCaaS, Log |
-| Management and |
-| Managed SIEM |
-
-
-| Lumen |
-| --- |
-| SKU |
-
-
-| List Price – |
-| --- |
-| (MRC) |
-
-
-| Lumen M&P |
-| --- |
-| Support Install |
-| and Setup – |
-| (NRC) |
-
-
-| SOC 24X7 |
-| --- |
-| Monitoring |
-
-
-| Each Additional |
-| --- |
-| Unit (MRC) |
-
-
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-Service Category 16
+
+# Service Category 16
+
+
 Respondent: __Lumen____________________________
+
 Solution Proposed Security Information Event Management (SIEM) and Log Management : _
-Service Category: Service Category 16: Enterprise Security Log Management, Analytics, and Response
-Service Category 16 Lumen Toolset Lumen Quantity List Price – Lumen M&P SOC 24X7 Each Additional
-Lumen SOCaaS, Log SKU (MRC) Support Install Monitoring Unit (MRC)
-Management and and Setup –
-Managed SIEM (NRC)
-Model Small Entity: Cloud based SOCaaS 250 – $ 79,300.00 20 hours included $317.20, per
-Devices/Endpoints: 250 SPLUNK for Public Minimum $136.00 per unit for
-Instance, 24X7 Sector Quantity hour quantities of 251
-SOC and Log 100G $2,720.00 NRC to 4999 units
-Archive Logs per
-day
-Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)
-Model Medium Entity: Cloud based SOCaaS 5000 $ 158,600.00 40 hours included $31.72, per unit
-Devices/Endpoints: SPLUNK for Public $136.00 per for quantities of
-5000, Instance, 24X7 Sector hour 5001 to 16999
-SOC and Log 200G $5,440.00 NRC units
-Archive Logs per
-day
-Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)
-Model Large Entity: Cloud based SOCaaS 17000 $ 317,200.00 80 hours included $18.66, Above
-Devices/Endpoints: SPLUNK for Public $136.00 per 17001 units
-17000, Instance, 24X7 Sector hour
-SOC and Log 400G $10,880.00 NRC
-Archive Logs per
-day
-Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)
-43230000-24-STC Page 24 of 25
+~~Service Category: Service Category 16: Enterprise Security Log Management, Analytics, and~~ Response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|Service Category 16<br>Lumen SOCaaS, Log<br>Management and<br>Managed SIEM|Lumen Toolset|Lumen<br>SKU|Quantity|List Price –<br>(MRC)|Lumen M&P<br>Support Install<br>and Setup –<br>(NRC)|SOC 24X7<br>Monitoring|Each Additional<br>Unit (MRC)|
+|---|---|---|---|---|---|---|---|
+|Model Small Entity:<br>Devices/Endpoints: 250|Cloud based<br>SPLUNK<br>Instance, 24X7<br>SOC and Log<br>Archive|SOCaaS<br>for Public<br>Sector<br>100G<br>Logs per<br>day|250 –<br>Minimum<br>Quantity|$ 79,300.00|20 hours<br>$136.00 per<br>hour<br>$2,720.00 NRC|included|$317.20, per<br>unit for<br>quantities of 251<br>to 4999 units|
+|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|Year 1 Total $82,020.00 … Year 2 Total $79,300 (minus install NRC)|
+|Model Medium Entity:<br>Devices/Endpoints:<br>5000,|Cloud based<br>SPLUNK<br>Instance, 24X7<br>SOC and Log<br>Archive|SOCaaS<br>for Public<br>Sector<br>200G<br>Logs per<br>day|5000|$ 158,600.00|40 hours<br>$136.00 per<br>hour<br>$5,440.00 NRC|included|$31.72, per unit<br>for quantities of<br>5001 to 16999<br>units|
+|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|Year 1 Total $164,040.00 … Year 2 Total $158,600.00 (minus install NRC)|
+|Model Large Entity:<br>Devices/Endpoints:<br>17000,|Cloud based<br>SPLUNK<br>Instance, 24X7<br>SOC and Log<br>Archive|SOCaaS<br>for Public<br>Sector<br>400G<br>Logs per<br>day|17000|$ 317,200.00|80 hours<br>$136.00 per<br>hour<br>$10,880.00 NRC|included|$18.66, Above<br>17001 units|
+|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|Year 1 Total $328,080.00 … Year 2 Total $317,200.00 (minus install NRC)|
+
+
+43230000-24-STC Page **24** of **25**
 Digital Security Solutions
+
+
+
 
 ---
 
 ## Page 24
 
 Docusign Envelope ID: BE2E4D45-ADC5-4FBA-8D87-BCD65D57E1CC
-43230000-24-STC Page 25 of 25
+
+
+43230000-24-STC Page **25** of **25**
 Digital Security Solutions
+
+
+
 
 ---

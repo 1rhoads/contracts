@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -99,21 +101,35 @@
                     {% endif %}
 
                     <!-- AI Search Section -->
-                <div class="ai-section" style="margin-bottom: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent-color);">
-                    <h2 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.5rem;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M11.5 11.5v.01"></path><path d="M16 16v.01"></path></svg>
-                        Ask AI Assistant
-                    </h2>
-                    <div class="ai-input-group" style="display: flex; gap: 1rem;">
-                        <input type="text" id="ai-query" placeholder="e.g. What are the security requirements for cloud data?" style="flex: 1; padding: 0.8rem; border-radius: 0.5rem; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.3); color: white;">
-                        <button onclick="askAI()" id="ai-btn" class="button secondary" style="padding: 0.8rem 1.5rem; border-radius: 0.5rem; cursor: pointer; background: var(--accent-color); color: white; border: none;">Ask</button>
+                    <div class="ai-section"
+                        style="margin-bottom: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent-color);">
+                        <h2
+                            style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
+                                <path d="M8.5 8.5v.01"></path>
+                                <path d="M11.5 11.5v.01"></path>
+                                <path d="M16 16v.01"></path>
+                            </svg>
+                            Ask AI Assistant
+                        </h2>
+                        <div class="ai-input-group" style="display: flex; gap: 1rem;">
+                            <input type="text" id="ai-query"
+                                placeholder="e.g. What are the security requirements for cloud data?"
+                                style="flex: 1; padding: 0.8rem; border-radius: 0.5rem; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.3); color: white;">
+                            <button onclick="askAI()" id="ai-btn" class="button secondary"
+                                style="padding: 0.8rem 1.5rem; border-radius: 0.5rem; cursor: pointer; background: var(--accent-color); color: white; border: none;">Ask</button>
+                        </div>
+                        <div id="ai-response" style="margin-top: 1rem; display: none;">
+                            <div class="loading-spinner" style="display: none; color: #aaa;">Thinking...</div>
+                            <div class="answer-content markdown-body"
+                                style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
+                            </div>
+                            <div class="sources-list" style="margin-top: 1rem; font-size: 0.9rem; color: #888;"></div>
+                        </div>
                     </div>
-                    <div id="ai-response" style="margin-top: 1rem; display: none;">
-                        <div class="loading-spinner" style="display: none; color: #aaa;">Thinking...</div>
-                        <div class="answer-content markdown-body" style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;"></div>
-                        <div class="sources-list" style="margin-top: 1rem; font-size: 0.9rem; color: #888;"></div>
-                    </div>
-                </div>
 
                     <div class="results-grid">
                         {% for result in results %}
@@ -185,18 +201,18 @@
             try {
                 const res = await fetch('/ask', {
                     method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({query: query})
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: query })
                 });
-                
+
                 const data = await res.json();
-                
+
                 if (data.error) {
                     answerDiv.innerText = "Error: " + data.error;
                 } else {
                     // Render Markdown
                     answerDiv.innerHTML = marked.parse(data.answer);
-                    
+
                     // Render Sources
                     if (data.sources && data.sources.length > 0) {
                         let sourceHTML = '<strong>Sources:</strong><ul>';

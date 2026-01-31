@@ -336,7 +336,7 @@ def ask_ai():
         
         # 2. Get all chunks from DB
         conn = get_db_connection()
-        rows = conn.execute("SELECT id, document_id, page_number, content, embedding, title, filename FROM chunks JOIN documents ON chunks.document_id = documents.id").fetchall()
+        rows = conn.execute("SELECT chunks.id, document_id, page_number, chunks.content, embedding, title, filename FROM chunks JOIN documents ON chunks.document_id = documents.id").fetchall()
         conn.close()
 
         if not rows:

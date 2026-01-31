@@ -8,6 +8,9 @@ services:
       - "8080:8000"
     volumes:
       - app_data:/app/instance
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - SECRET_KEY=${SECRET_KEY}
     restart: always
 
   digest-worker:

@@ -3,7 +3,10 @@ import os
 import glob
 import re
 import json
+import numpy as np
+import io
 from util.categories import extract_categories
+from util.llm import get_embedding
 
 # Configuration
 DB_NAME = "instance/contracts.db"
@@ -29,6 +32,18 @@ def init_db():
     c.execute('''
     CREATE VIRTUAL TABLE IF NOT EXISTS documents_fts USING fts5(
         title, content, content='documents', content_rowid='id'
+    )
+    ''')
+
+    # Create Chunks table for RAG
+    c.execute('''
+    CREATE TABLE IF NOT EXISTS chunks (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        document_id INTEGER,
+        page_number INTEGER,
+        content TEXT,
+        embedding BLOB,
+        FOREIGN KEY(document_id) REFERENCES documents(id)
     )
     ''')
     
@@ -101,11 +116,46 @@ def ingest_files():
             updated_count += 1
             print(f"Updated: {filename} (Cats: {len(cats)})")
         else:
-            # Insert new
             c.execute("INSERT INTO documents (title, filename, vendor, categories, content) VALUES (?, ?, ?, ?, ?)", 
                       (title, filename, vendor, cats_json, content))
+            doc_id = c.lastrowid
             new_count += 1
             print(f"Imported: {filename} (Cats: {len(cats)})")
+
+            # --- RAG: Chunking & Embedding ---
+            print(f"  generating embeddings for {filename}...")
+            # Split by pages
+            page_splits = re.split(r'(^## Page \d+\n)', content, flags=re.MULTILINE)
+            current_page = 1
+            
+            # Helper to insert chunk
+            def insert_chunk(doc_id, page_num, text):
+                if not text.strip(): return
+                try:
+                    emb = get_embedding(text)
+                    # Convert numpy dict to bytes
+                    emb_blob = emb.tobytes()
+                    c.execute("INSERT INTO chunks (document_id, page_number, content, embedding) VALUES (?, ?, ?, ?)",
+                              (doc_id, page_num, text, emb_blob))
+                except Exception as e:
+                    print(f"Error embedding page {page_num}: {e}")
+
+            if len(page_splits) > 1:
+                for i in range(1, len(page_splits), 2):
+                    header = page_splits[i].strip()
+                    page_content = page_splits[i+1]
+                    try:
+                        num_match = re.search(r'(\d+)', header)
+                        if num_match:
+                            current_page = int(num_match.group(1))
+                    except:
+                        pass
+                    
+                    full_chunk_text = f"{header}\n{page_content}"
+                    insert_chunk(doc_id, current_page, full_chunk_text)
+            else:
+                # Single chunk
+                insert_chunk(doc_id, 1, content)
         
     conn.commit()
     conn.close()

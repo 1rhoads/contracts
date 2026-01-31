@@ -452,3 +452,12 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
+
+/* AI Answer Styles */
+.ai-section .markdown-body p {
+    margin-bottom: 0.5rem;
+}
+.ai-section .markdown-body ul {
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}

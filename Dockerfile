@@ -19,5 +19,9 @@ RUN python3 download_pdfs.py
 # Expose the Gunicorn port
 EXPOSE 8000
 
-# Run the application with Gunicorn
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "app:app"]
+# Copy startup script
+COPY start.sh .
+RUN chmod +x start.sh
+
+# Run the startup script
+CMD ["./start.sh"]

@@ -1,8 +1,10 @@
 import os
 import sqlite3
 import re
-from flask import Flask, render_template, request, abort, redirect, url_for
-from markdown import markdown # We might need this, but we can display raw text or pre-rendered. 
+from flask import Flask, render_template, request, abort, redirect, url_for, jsonify
+from markdown import markdown 
+import numpy as np
+from util.llm import get_embedding, generate_answer
 # Actually, displaying markdown as HTML is better.
 # Trying to import markdown, if not available we will just return text.
 
@@ -320,6 +322,87 @@ def serve_pdf(filename):
     from flask import send_from_directory
     pdf_dir = os.path.join(os.path.dirname(__file__), 'data', 'pdfs')
     return send_from_directory(pdf_dir, filename)
+
+@app.route('/ask', methods=['POST'])
+def ask_ai():
+    data = request.get_json()
+    query = data.get('query')
+    if not query:
+        return jsonify({'error': 'No query provided'}), 400
+
+    try:
+        # 1. Embed Query
+        query_emb = get_embedding(query) # numpy array
+        
+        # 2. Get all chunks from DB
+        conn = get_db_connection()
+        rows = conn.execute("SELECT id, document_id, page_number, content, embedding, title, filename FROM chunks JOIN documents ON chunks.document_id = documents.id").fetchall()
+        conn.close()
+
+        if not rows:
+            return jsonify({'answer': "No documents found to analyze.", 'sources': []})
+
+        # 3. Calculate Similarity (Brute Force)
+        # Convert list of blobs to numpy matrix
+        # Embeddings are usually float32. 
+        # Note: blobs are bytes. np.frombuffer(blob, dtype=np.float32)
+        
+        # Optimization: Pre-load this if dataset grows, but for 1000 chunks it's ms.
+        db_embeddings = []
+        chunk_metadata = []
+        
+        for r in rows:
+            if r['embedding']:
+                emb = np.frombuffer(r['embedding'], dtype=np.float32)
+                db_embeddings.append(emb)
+                chunk_metadata.append({
+                    'id': r['id'],
+                    'title': r['title'],
+                    'filename': r['filename'],
+                    'page': r['page_number'],
+                    'content': r['content']
+                })
+        
+        if not db_embeddings:
+             return jsonify({'answer': "No embeddings found. Please re-ingest data.", 'sources': []})
+
+        db_embeddings = np.array(db_embeddings)
+        
+        # Cosine Similarity: (A . B) / (|A| * |B|)
+        # sentence-transformers embeddings are normalized, so just dot product
+        scores = np.dot(db_embeddings, query_emb)
+        
+        # Top 5
+        top_k_indices = np.argsort(scores)[::-1][:5]
+        
+        top_chunks = [chunk_metadata[i] for i in top_k_indices]
+        context_texts = [f"Source: {c['title']} (Page {c['page']})\n{c['content']}" for c in top_chunks]
+        
+        # 4. Generate Answer
+        answer = generate_answer(query, context_texts)
+        
+        # Format Sources for UI
+        sources = []
+        seen = set()
+        for c in top_chunks:
+            key = (c['filename'], c['page'])
+            if key not in seen:
+                sources.append({
+                    'title': c['title'],
+                    'filename': c['filename'],
+                    'page': c['page'],
+                    'score': float(scores[chunk_metadata.index(c)]) # Approximate score lookup
+                })
+                seen.add(key)
+                
+        return jsonify({
+            'answer': answer,
+            'sources': sources
+        })
+
+    except Exception as e:
+        print(f"RAG Error: {e}")
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

@@ -7,3 +7,7 @@ schedule
 markdown
 
 pymupdf4llm
+google-generativeai
+sentence-transformers
+numpy
+torch --index-url https://download.pytorch.org/whl/cpu

@@ -21,3 +21,8 @@ Thumbs.db
 # Debug/Temporary
 debug_*
 *.tmp
+
+# Local/Runtime
+app.log
+instance/
+.DS_Store

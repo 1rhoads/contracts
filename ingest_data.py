@@ -3,11 +3,22 @@ import os
 import glob
 import re
 import json
-import numpy as np
+import sqlite3
+import os
+import glob
+import re
+import json
 import io
 from util.categories import extract_categories
-from util.llm import get_embedding
 
+try:
+    import numpy as np
+    from util.llm import get_embedding
+    HAS_EMBEDDINGS = True
+except ImportError:
+    print("Warning: numpy or util.llm not found. Embeddings will be skipped.")
+    HAS_EMBEDDINGS = False
+    
 # Configuration
 DB_NAME = "instance/contracts.db"
 MARKDOWN_DIR = "data/markdown"
@@ -46,6 +57,23 @@ def init_db():
         FOREIGN KEY(document_id) REFERENCES documents(id)
     )
     ''')
+
+    # Create Product Lines table
+    c.execute('''
+    CREATE TABLE IF NOT EXISTS product_lines (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        document_id INTEGER,
+        vendor TEXT,
+        oem TEXT,
+        sku TEXT,
+        description TEXT,
+        price TEXT,
+        unit TEXT,
+        raw_line TEXT,
+        FOREIGN KEY(document_id) REFERENCES documents(id)
+    )
+    ''')
+
     
     # Triggers to keep FTS in sync
     c.execute('''
@@ -123,39 +151,42 @@ def ingest_files():
             print(f"Imported: {filename} (Cats: {len(cats)})")
 
             # --- RAG: Chunking & Embedding ---
-            print(f"  generating embeddings for {filename}...")
-            # Split by pages
-            page_splits = re.split(r'(^## Page \d+\n)', content, flags=re.MULTILINE)
-            current_page = 1
-            
-            # Helper to insert chunk
-            def insert_chunk(doc_id, page_num, text):
-                if not text.strip(): return
-                try:
-                    emb = get_embedding(text)
-                    # Convert numpy dict to bytes
-                    emb_blob = emb.tobytes()
-                    c.execute("INSERT INTO chunks (document_id, page_number, content, embedding) VALUES (?, ?, ?, ?)",
-                              (doc_id, page_num, text, emb_blob))
-                except Exception as e:
-                    print(f"Error embedding page {page_num}: {e}")
-
-            if len(page_splits) > 1:
-                for i in range(1, len(page_splits), 2):
-                    header = page_splits[i].strip()
-                    page_content = page_splits[i+1]
+            if HAS_EMBEDDINGS:
+                print(f"  generating embeddings for {filename}...")
+                # Split by pages
+                page_splits = re.split(r'(^## Page \d+\n)', content, flags=re.MULTILINE)
+                current_page = 1
+                
+                # Helper to insert chunk
+                def insert_chunk(doc_id, page_num, text):
+                    if not text.strip(): return
                     try:
-                        num_match = re.search(r'(\d+)', header)
-                        if num_match:
-                            current_page = int(num_match.group(1))
-                    except:
-                        pass
-                    
-                    full_chunk_text = f"{header}\n{page_content}"
-                    insert_chunk(doc_id, current_page, full_chunk_text)
+                        emb = get_embedding(text)
+                        # Convert numpy dict to bytes
+                        emb_blob = emb.tobytes()
+                        c.execute("INSERT INTO chunks (document_id, page_number, content, embedding) VALUES (?, ?, ?, ?)",
+                                  (doc_id, page_num, text, emb_blob))
+                    except Exception as e:
+                        print(f"Error embedding page {page_num}: {e}")
+    
+                if len(page_splits) > 1:
+                    for i in range(1, len(page_splits), 2):
+                        header = page_splits[i].strip()
+                        page_content = page_splits[i+1]
+                        try:
+                            num_match = re.search(r'(\d+)', header)
+                            if num_match:
+                                current_page = int(num_match.group(1))
+                        except:
+                            pass
+                        
+                        full_chunk_text = f"{header}\n{page_content}"
+                        insert_chunk(doc_id, current_page, full_chunk_text)
+                else:
+                    # Single chunk
+                    insert_chunk(doc_id, 1, content)
             else:
-                # Single chunk
-                insert_chunk(doc_id, 1, content)
+                print(f"  Skipping embeddings for {filename} (missing dependencies)")
         
     conn.commit()
     conn.close()

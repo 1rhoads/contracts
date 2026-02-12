@@ -22,7 +22,13 @@
 
     <div class="container">
         <header>
-            <h1>Florida Contracts <span class="highlight">Explorer</span></h1>
+            <div style="display: inline-flex; align-items: center; gap: 1.5rem;">
+                <h1 style="margin-bottom: 0;">Florida Contracts <span class="highlight">Explorer</span></h1>
+                <a href="/workflow/quote" class="button"
+                    style="background: var(--secondary-color); color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 2rem; font-weight: 600; font-size: 1rem; transition: transform 0.2s;">
+                    Compare Prices &rarr;
+                </a>
+            </div>
             <p class="subtitle">Searchable database of Digital Security Solutions state term contracts.</p>
         </header>
 
@@ -52,41 +58,43 @@
                 <!-- Sidebar -->
                 <aside class="filters-sidebar" style="width: 250px; flex-shrink: 0;">
                     <div class="filter-group">
-                        <h3>Vendors</h3>
-                        <div class="filter-list" style="max-height: 300px; overflow-y: auto;">
-                            {% for vendor in all_vendors %}
-                            {% set is_active = (vendor == selected_vendor) %}
-                            <a href="{{ url_for('index', q=query, vendor=vendor if not is_active else None, category=selected_category) }}"
-                                class="filter-item {{ 'active' if is_active else '' }}"
-                                style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
-                                {{ vendor }}
-                                {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
-                            </a>
-                            {% endfor %}
-                        </div>
-                    </div>
+                        <div class="filter-group">
 
-                    <div class="filter-group" style="margin-top: 2rem;">
-                        <h3>Service Categories</h3>
-                        <div class="filter-list" style="max-height: 400px; overflow-y: auto;">
-                            {% for cat in all_categories %}
-                            {% set is_active = (cat == selected_category) %}
-                            <a href="{{ url_for('index', q=query, vendor=selected_vendor, category=cat if not is_active else None) }}"
-                                class="filter-item {{ 'active' if is_active else '' }}"
-                                style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
-                                {{ cat }}
-                                {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
-                            </a>
-                            {% endfor %}
+                            <h3>Vendors</h3>
+                            <div class="filter-list" style="max-height: 300px; overflow-y: auto;">
+                                {% for vendor in all_vendors %}
+                                {% set is_active = (vendor == selected_vendor) %}
+                                <a href="{{ url_for('index', q=query, vendor=vendor if not is_active else None, category=selected_category) }}"
+                                    class="filter-item {{ 'active' if is_active else '' }}"
+                                    style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
+                                    {{ vendor }}
+                                    {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
+                                </a>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
 
-                    {% if selected_vendor or selected_category %}
-                    <div style="margin-top: 1rem;">
-                        <a href="{{ url_for('index', q=query) }}" class="button secondary"
-                            style="width: 100%; text-align: center;">Clear Filters</a>
-                    </div>
-                    {% endif %}
+                        <div class="filter-group" style="margin-top: 2rem;">
+                            <h3>Service Categories</h3>
+                            <div class="filter-list" style="max-height: 400px; overflow-y: auto;">
+                                {% for cat in all_categories %}
+                                {% set is_active = (cat == selected_category) %}
+                                <a href="{{ url_for('index', q=query, vendor=selected_vendor, category=cat if not is_active else None) }}"
+                                    class="filter-item {{ 'active' if is_active else '' }}"
+                                    style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
+                                    {{ cat }}
+                                    {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
+                                </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        {% if selected_vendor or selected_category %}
+                        <div style="margin-top: 1rem;">
+                            <a href="{{ url_for('index', q=query) }}" class="button secondary"
+                                style="width: 100%; text-align: center;">Clear Filters</a>
+                        </div>
+                        {% endif %}
                 </aside>
 
                 <!-- Results -->
@@ -102,7 +110,7 @@
 
                     <!-- AI Search Section -->
                     <div class="ai-section"
-                        style="margin-bottom: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent-color);">
+                        style="display: none; margin-bottom: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent-color);">
                         <h2
                             style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.5rem;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"

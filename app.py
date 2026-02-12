@@ -3,10 +3,15 @@ import sqlite3
 import re
 from flask import Flask, render_template, request, abort, redirect, url_for, jsonify
 from markdown import markdown 
-import numpy as np
-from util.llm import get_embedding, generate_answer
-# Actually, displaying markdown as HTML is better.
-# Trying to import markdown, if not available we will just return text.
+import sqlite3
+
+try:
+    import numpy as np
+    from util.llm import get_embedding, generate_answer
+    HAS_EMBEDDINGS = True
+except ImportError:
+    print("Warning: numpy or util.llm not found. RAG features will be disabled.")
+    HAS_EMBEDDINGS = False
 
 app = Flask(__name__)
 
@@ -330,6 +335,9 @@ def ask_ai():
     if not query:
         return jsonify({'error': 'No query provided'}), 400
 
+    if not HAS_EMBEDDINGS:
+        return jsonify({'answer': " AI features are currently unavailable due to missing dependencies (numpy).", 'sources': []})
+
     try:
         # 1. Embed Query
         query_emb = get_embedding(query) # numpy array
@@ -403,6 +411,85 @@ def ask_ai():
     except Exception as e:
         print(f"RAG Error: {e}")
         return jsonify({'error': str(e)}), 500
+
+# --- Workflow Routes ---
+
+@app.route('/workflow/quote')
+def workflow_quote():
+    return render_template('workflow_quote.html')
+
+@app.route('/api/oems')
+def api_oems():
+    conn = get_db_connection()
+    # Get distinct OEMs from product_lines
+    rows = conn.execute("SELECT DISTINCT oem FROM product_lines WHERE oem IS NOT NULL ORDER BY oem").fetchall()
+    conn.close()
+    return jsonify([r['oem'] for r in rows])
+
+@app.route('/api/oems/<path:oem>/products')
+def api_oem_products(oem):
+    conn = get_db_connection()
+    # Get products for this OEM
+    # Group by SKU + Description to avoid duplicates
+    sql = """
+        SELECT DISTINCT sku, description 
+        FROM product_lines 
+        WHERE oem = ? 
+        ORDER BY sku
+    """
+    rows = conn.execute(sql, (oem,)).fetchall()
+    conn.close()
+    
+    products = []
+    seen = set()
+    for r in rows:
+        # key = (r['sku'], r['description'])
+        products.append({
+            'sku': r['sku'],
+            'description': r['description']
+        })
+        
+    return jsonify(products)
+
+@app.route('/api/products/vendors')
+def api_product_vendors():
+    sku = request.args.get('sku')
+    description = request.args.get('description') # sometimes SKU is same as description
+    
+    if not sku and not description:
+        return jsonify([])
+        
+    conn = get_db_connection()
+    sql = """
+        SELECT pl.id, pl.vendor, pl.price, pl.unit, pl.description, d.id as doc_id, d.title
+        FROM product_lines pl
+        JOIN documents d ON pl.document_id = d.id
+        WHERE pl.sku = ? OR pl.description = ?
+        ORDER BY pl.price ASC
+    """
+    # Simple logic: match either SKU or Description (since we fallback desc to sku)
+    val = sku if sku else description
+    
+    # Actually, we should be precise.
+    # The UI will likely pass SKU.
+    if sku:
+        rows = conn.execute(sql, (sku, sku)).fetchall()
+    else:
+         rows = conn.execute(sql, (description, description)).fetchall()
+         
+    conn.close()
+    
+    results = []
+    for r in rows:
+        results.append({
+            'vendor': r['vendor'],
+            'price': r['price'],
+            'unit': r['unit'],
+            'description': r['description'],
+            'doc_id': r['doc_id'],
+            'doc_title': r['title']
+        })
+    return jsonify(results)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

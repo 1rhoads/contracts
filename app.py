@@ -492,4 +492,5 @@ def api_product_vendors():
     return jsonify(results)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    # Bind to 0.0.0.0 to allow external access (required for Docker/Portainer)
+    app.run(debug=True, host='0.0.0.0', port=5000)

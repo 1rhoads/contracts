@@ -493,4 +493,5 @@ def api_product_vendors():
 
 if __name__ == '__main__':
     # Bind to 0.0.0.0 to allow external access (required for Docker/Portainer)
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Port 8000 matches docker-compose.yml (8080:8000)
+    app.run(debug=True, host='0.0.0.0', port=8000)

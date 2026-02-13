@@ -5,6 +5,8 @@ set -e
 if [ ! -f "instance/contracts.db" ]; then
     echo "Database not found. initializing and ingesting data..."
     python3 ingest_data.py
+    echo "Extracting products..."
+    python3 extract_products.py
 fi
 
 # Start the application

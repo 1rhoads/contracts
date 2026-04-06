@@ -2,8 +2,7 @@ import os
 import sqlite3
 import re
 from flask import Flask, render_template, request, abort, redirect, url_for, jsonify
-from markdown import markdown 
-import sqlite3
+from markdown import markdown
 
 try:
     import numpy as np
@@ -14,6 +13,7 @@ except ImportError:
     HAS_EMBEDDINGS = False
 
 app = Flask(__name__)
+app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 
 def get_db_connection():
     # Use instance folder for persistence
@@ -195,10 +195,6 @@ def view_document(doc_id):
     # Regex to capture page number and content
     # Matches "## Page 1" followed by content until next "## Page" or end of string
     # We use capturing group for page num, and then the content.
-    pages = []
-    # Note: re.split might be easier, or finditer
-    # The format is line: "## Page <num>"
-    
     page_splits = re.split(r'(^## Page \d+\n)', content, flags=re.MULTILINE)
     
     # page_splits[0] is strictly preamble (often empty if file starts with page 1, or just the title)
@@ -271,10 +267,11 @@ def view_document(doc_id):
                     if higher_matches:
                         next_result = min(higher_matches)
 
-                return render_template('document.html', 
-                                     doc=doc, 
-                                     content=page_md, 
-                                     current_page=target_page, 
+                content_html = markdown(page_md, extensions=['tables'])
+                return render_template('document.html',
+                                     doc=doc,
+                                     content=content_html,
+                                     current_page=target_page,
                                      total_pages=total_pages,
                                      query=query,
                                      prev_page=prev_page,
@@ -320,7 +317,7 @@ def view_document(doc_id):
          return redirect(url_for('view_document', doc_id=doc_id, page=1))
          
     # Fallback to full content
-    return render_template('document.html', doc=doc, content=content)
+    return render_template('document.html', doc=doc, content=markdown(content, extensions=['tables']))
 
 @app.route('/pdfs/<path:filename>')
 def serve_pdf(filename):
@@ -365,6 +362,7 @@ def ask_ai():
                 db_embeddings.append(emb)
                 chunk_metadata.append({
                     'id': r['id'],
+                    'doc_id': r['document_id'],
                     'title': r['title'],
                     'filename': r['filename'],
                     'page': r['page_number'],
@@ -391,17 +389,19 @@ def ask_ai():
         
         # Format Sources for UI
         sources = []
-        seen = set()
-        for c in top_chunks:
+        seen_pages = set()
+        for rank_idx, chunk_idx in enumerate(top_k_indices):
+            c = chunk_metadata[chunk_idx]
             key = (c['filename'], c['page'])
-            if key not in seen:
+            if key not in seen_pages:
                 sources.append({
                     'title': c['title'],
                     'filename': c['filename'],
+                    'doc_id': c['doc_id'],
                     'page': c['page'],
-                    'score': float(scores[chunk_metadata.index(c)]) # Approximate score lookup
+                    'score': float(scores[chunk_idx])
                 })
-                seen.add(key)
+                seen_pages.add(key)
                 
         return jsonify({
             'answer': answer,
@@ -441,9 +441,7 @@ def api_oem_products(oem):
     conn.close()
     
     products = []
-    seen = set()
     for r in rows:
-        # key = (r['sku'], r['description'])
         products.append({
             'sku': r['sku'],
             'description': r['description']
@@ -467,11 +465,6 @@ def api_product_vendors():
         WHERE pl.sku = ? OR pl.description = ?
         ORDER BY pl.price ASC
     """
-    # Simple logic: match either SKU or Description (since we fallback desc to sku)
-    val = sku if sku else description
-    
-    # Actually, we should be precise.
-    # The UI will likely pass SKU.
     if sku:
         rows = conn.execute(sql, (sku, sku)).fetchall()
     else:

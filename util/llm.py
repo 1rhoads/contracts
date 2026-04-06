@@ -2,7 +2,6 @@
 import os
 import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
-import numpy as np
 
 # Global embedding model (lazy load)
 _embed_model = None
@@ -33,7 +32,7 @@ def generate_answer(query, context_chunks):
         return "Error: GOOGLE_API_KEY not set in environment."
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
 
     # Construct Prompt
     context_text = "\n\n---\n\n".join(context_chunks)

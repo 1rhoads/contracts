@@ -3,32 +3,30 @@ import os
 import glob
 import re
 import json
-import sqlite3
-import os
-import glob
-import re
-import json
-import io
+import hashlib
 from util.categories import extract_categories
 
 try:
-    import numpy as np
     from util.llm import get_embedding
     HAS_EMBEDDINGS = True
 except ImportError:
     print("Warning: numpy or util.llm not found. Embeddings will be skipped.")
     HAS_EMBEDDINGS = False
-    
+
 # Configuration
 DB_NAME = "instance/contracts.db"
 MARKDOWN_DIR = "data/markdown"
+
+
+def content_hash(text):
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()
+
 
 def init_db():
     if not os.path.exists('instance'):
         os.makedirs('instance')
     conn = sqlite3.connect(DB_NAME)
     c = conn.cursor()
-    # Create main table
     c.execute('''
     CREATE TABLE IF NOT EXISTS documents (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -36,17 +34,20 @@ def init_db():
         filename TEXT,
         vendor TEXT,
         categories TEXT,
-        content TEXT
+        content TEXT,
+        content_hash TEXT
     )
     ''')
-    # Create FTS table
+    # Add content_hash column to existing databases that predate this schema
+    try:
+        c.execute("ALTER TABLE documents ADD COLUMN content_hash TEXT")
+    except sqlite3.OperationalError:
+        pass  # Column already exists
     c.execute('''
     CREATE VIRTUAL TABLE IF NOT EXISTS documents_fts USING fts5(
         title, content, content='documents', content_rowid='id'
     )
     ''')
-
-    # Create Chunks table for RAG
     c.execute('''
     CREATE TABLE IF NOT EXISTS chunks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -57,8 +58,6 @@ def init_db():
         FOREIGN KEY(document_id) REFERENCES documents(id)
     )
     ''')
-
-    # Create Product Lines table
     c.execute('''
     CREATE TABLE IF NOT EXISTS product_lines (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -73,9 +72,6 @@ def init_db():
         FOREIGN KEY(document_id) REFERENCES documents(id)
     )
     ''')
-
-    
-    # Triggers to keep FTS in sync
     c.execute('''
     CREATE TRIGGER IF NOT EXISTS documents_ai AFTER INSERT ON documents BEGIN
       INSERT INTO documents_fts(rowid, title, content) VALUES (new.id, new.title, new.content);
@@ -92,29 +88,51 @@ def init_db():
       INSERT INTO documents_fts(rowid, title, content) VALUES (new.id, new.title, new.content);
     END;
     ''')
-    
     conn.commit()
     conn.close()
     print("Database initialized.")
 
+
+def insert_chunk(cursor, doc_id, page_num, text):
+    if not text.strip():
+        return
+    try:
+        emb = get_embedding(text)
+        cursor.execute(
+            "INSERT INTO chunks (document_id, page_number, content, embedding) VALUES (?, ?, ?, ?)",
+            (doc_id, page_num, text, emb.tobytes())
+        )
+    except Exception as e:
+        print(f"  Error embedding page {page_num}: {e}")
+
+
+def generate_chunks(cursor, doc_id, content):
+    page_splits = re.split(r'(^## Page \d+\n)', content, flags=re.MULTILINE)
+    if len(page_splits) > 1:
+        for i in range(1, len(page_splits), 2):
+            header = page_splits[i].strip()
+            page_content = page_splits[i + 1] if i + 1 < len(page_splits) else ""
+            num_match = re.search(r'(\d+)', header)
+            page_num = int(num_match.group(1)) if num_match else i // 2 + 1
+            insert_chunk(cursor, doc_id, page_num, f"{header}\n{page_content}")
+    else:
+        insert_chunk(cursor, doc_id, 1, content)
+
+
 def ingest_files():
     conn = sqlite3.connect(DB_NAME)
     c = conn.cursor()
-    
-    # Check if we already have data
-    files = glob.glob(os.path.join(MARKDOWN_DIR, "*.md"))
-    # Sort files to ensure consistent order if possible, though updates won't change ID
-    files.sort()
-    
+
+    files = sorted(glob.glob(os.path.join(MARKDOWN_DIR, "*.md")))
     print(f"Scanning {len(files)} files...")
-    
+
     new_count = 0
     updated_count = 0
-    
+    skipped_count = 0
+
     for filepath in files:
         filename = os.path.basename(filepath)
-        
-        # title cleaning logic
+
         title = filename.replace('.md', '').replace('.pdf', '')
         title = title.replace('_', ' ')
         title = re.sub(r'Exhibit\s+B\s*[-–]?\s*', '', title, flags=re.IGNORECASE)
@@ -123,74 +141,55 @@ def ingest_files():
         title = re.sub(r'^\s*[-–]\s*', '', title)
         title = title.title()
         title = re.sub(r'\s+', ' ', title).strip()
-        
-        # Vendor is essentially the cleaned title for now, or we can use the filename stem
-        vendor = title 
-        
+
+        vendor = title
+
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # Extract Categories
+        new_hash = content_hash(content)
         cats = extract_categories(content)
         cats_json = json.dumps(cats)
 
-        # Check if file exists in DB
-        existing = c.execute("SELECT id FROM documents WHERE filename = ?", (filename,)).fetchone()
+        existing = c.execute(
+            "SELECT id, content_hash FROM documents WHERE filename = ?", (filename,)
+        ).fetchone()
+
         if existing:
-            # Update content
-            # Only update if changed? For now, force update to get new metadata
-            c.execute("UPDATE documents SET title=?, vendor=?, categories=?, content=? WHERE id=?", 
-                      (title, vendor, cats_json, content, existing[0]))
+            doc_id, stored_hash = existing
+            if stored_hash == new_hash:
+                skipped_count += 1
+                continue  # Content unchanged — nothing to do
+
+            c.execute(
+                "UPDATE documents SET title=?, vendor=?, categories=?, content=?, content_hash=? WHERE id=?",
+                (title, vendor, cats_json, content, new_hash, doc_id)
+            )
             updated_count += 1
             print(f"Updated: {filename} (Cats: {len(cats)})")
+
+            if HAS_EMBEDDINGS:
+                c.execute("DELETE FROM chunks WHERE document_id = ?", (doc_id,))
+                print(f"  Re-generating embeddings for {filename}...")
+                generate_chunks(c, doc_id, content)
         else:
-            c.execute("INSERT INTO documents (title, filename, vendor, categories, content) VALUES (?, ?, ?, ?, ?)", 
-                      (title, filename, vendor, cats_json, content))
+            c.execute(
+                "INSERT INTO documents (title, filename, vendor, categories, content, content_hash) VALUES (?, ?, ?, ?, ?, ?)",
+                (title, filename, vendor, cats_json, content, new_hash)
+            )
             doc_id = c.lastrowid
             new_count += 1
             print(f"Imported: {filename} (Cats: {len(cats)})")
 
-            # --- RAG: Chunking & Embedding ---
             if HAS_EMBEDDINGS:
-                print(f"  generating embeddings for {filename}...")
-                # Split by pages
-                page_splits = re.split(r'(^## Page \d+\n)', content, flags=re.MULTILINE)
-                current_page = 1
-                
-                # Helper to insert chunk
-                def insert_chunk(doc_id, page_num, text):
-                    if not text.strip(): return
-                    try:
-                        emb = get_embedding(text)
-                        # Convert numpy dict to bytes
-                        emb_blob = emb.tobytes()
-                        c.execute("INSERT INTO chunks (document_id, page_number, content, embedding) VALUES (?, ?, ?, ?)",
-                                  (doc_id, page_num, text, emb_blob))
-                    except Exception as e:
-                        print(f"Error embedding page {page_num}: {e}")
-    
-                if len(page_splits) > 1:
-                    for i in range(1, len(page_splits), 2):
-                        header = page_splits[i].strip()
-                        page_content = page_splits[i+1]
-                        try:
-                            num_match = re.search(r'(\d+)', header)
-                            if num_match:
-                                current_page = int(num_match.group(1))
-                        except:
-                            pass
-                        
-                        full_chunk_text = f"{header}\n{page_content}"
-                        insert_chunk(doc_id, current_page, full_chunk_text)
-                else:
-                    # Single chunk
-                    insert_chunk(doc_id, 1, content)
+                print(f"  Generating embeddings for {filename}...")
+                generate_chunks(c, doc_id, content)
             else:
-                print(f"  Skipping embeddings for {filename} (missing dependencies)")
-        
+                print(f"  Skipping embeddings (missing dependencies)")
+
     conn.commit()
     conn.close()
-    print(f"Ingestion complete. Added {new_count} new, Updated {updated_count} existing documents.")
+    print(f"Ingestion complete. Added {new_count} new, updated {updated_count}, skipped {skipped_count} unchanged.")
 
 
 if __name__ == "__main__":

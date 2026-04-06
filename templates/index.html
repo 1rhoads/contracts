@@ -110,7 +110,7 @@
 
                     <!-- AI Search Section -->
                     <div class="ai-section"
-                        style="display: none; margin-bottom: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent-color);">
+                        style="margin-bottom: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent-color);">
                         <h2
                             style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.5rem;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
@@ -225,7 +225,7 @@
                     if (data.sources && data.sources.length > 0) {
                         let sourceHTML = '<strong>Sources:</strong><ul>';
                         data.sources.forEach(s => {
-                            sourceHTML += `<li><a href="/document/${s.filename}?page=${s.page}" target="_blank" style="color: var(--secondary-color);">${s.title} (Page ${s.page})</a></li>`;
+                            sourceHTML += `<li><a href="/document/${s.doc_id}?page=${s.page}" target="_blank" style="color: var(--secondary-color);">${s.title} (Page ${s.page})</a></li>`;
                         });
                         sourceHTML += '</ul>';
                         sourcesDiv.innerHTML = sourceHTML;

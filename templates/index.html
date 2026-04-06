@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Florida Contract Search</title>
+    <title>Florida Contracts Explorer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!-- Marked.js for markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-
 <body>
     <div class="background-blobs">
         <div class="blob blob-1"></div>
@@ -20,176 +17,141 @@
         <div class="blob blob-3"></div>
     </div>
 
-    <div class="container">
-        <header>
-            <div style="display: inline-flex; align-items: center; gap: 1.5rem;">
-                <h1 style="margin-bottom: 0;">Florida Contracts <span class="highlight">Explorer</span></h1>
-                <a href="/workflow/quote" class="button"
-                    style="background: var(--secondary-color); color: white; text-decoration: none; padding: 0.5rem 1rem; border-radius: 2rem; font-weight: 600; font-size: 1rem; transition: transform 0.2s;">
-                    Compare Prices &rarr;
-                </a>
+    {% include '_sidebar.html' %}
+
+    <div class="page-container">
+
+        <div class="page-header">
+            <h1 class="page-title">Florida Contracts <span class="highlight">Explorer</span></h1>
+            <p class="page-subtitle">Searchable database of Digital Security Solutions state term contracts.</p>
+        </div>
+
+        <form action="/" method="get" class="search-form">
+            <input type="text" name="q" placeholder="Search vendors, SKUs, pricing, service categories…"
+                   value="{{ query }}" autocomplete="off" autofocus>
+            <button type="submit" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+            </button>
+        </form>
+
+        <!-- AI Assistant -->
+        <div class="ai-section">
+            <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor" stroke-width="2">
+                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                    <path d="M8.5 8.5v.01"/><path d="M11.5 11.5v.01"/><path d="M16 16v.01"/>
+                </svg>
+                Ask AI Assistant
+            </h2>
+            <div class="ai-input-group">
+                <input type="text" id="ai-query"
+                       placeholder="e.g. Which vendors offer CrowdStrike and what are the prices?">
+                <button onclick="askAI()" id="ai-btn" class="ai-ask-btn">Ask</button>
             </div>
-            <p class="subtitle">Searchable database of Digital Security Solutions state term contracts.</p>
-        </header>
+            <div id="ai-response" style="display:none;">
+                <div class="loading-spinner" style="display:none;">Thinking…</div>
+                <div class="answer-content markdown-body"></div>
+                <div class="sources-list"></div>
+            </div>
+        </div>
 
-        <section class="search-section">
-            <form action="/" method="get" class="search-form">
-                <input type="text" name="q" placeholder="Search for vendors, terms, or pricing..." value="{{ query }}"
-                    autocomplete="off" autofocus>
-                <button type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
-            </form>
-        </section>
+        <!-- Results -->
+        <div class="content-layout">
 
-        <!-- Always show main container now -->
-        <section class="results-section">
-            {% if query or selected_vendor or selected_category %}
-            <h2>{{ results|length }} Result{% if results|length != 1 %}s{% endif %} Found</h2>
-            {% endif %}
-
-            <div class="main-container"
-                style="display: flex; gap: 2rem; width: 100%; margin: 0 auto; margin-top: 2rem; padding: 0 1rem;">
-
-                <!-- Sidebar -->
-                <aside class="filters-sidebar" style="width: 250px; flex-shrink: 0;">
-                    <div class="filter-group">
-                        <div class="filter-group">
-
-                            <h3>Vendors</h3>
-                            <div class="filter-list" style="max-height: 300px; overflow-y: auto;">
-                                {% for vendor in all_vendors %}
-                                {% set is_active = (vendor == selected_vendor) %}
-                                <a href="{{ url_for('index', q=query, vendor=vendor if not is_active else None, category=selected_category) }}"
-                                    class="filter-item {{ 'active' if is_active else '' }}"
-                                    style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
-                                    {{ vendor }}
-                                    {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
-                                </a>
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                        <div class="filter-group" style="margin-top: 2rem;">
-                            <h3>Service Categories</h3>
-                            <div class="filter-list" style="max-height: 400px; overflow-y: auto;">
-                                {% for cat in all_categories %}
-                                {% set is_active = (cat == selected_category) %}
-                                <a href="{{ url_for('index', q=query, vendor=selected_vendor, category=cat if not is_active else None) }}"
-                                    class="filter-item {{ 'active' if is_active else '' }}"
-                                    style="display: block; padding: 4px 8px; text-decoration: none; color: inherit; border-radius: 4px; {{ 'background: var(--primary-light); color: var(--primary); font-weight: bold;' if is_active else '' }}">
-                                    {{ cat }}
-                                    {% if is_active %} <span style="float: right;">&times;</span> {% endif %}
-                                </a>
-                                {% endfor %}
-                            </div>
-                        </div>
-
-                        {% if selected_vendor or selected_category %}
-                        <div style="margin-top: 1rem;">
-                            <a href="{{ url_for('index', q=query) }}" class="button secondary"
-                                style="width: 100%; text-align: center;">Clear Filters</a>
-                        </div>
-                        {% endif %}
-                </aside>
-
-                <!-- Results -->
-                <main class="results-area" style="flex-grow: 1;">
-                    {% if query %}
-                    <p class="search-stats">{{ results|length }} result(s) found for "<strong>{{ query }}</strong>"</p>
-                    {% elif selected_vendor or selected_category %}
-                    <p class="search-stats">{{ results|length }} document(s) matching filters</p>
-                    {% else %}
-                    <p class="search-stats" style="color: var(--text-secondary);">Select a filter or search to browse
-                        documents.</p>
-                    {% endif %}
-
-                    <!-- AI Search Section -->
-                    <div class="ai-section"
-                        style="margin-bottom: 2rem; background: var(--glass-bg); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--accent-color);">
-                        <h2
-                            style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.5rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                                <path d="M8.5 8.5v.01"></path>
-                                <path d="M11.5 11.5v.01"></path>
-                                <path d="M16 16v.01"></path>
-                            </svg>
-                            Ask AI Assistant
-                        </h2>
-                        <div class="ai-input-group" style="display: flex; gap: 1rem;">
-                            <input type="text" id="ai-query"
-                                placeholder="e.g. What are the security requirements for cloud data?"
-                                style="flex: 1; padding: 0.8rem; border-radius: 0.5rem; border: 1px solid var(--glass-border); background: rgba(0,0,0,0.3); color: white;">
-                            <button onclick="askAI()" id="ai-btn" class="button secondary"
-                                style="padding: 0.8rem 1.5rem; border-radius: 0.5rem; cursor: pointer; background: var(--accent-color); color: white; border: none;">Ask</button>
-                        </div>
-                        <div id="ai-response" style="margin-top: 1rem; display: none;">
-                            <div class="loading-spinner" style="display: none; color: #aaa;">Thinking...</div>
-                            <div class="answer-content markdown-body"
-                                style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
-                            </div>
-                            <div class="sources-list" style="margin-top: 1rem; font-size: 0.9rem; color: #888;"></div>
-                        </div>
-                    </div>
-
-                    <div class="results-grid">
-                        {% for result in results %}
-                        <div class="card result-card">
-                            <div class="card-header">
-                                <h2><a href="{{ url_for('view_document', doc_id=result.id, q=query) }}">{{ result.title
-                                        }}</a></h2>
-                                {% if result.match_count > 0 %}
-                                <span class="match-badge">{{ result.match_count }} matches</span>
-                                {% endif %}
-                            </div>
-
-                            <div class="metadata-badges"
-                                style="margin: 0.5rem 0; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                                <span class="badge"
-                                    style="background: #eef2ff; color: #4f46e5; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">{{
-                                    result.vendor }}</span>
-                                {% for cat in result.categories[:2] %}
-                                <span class="badge"
-                                    style="background: #ecfdf5; color: #059669; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">{{
-                                    cat.split('.')[0] }}</span>
-                                {% endfor %}
-                                {% if result.categories|length > 2 %}
-                                <span class="badge" style="font-size: 0.8rem; color: #666;">+{{ result.categories|length
-                                    - 2 }} more</span>
-                                {% endif %}
-                            </div>
-
-                            <div class="snippet">
-                                ...{{ result.snippet|safe }}...
-                            </div>
-                            <div class="card-footer">
-                                <span class="filename">{{ result.filename }}</span>
-                                <a href="{{ url_for('view_document', doc_id=result.id, q=query) }}"
-                                    class="button small">View Document &rarr;</a>
-                            </div>
-                        </div>
+            <!-- Filter sidebar -->
+            <aside class="filters-sidebar">
+                <div class="filter-panel">
+                    <h3>Vendors</h3>
+                    <div class="filter-list">
+                        {% for vendor in all_vendors %}
+                        {% set is_active = (vendor == selected_vendor) %}
+                        <a href="{{ url_for('index', q=query, vendor=None if is_active else vendor, category=selected_category) }}"
+                           class="filter-item {{ 'active' if is_active else '' }}">
+                            {{ vendor }}
+                            {% if is_active %}<span style="float:right;opacity:.6">&times;</span>{% endif %}
+                        </a>
                         {% endfor %}
-
-                        {% if not results and (query or selected_vendor or selected_category) %}
-                        <div class="no-results">
-                            <p>No documents found matching your criteria.</p>
-                        </div>
-                        {% endif %}
                     </div>
-                </main>
-            </div>
+                </div>
 
+                <div class="filter-panel">
+                    <h3>Service Categories</h3>
+                    <div class="filter-list">
+                        {% for cat in all_categories %}
+                        {% set is_active = (cat == selected_category) %}
+                        <a href="{{ url_for('index', q=query, vendor=selected_vendor, category=None if is_active else cat) }}"
+                           class="filter-item {{ 'active' if is_active else '' }}">
+                            {{ cat }}
+                            {% if is_active %}<span style="float:right;opacity:.6">&times;</span>{% endif %}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                {% if selected_vendor or selected_category %}
+                <a href="{{ url_for('index', q=query) }}" class="button secondary"
+                   style="width:100%;text-align:center;margin-top:.5rem;">Clear Filters</a>
+                {% endif %}
+            </aside>
+
+            <!-- Results -->
+            <main class="results-area">
+                {% if query %}
+                <p class="search-stats">{{ results|length }} result{% if results|length != 1 %}s{% endif %} for "<strong>{{ query }}</strong>"</p>
+                {% elif selected_vendor or selected_category %}
+                <p class="search-stats">{{ results|length }} document{% if results|length != 1 %}s{% endif %} matching filters</p>
+                {% else %}
+                <p class="search-stats">Select a filter or search to browse documents.</p>
+                {% endif %}
+
+                <div class="results-grid">
+                    {% for result in results %}
+                    <div class="result-card animate-fade-in">
+                        <div class="card-header">
+                            <h2><a href="{{ url_for('view_document', doc_id=result.id, q=query) }}">{{ result.title }}</a></h2>
+                            {% if result.match_count > 0 %}
+                            <span class="match-badge">{{ result.match_count }} matches</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="metadata-badges">
+                            <span class="badge badge-vendor">{{ result.vendor }}</span>
+                            {% for cat in result.categories[:2] %}
+                            <span class="badge badge-category">{{ cat.split('.')[0] }}</span>
+                            {% endfor %}
+                            {% if result.categories|length > 2 %}
+                            <span class="badge badge-more">+{{ result.categories|length - 2 }} more</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="snippet">…{{ result.snippet|safe }}…</div>
+
+                        <div class="card-footer">
+                            <span class="filename">{{ result.filename }}</span>
+                            <a href="{{ url_for('view_document', doc_id=result.id, q=query) }}"
+                               class="button small">View &rarr;</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    {% if not results and (query or selected_vendor or selected_category) %}
+                    <div class="no-results">
+                        <p>No documents found matching your criteria.</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </main>
+        </div>
     </div>
+
     <script>
         async function askAI() {
-            const query = document.getElementById('ai-query').value;
+            const query = document.getElementById('ai-query').value.trim();
             if (!query) return;
 
             const btn = document.getElementById('ai-btn');
@@ -198,48 +160,45 @@
             const sourcesDiv = responseDiv.querySelector('.sources-list');
             const spinner = responseDiv.querySelector('.loading-spinner');
 
-            // Reset UI
             responseDiv.style.display = 'block';
             spinner.style.display = 'block';
             answerDiv.innerHTML = '';
             sourcesDiv.innerHTML = '';
             btn.disabled = true;
-            btn.innerText = 'Asking...';
+            btn.textContent = 'Asking…';
 
             try {
                 const res = await fetch('/ask', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ query: query })
+                    body: JSON.stringify({ query })
                 });
-
                 const data = await res.json();
 
                 if (data.error) {
-                    answerDiv.innerText = "Error: " + data.error;
+                    answerDiv.textContent = 'Error: ' + data.error;
                 } else {
-                    // Render Markdown
                     answerDiv.innerHTML = marked.parse(data.answer);
-
-                    // Render Sources
                     if (data.sources && data.sources.length > 0) {
-                        let sourceHTML = '<strong>Sources:</strong><ul>';
+                        let html = '<strong>Sources:</strong><ul style="margin:.5rem 0 0 1.25rem">';
                         data.sources.forEach(s => {
-                            sourceHTML += `<li><a href="/document/${s.doc_id}?page=${s.page}" target="_blank" style="color: var(--secondary-color);">${s.title} (Page ${s.page})</a></li>`;
+                            html += `<li><a href="/document/${s.doc_id}?page=${s.page}">${s.title} (Page ${s.page})</a></li>`;
                         });
-                        sourceHTML += '</ul>';
-                        sourcesDiv.innerHTML = sourceHTML;
+                        sourcesDiv.innerHTML = html + '</ul>';
                     }
                 }
             } catch (e) {
-                answerDiv.innerText = "Network Error: " + e;
+                answerDiv.textContent = 'Network error: ' + e;
             } finally {
                 spinner.style.display = 'none';
                 btn.disabled = false;
-                btn.innerText = 'Ask';
+                btn.textContent = 'Ask';
             }
         }
+
+        document.getElementById('ai-query').addEventListener('keydown', e => {
+            if (e.key === 'Enter') askAI();
+        });
     </script>
 </body>
-
 </html>

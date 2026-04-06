@@ -1,75 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ doc.title }} - Search Results</title>
+    <title>{{ doc.title }} — Search Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!-- Marked.js for markdown rendering -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-        .results-header {
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .page-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-decoration: none;
-            display: block;
-            color: inherit;
-        }
-
-        .page-card:hover {
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary-color);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .page-number {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .match-snippet {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.5;
-        }
-
-        .match-highlight {
-            background: rgba(255, 215, 0, 0.2);
-            color: #ffd700;
-            padding: 0 4px;
-            border-radius: 4px;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .back-link:hover {
-            color: var(--primary-color);
-        }
-    </style>
 </head>
-
 <body>
     <div class="background-blobs">
         <div class="blob blob-1"></div>
@@ -77,25 +16,33 @@
         <div class="blob blob-3"></div>
     </div>
 
-    <div class="container">
-        <a href="{{ url_for('index', q=query) }}" class="back-link">← Back to Search</a>
+    {% include '_sidebar.html' %}
+
+    <div class="doc-results-container">
+        <a href="{{ url_for('index', q=query) }}" class="back-link" style="display:inline-flex;margin-bottom:1.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor" stroke-width="2" style="margin-right:.4rem">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+            </svg>
+            Back to Search
+        </a>
 
         <div class="results-header">
             <h1>{{ doc.title }}</h1>
-            <p>Found <strong>{{ total_matches }}</strong> pages matching "<strong>{{ query }}</strong>"</p>
+            <p>Found <strong>{{ total_matches }}</strong> page{% if total_matches != 1 %}s{% endif %} matching
+               "<strong>{{ query }}</strong>"</p>
         </div>
 
         <div class="page-list">
             {% for page in matches %}
-            <a href="{{ url_for('view_document', doc_id=doc.id, page=page.page_num, q=query) }}" class="page-card">
+            <a href="{{ url_for('view_document', doc_id=doc.id, page=page.page_num, q=query) }}"
+               class="page-card animate-fade-in">
                 <span class="page-number">Page {{ page.page_num }}</span>
-                <div class="match-snippet">
-                    ...{{ page.snippet|safe }}...
-                </div>
+                <div class="match-snippet">…{{ page.snippet|safe }}…</div>
             </a>
             {% endfor %}
         </div>
     </div>
 </body>
-
 </html>

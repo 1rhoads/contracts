@@ -1,7 +1,6 @@
 services:
   app:
     build: .
-    image: florida-contracts-app
     ports:
       - "8080:8000"
     volumes:
@@ -13,7 +12,6 @@ services:
 
   digest-worker:
     build: .
-    image: florida-contracts-worker
     command: python3 scheduler.py
     environment:
       - RUN_ON_STARTUP=true
